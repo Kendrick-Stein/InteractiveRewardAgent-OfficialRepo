@@ -78,27 +78,15 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
   gap: 24px;
 }
 
+.single-page-nav {
+  justify-content: flex-start;
+}
+
 .brand {
   font-weight: 850;
   color: var(--ink);
   text-decoration: none;
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  font-weight: 760;
-  font-size: 14px;
-}
-
-.nav-links a:hover { color: var(--teal-dark); }
 
 .container {
   max-width: 1220px;
@@ -577,9 +565,6 @@ tr:last-child td { border-bottom: 0; }
     flex-direction: column;
     padding-top: 14px;
     padding-bottom: 14px;
-  }
-  .nav-links {
-    gap: 14px;
   }
   .container {
     padding-left: 18px;
