@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official project page for Interactive Reward Agent and GUI-RewardBench.">
+  <title>Interactive Reward Agent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html">Interactive Reward Agent</a>
+    <div class="nav-links">
+      <a href="benchmark.html">Benchmark</a>
+      <a href="usage.html">Usage</a>
+      <a href="paper.html">Paper</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="paper-hero" aria-labelledby="page-title">
+    <div class="container paper-hero-inner">
+      <p class="eyebrow">Official Repo · GUI Task-Completion Evaluation</p>
+      <h1 id="page-title">Interactive Reward Agent</h1>
+      <p class="lead">In this paper, we propose an interactive reward agent (IRA) based on a propose-then-verify framework to discover the environment state for GUI task evaluation. Given a task instruction and a GUI environment after the agent execution, the interactive reward agent first proposes the task completion conditions and then verifies them by invoking system tools, application tools, and GUI tools.</p>
+      <dl class="fact-strip" aria-label="Paper summary">
+        <div>
+          <dt>86.9%</dt>
+          <dd>Accuracy on GUI-RewardBench</dd>
+        </div>
+        <div>
+          <dt>321</dt>
+          <dd>Stable GUI trajectories</dd>
+        </div>
+        <div>
+          <dt>10</dt>
+          <dd>Ubuntu desktop categories</dd>
+        </div>
+        <div>
+          <dt>0.84</dt>
+          <dd>Overall Cohen's kappa with human judgment</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="container hero-figure-wrap">
+      <figure class="paper-figure hero-figure">
+        <img src="assets/figures/figure1.png" width="2872" height="2812" alt="Comparison between Interactive Reward Agent and VLM-based evaluators on an output-file verification task.">
+        <figcaption>Comparison between interactive reward agent and VLM-based evaluators on tasks requiring verifying output files.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="paper-section" aria-labelledby="method-title">
+    <div class="container two-column">
+      <div class="section-copy">
+        <p class="section-kicker">Method</p>
+        <h2 id="method-title">Propose-then-verify evaluation</h2>
+        <p>In this paper, we propose an interactive reward agent (IRA) built on a propose-then-verify framework equipped with tools for environment interaction. Given a task instruction and a GUI environment after the agent execution, the interactive reward agent first generates explicit task completion conditions and then verifies them through tools.</p>
+        <p>Concretely, the interactive reward agent uses a VLM to propose task-specific completion conditions, rather than to directly judge task success. It then verifies these conditions by collecting evidence from the actual environment through system tools, application tools, and GUI tools.</p>
+      </div>
+      <figure class="paper-figure">
+        <img src="assets/figures/image.png" width="4721" height="2134" alt="Interactive Reward Agent evaluation pipeline from task instruction to final reward.">
+        <figcaption>Interactive reward agent evaluation pipeline. The task instruction and final environment state are the inputs. Interactive reward agent first generates necessary completion conditions grounded in the instruction and then verifies each condition through tool-selected environment queries.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="paper-section muted-section" aria-labelledby="bench-title">
+    <div class="container">
+      <div class="section-copy wide-copy">
+        <p class="section-kicker">Benchmark</p>
+        <h2 id="bench-title">GUI-RewardBench at a glance</h2>
+        <p>GUI-RewardBench is designed to evaluate whether a reward evaluator can judge GUI task completion from the environment state. GUI-RewardBench emphasizes cases where completion evidence may be distributed across screenshots, files, application preferences, system settings, and generated artifacts.</p>
+      </div>
+      <dl class="bench-strip" aria-label="GUI-RewardBench composition">
+        <div><dt>192</dt><dd>Artifact-verification tasks</dd></div>
+        <div><dt>89</dt><dd>Hidden-state tasks</dd></div>
+        <div><dt>40</dt><dd>Visible-state tasks</dd></div>
+      </dl>
+      <div class="figure-pair">
+        <figure class="paper-figure">
+          <img src="assets/figures/rewardbench_trajectory_length.png" width="3236" height="1492" alt="Distribution of GUI-RewardBench trajectory lengths.">
+          <figcaption>Trajectory length distribution.</figcaption>
+        </figure>
+        <figure class="paper-figure portrait-figure">
+          <img src="assets/figures/rewardbench_category_outcome_donut.png" width="1955" height="1723" alt="GUI-RewardBench task category distribution.">
+          <figcaption>Task category distribution.</figcaption>
+        </figure>
+      </div>
+      <p class="section-note">The category distribution covers office productivity, graphics editing, web browsing, communication, media playback, development, OS-level configuration, and multi-application workflows.</p>
+    </div>
+  </section>
+
+  <section class="paper-section" aria-labelledby="result-title">
+    <div class="container">
+      <div class="section-copy wide-copy">
+        <p class="section-kicker">Experiments</p>
+        <h2 id="result-title">Quantitative Results</h2>
+        <p>We provide the overall binary classification metrics and report per category accuracy. The evaluation scheme is a central factor in GUI reward modeling: the performance gap is not only determined by the backbone model, but also by the way task success is verified.</p>
+      </div>
+      <figure class="paper-figure wide-figure">
+        <img src="assets/figures/imageheat_annotated.png" width="3390" height="1500" alt="Per-category accuracy heatmap across evaluator families.">
+        <figcaption>Per-category accuracy comparison across VLM-as-reward evaluators, GUI-agent-as-reward evaluators, and interactive reward agent variants. Each cell reports the accuracy percentage for one method on one application category, with warmer colors indicating higher accuracy.</figcaption>
+      </figure>
+      <div class="result-readout">
+        <p>Table results show that interactive reward agent with GPT-5.5 achieves the highest accuracy of 86.9%, improving over the strongest VLM baseline, DistRL, by 8.1 percentage points, and over the strongest GUI-agent-as-reward evaluator baseline by 3.7 percentage points.</p>
+        <p>Interactive reward agent does not improve performance by blindly accepting more tasks as successful. Instead, it produces a better-calibrated decision boundary between false positives and false negatives.</p>
+      </div>
+      <div class="table-wrap paper-table-wrap" aria-label="Overall binary classification metrics">
+        <table>
+          <caption>overall binary classification metrics.</caption>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Method</th>
+              <th>Acc.</th>
+              <th>Prec.</th>
+              <th>Rec.</th>
+              <th>F1</th>
+              <th>TP</th>
+              <th>FP</th>
+              <th>TN</th>
+              <th>FN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>VLM-as-reward-evaluator</td><td>WebRL</td><td>47.0%</td><td>100.0%</td><td>0.6%</td><td>1.2%</td><td>1</td><td>0</td><td>150</td><td>170</td></tr>
+            <tr><td>VLM-as-reward-evaluator</td><td>ZeroGUI</td><td>67.6%</td><td>77.2%</td><td>55.6%</td><td>64.6%</td><td>95</td><td>28</td><td>122</td><td>76</td></tr>
+            <tr><td>VLM-as-reward-evaluator</td><td>DigiRL</td><td>78.5%</td><td>93.2%</td><td>64.3%</td><td>76.1%</td><td>110</td><td>8</td><td>142</td><td>61</td></tr>
+            <tr><td>VLM-as-reward-evaluator</td><td>DistRL</td><td>78.8%</td><td>92.6%</td><td>65.5%</td><td>76.7%</td><td>112</td><td>9</td><td>141</td><td>59</td></tr>
+            <tr><td>GUI-agent-as-reward-evaluator</td><td>UITars-1.5</td><td>60.4%</td><td>63.5%</td><td>27.8%</td><td>38.6%</td><td>40</td><td>23</td><td>154</td><td>104</td></tr>
+            <tr><td>GUI-agent-as-reward-evaluator</td><td>GPT-5.4</td><td>77.9%</td><td>89.7%</td><td>64.0%</td><td>74.7%</td><td>105</td><td>12</td><td>145</td><td>59</td></tr>
+            <tr><td>GUI-agent-as-reward-evaluator</td><td>GPT-5.5</td><td>83.2%</td><td>90.8%</td><td>71.5%</td><td>80.0%</td><td>108</td><td>11</td><td>159</td><td>43</td></tr>
+            <tr><td>Interactive Reward Agent</td><td>Qwen3.5-397B-A17B</td><td>81.0%</td><td>86.7%</td><td>71.6%</td><td>78.4%</td><td>111</td><td>17</td><td>149</td><td>44</td></tr>
+            <tr><td>Interactive Reward Agent</td><td>Qwen3.6-35B-A3B</td><td>85.0%</td><td>88.7%</td><td>79.6%</td><td>83.9%</td><td>125</td><td>16</td><td>148</td><td>32</td></tr>
+            <tr><td>Interactive Reward Agent</td><td>GPT-5.4</td><td>85.4%</td><td>94.0%</td><td>76.2%</td><td>84.2%</td><td>125</td><td>8</td><td>149</td><td>39</td></tr>
+            <tr class="highlight-row"><td>Interactive Reward Agent</td><td>GPT-5.5</td><td>86.9%</td><td>93.7%</td><td>77.6%</td><td>84.9%</td><td>118</td><td>8</td><td>161</td><td>34</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-section muted-section" aria-labelledby="qual-title">
+    <div class="container two-column qualitative-grid">
+      <div class="section-copy">
+        <p class="section-kicker">Analysis</p>
+        <h2 id="qual-title">Qualitative Results</h2>
+        <p>Interactive reward agent converts ambiguous or incomplete visual observations into explicit evidence over files, configurations, and application states.</p>
+        <p>These findings show that explicit conditions and verifiable environment evidence offer a practical path toward more reliable, transparent, and scalable reward signals for GUI agents.</p>
+      </div>
+      <figure class="paper-figure">
+        <img src="assets/figures/quant.png" width="4477" height="3845" alt="Qualitative comparison between the VLM-based evaluator and Interactive Reward Agent.">
+        <figcaption>Qualitative comparisons between the VLM-based evaluator and the interactive reward agent using the same GPT-5.5 backbone. In both cases, the interactive reward agent yields better results.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>Interactive Reward Agent official repository. GitHub Pages are served from <code>docs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

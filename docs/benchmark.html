@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Benchmark page for GUI-RewardBench task trajectories.">
+  <title>GUI-RewardBench</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html">Interactive Reward Agent</a>
+    <div class="nav-links">
+      <a href="benchmark.html">Benchmark</a>
+      <a href="usage.html">Usage</a>
+      <a href="paper.html">Paper</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="band soft">
+    <div class="container">
+      <div class="section-heading">
+        <h1>GUI-RewardBench</h1>
+        <p>GUI-RewardBench contains 321 stable GUI task trajectories across 10 Ubuntu desktop categories. It targets the evaluator problem: deciding whether a task was completed from heterogeneous final-state evidence.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Trajectories</th></tr></thead>
+          <tbody>
+            <tr><td>Chrome</td><td>37</td></tr>
+            <tr><td>GIMP</td><td>34</td></tr>
+            <tr><td>LibreOffice Calc</td><td>59</td></tr>
+            <tr><td>LibreOffice Impress</td><td>50</td></tr>
+            <tr><td>LibreOffice Writer</td><td>32</td></tr>
+            <tr><td>Multi-apps</td><td>28</td></tr>
+            <tr><td>OS</td><td>28</td></tr>
+            <tr><td>Thunderbird</td><td>16</td></tr>
+            <tr><td>VLC</td><td>19</td></tr>
+            <tr><td>VS Code</td><td>18</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Benchmark figures from the current paper</h2>
+        <p>These figures are copied from the non-commented image references in the LaTeX source.</p>
+      </div>
+      <div class="media-grid">
+        <figure class="media-block">
+          <img class="media-image" src="assets/figures/rewardbench_trajectory_length.png" width="3236" height="1492" alt="Trajectory length distribution." loading="lazy">
+          <figcaption>Trajectory length distribution.</figcaption>
+        </figure>
+        <figure class="media-block">
+          <img class="media-image" src="assets/figures/rewardbench_category_outcome_donut.png" width="1955" height="1723" alt="Task category distribution." loading="lazy">
+          <figcaption>Task category distribution.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band soft">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Verification types</h2>
+        <p>The benchmark stresses evidence that may be outside the final screenshot.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature"><h3>Artifact verification</h3><p>192 tasks require checking generated documents, spreadsheets, presentations, images, PDFs, or other files.</p></article>
+        <article class="feature"><h3>Hidden state</h3><p>89 tasks require application preferences, configuration files, default handlers, or system settings.</p></article>
+        <article class="feature"><h3>Visible state</h3><p>40 tasks can usually be assessed directly from interface evidence.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <div class="media-grid">
+        <figure class="media-block">
+          <img class="media-image" src="assets/figures/imageheat_annotated.png" width="3390" height="1500" alt="Per-category evaluator accuracy heatmap." loading="lazy">
+          <figcaption>Per-category accuracy comparison across VLM-as-reward evaluators, GUI-agent-as-reward evaluators, and IRA variants.</figcaption>
+        </figure>
+        <figure class="media-block">
+          <img class="media-image" src="assets/figures/quant.png" width="4477" height="3845" alt="Qualitative comparison between VLM-based evaluator and Interactive Reward Agent." loading="lazy">
+          <figcaption>Qualitative comparisons between the VLM-based evaluator and the interactive reward agent using the same GPT-5.5 backbone.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>Interactive Reward Agent official repository. GitHub Pages are served from <code>docs/</code>.</p>
+  </div>
+</footer>
+</body>
+</html>
