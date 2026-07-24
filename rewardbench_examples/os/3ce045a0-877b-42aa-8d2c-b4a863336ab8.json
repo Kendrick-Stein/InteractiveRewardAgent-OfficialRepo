@@ -1,0 +1,129 @@
+{
+  "id": "3ce045a0-877b-42aa-8d2c-b4a863336ab8",
+  "snapshot": "os",
+  "instruction": "My glasses are broken, and I'm having trouble seeing small things clearly. Could you help me enlarge the text on my screen so it's easier to read?",
+  "source": "https://help.ubuntu.com/lts/ubuntu-help/a11y-font-size.html.en",
+  "trajectory": "trajectories/",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": [
+      "check_include_exclude",
+      "check_include_exclude"
+    ],
+    "conj": "or",
+    "result": [
+      {
+        "type": "vm_command_line",
+        "command": "TEXT_SCALE=$(timeout 10 gsettings get org.gnome.desktop.interface text-scaling-factor 2>/dev/null | grep -oE '[0-9]+\\.[0-9]+' | head -1); if [ -n \"$TEXT_SCALE\" ] && [ \"$(echo \"$TEXT_SCALE >= 1.2\" | bc -l 2>/dev/null || echo 0)\" = \"1\" ]; then echo \"Large text enabled (factor: $TEXT_SCALE)\"; else echo \"No text scaling enabled\"; fi",
+        "shell": true
+      },
+      {
+        "type": "vm_command_line",
+        "command": "ZOOM_ENABLED=$(timeout 10 gsettings get org.gnome.desktop.a11y.applications screen-magnifier-enabled 2>/dev/null | grep -c true); ZOOM_FACTOR=$(timeout 10 gsettings get org.gnome.desktop.a11y.magnifier mag-factor 2>/dev/null | grep -oE '[0-9]+\\.[0-9]+' | head -1); if [ \"$ZOOM_ENABLED\" -gt 0 ] && [ -n \"$ZOOM_FACTOR\" ] && [ \"$(echo \"$ZOOM_FACTOR > 1.1\" | bc -l 2>/dev/null || echo 0)\" = \"1\" ]; then echo \"Zoom enabled with magnification (factor: $ZOOM_FACTOR)\"; else echo \"No zoom magnification enabled\"; fi",
+        "shell": true
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule",
+        "rules": {
+          "include": [
+            "Large text enabled"
+          ],
+          "exclude": [
+            "No text scaling enabled",
+            "error"
+          ]
+        }
+      },
+      {
+        "type": "rule",
+        "rules": {
+          "include": [
+            "Zoom enabled with magnification"
+          ],
+          "exclude": [
+            "No zoom magnification enabled",
+            "error"
+          ]
+        }
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125559",
+      "action": "pyautogui.click(1866, 10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125559.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125605",
+      "action": "pyautogui.click(1679, 189)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125605.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125617",
+      "action": "pyautogui.click(1353, 442)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125617.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125627",
+      "action": "pyautogui.click(1433, 164)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125627.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125637",
+      "action": "pyautogui.click(1107, 658)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125637.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125648",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@125648.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

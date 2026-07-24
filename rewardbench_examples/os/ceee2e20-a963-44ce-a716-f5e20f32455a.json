@@ -1,0 +1,275 @@
+{
+  "id": "ceee2e20-a963-44ce-a716-f5e20f32455a",
+  "raw_id": "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3",
+  "snapshot": "os",
+  "instruction": "Can you add 'rhythmbox' as a favorite app to 'favorites'?",
+  "raw_instruction": "Can you remove the first favorite app from 'favorites'?",
+  "related_apps": [
+    "os"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "check_gnome_favorite_apps",
+    "result": {
+      "type": "vm_command_line",
+      "command": "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'\ngsettings get org.gnome.shell favorite-apps",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": [
+          "thunderbird.desktop",
+          "vim.desktop",
+          "google-chrome.desktop",
+          "rhythmbox.desktop"
+        ]
+      }
+    }
+  },
+  "raw_evaluator": {
+    "func": "check_gnome_favorite_apps",
+    "result": {
+      "type": "vm_command_line",
+      "command": "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'\ngsettings get org.gnome.shell favorite-apps",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": [
+          "google-chrome.desktop",
+          "thunderbird.desktop"
+        ]
+      }
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3_trace_7fd999b264e7_1755704454/image_0001.png",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'\ngsettings set org.gnome.shell favorite-apps \"['thunderbird.desktop']\"",
+        "shell": true
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 0.5
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'\ngsettings set org.gnome.shell favorite-apps \"['thunderbird.desktop', 'vim.desktop', 'google-chrome.desktop']\"",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@122650",
+      "action": "pyautogui.click(33.789, 1040.44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@122650.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@122658",
+      "action": "pyautogui.click(1082.236, 855.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@122658.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@122708",
+      "action": "pyautogui.click(665.839, 48.462, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@122708.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@122720",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@122720.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@122733",
+      "action": "pyautogui.click(709.565, 49.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@122733.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@122745",
+      "action": "pyautogui.click(644.969, 170.11, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@122745.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@122757",
+      "action": "pyautogui.click(700.621, 137.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@122757.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@122812",
+      "action": "pyautogui.click(33.789, 1040.44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@122812.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@122827",
+      "action": "pyautogui.write('favorites', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@122827.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@122842",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@122842.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@122855",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@122855.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@122908",
+      "action": "pyautogui.write('Show Applications', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@122908.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@122923",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@122923.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@122928",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@122928.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@122933",
+      "action": "pyautogui.hotkey('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@122933.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@122942",
+      "action": "pyautogui.click(1082.236, 855.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@122942.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@122951",
+      "action": "pyautogui.click(836.77, 49.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20260105@122951.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260105@123002",
+      "action": "pyautogui.click(33.789, 1040.44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20260105@123002.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260105@123015",
+      "action": "pyautogui.click(1082.236, 855.495, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_17_20260105@123015.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260105@123028",
+      "action": "pyautogui.click(1232.298, 945.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_18_20260105@123028.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260105@123040",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_19_20260105@123040.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

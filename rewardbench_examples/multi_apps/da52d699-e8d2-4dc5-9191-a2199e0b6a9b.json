@@ -1,0 +1,243 @@
+{
+  "id": "da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Examine the spreadsheet on the desktop, which contains a record of books read in 2022. Take the website https://howlongtoread.com/ as a reference to identify the book with the slowest reading pace, measured in words per day. I have an empty document named 'book_list_result.docx' on the desktop; please open it and record the title there.",
+  "source": "GAIA",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/da52d699-e8d2-4dc5-9191-a2199e0b6a9b/2023_validation_Book_Reading_Rate.xlsx",
+            "path": "/home/user/Desktop/2023_validation_Book_Reading_Rate.xlsx"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/da52d699-e8d2-4dc5-9191-a2199e0b6a9b/book_list_result.docx",
+            "path": "/home/user/Desktop/book_list_result.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/2023_validation_Book_Reading_Rate.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/da52d699-e8d2-4dc5-9191-a2199e0b6a9b",
+  "related_apps": [
+    "libreoffice_calc",
+    "chrome",
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "func": "compare_docx_files",
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "book_list_result.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/da52d699-e8d2-4dc5-9191-a2199e0b6a9b/book_list_result_Gold.docx",
+      "dest": "book_list_result_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/book_list_result.docx",
+      "dest": "book_list_result.docx"
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@012956",
+      "action": "pyautogui.moveTo(187.826, 343.187)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@012956.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@012956",
+      "action": "pyautogui.dragTo(1055.404, 529.121, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@012956.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@013012",
+      "action": "pyautogui.click(888.447, 336.264, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@013012.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@013027",
+      "action": "pyautogui.write('=G2/H2', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@013027.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@013046",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@013046.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@013103",
+      "action": "pyautogui.click(898.385, 337.253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@013103.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@013116",
+      "action": "pyautogui.write('=G3/H3', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@013116.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@013133",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@013133.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@013144",
+      "action": "pyautogui.click(898.385, 447.033, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@013144.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@013154",
+      "action": "pyautogui.hotkey('ctrl', 'c')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@013154.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@013209",
+      "action": "pyautogui.click(1833.54, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@013209.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@013221",
+      "action": "pyautogui.doubleClick(1850.435, 796.154, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251222@013221.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251222@013233",
+      "action": "pyautogui.hotkey('ctrl', 'v')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251222@013233.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251222@013245",
+      "action": "pyautogui.hotkey('ctrl', 'v')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251222@013245.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251222@013312",
+      "action": "pyautogui.click(684.72, 420.33, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251222@013312.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251222@013339",
+      "action": "pyautogui.write('Out of the Silent Planet', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251222@013339.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20251222@013356",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20251222@013356.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20251222@013421",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_17_20251222@013421.png"
+    }
+  ],
+  "result_raw": 1.0
+}

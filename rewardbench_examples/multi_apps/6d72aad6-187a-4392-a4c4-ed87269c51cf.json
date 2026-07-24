@@ -1,0 +1,158 @@
+{
+  "id": "6d72aad6-187a-4392-a4c4-ed87269c51cf",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Could you please converting OpenOffice Impress presentation to video and play it with VLC?",
+  "source": "https://superuser.com/questions/923171/converting-openoffice-impress-presentation-to-video-without-screen-recording",
+  "config": [],
+  "trajectory": "trajectories/6d72aad6-187a-4392-a4c4-ed87269c51cf",
+  "related_apps": [
+    "libreoffice_calc",
+    "libreoffice_impress",
+    "libreoffice_writer",
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@120946",
+      "action": "pyautogui.click(34, 482)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@120946.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@120954",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@120954.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@121001",
+      "action": "pyautogui.click(151, 476)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@121001.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@121009",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@121009.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@121017",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@121017.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@121023",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@121023.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@121029",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@121029.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@121036",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@121036.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@121041",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@121041.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@121046",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@121046.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@121052",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@121052.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@121057",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@121057.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@121103",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@121103.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@121109",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@121109.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@121115",
+      "action": "pyautogui.click(142, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@121115.png"
+    }
+  ],
+  "result_raw": "0"
+}

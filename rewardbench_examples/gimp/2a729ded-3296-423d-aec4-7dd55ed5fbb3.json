@@ -1,0 +1,177 @@
+{
+  "id": "2a729ded-3296-423d-aec4-7dd55ed5fbb3",
+  "snapshot": "gimp",
+  "instruction": "Could you make the background of this image transparent for me?",
+  "source": "https://www.youtube.com/watch?v=lOzSiOIipSM",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/2a729ded-3296-423d-aec4-7dd55ed5fbb3/dog_with_background.png",
+            "path": "/home/user/Desktop/dog_with_background.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/dog_with_background.png"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/2a729ded-3296-423d-aec4-7dd55ed5fbb3/dog_cutout_gold.png",
+            "path": "/home/user/Desktop/dog_cutout_gold.png"
+          }
+        ]
+      }
+    },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.write(\"dog_without_background\");time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_structure_sim",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/dog_cutout_gold.png",
+      "dest": "dog_cutout_gold.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/dog_without_background.png",
+      "dest": "dog_without_background.png"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133433",
+      "action": "pyautogui.click(1051, 554)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133433.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133438",
+      "action": "pyautogui.click(1187, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133438.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133443",
+      "action": "pyautogui.click(317, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133443.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133449",
+      "action": "pyautogui.click(355, 317)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133449.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133455",
+      "action": "pyautogui.click(413, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133455.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133502",
+      "action": "pyautogui.click(386, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133502.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133509",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@133509.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

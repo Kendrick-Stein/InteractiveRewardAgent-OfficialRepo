@@ -1,0 +1,153 @@
+{
+  "id": "51f5801c-18b3-4f25-b0c3-02f85507a078",
+  "snapshot": "libreoffice_impress",
+  "instruction": "I've been working on this presentation in LibreOffice Impress and I've added a bunch of speaker notes for my upcoming talk. I'd like to have those notes handy in a separate document when I rehearse. Could you assist me in extracting all the presenter notes from the Impress file and saving them as a Word document? Just keep the text of the notes, do not add any formatting or page number information. I'd like the file to be named 'notes.docx' and placed on my Desktop for easy access.",
+  "source": "https://github.com/danielrcollins1/ImpressExtractNotes",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/51f5801c-18b3-4f25-b0c3-02f85507a078/Dickinson_Slides.pptx",
+            "path": "/home/user/Desktop/Dickinson_Slides.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Dickinson_Slides.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress",
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "func": "compare_docx_files",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/notes.docx",
+      "dest": "notes.docx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/51f5801c-18b3-4f25-b0c3-02f85507a078/notes_gold.docx",
+      "dest": "notes_gold.docx"
+    },
+    "options": {
+      "ignore_blanks": true
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@121300",
+      "action": "pyautogui.click(344, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@121300.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@121304",
+      "action": "pyautogui.click(172, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@121304.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@121308",
+      "action": "pyautogui.click(205, 144)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@121308.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@121313",
+      "action": "pyautogui.click(82, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@121313.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@121318",
+      "action": "pyautogui.click(147, 476)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@121318.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@121324",
+      "action": "pyautogui.click(455, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@121324.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@121329",
+      "action": "pyautogui.typewrite('notes.docx')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@121329.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@121334",
+      "action": "pyautogui.click(1458, 936)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@121334.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@121339",
+      "action": "pyautogui.click(1458, 936)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@121339.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@121345",
+      "action": "pyautogui.click(1545, 160)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@121345.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@121350",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_11_20251127@121350.png"
+    }
+  ],
+  "result_raw": "0"
+}

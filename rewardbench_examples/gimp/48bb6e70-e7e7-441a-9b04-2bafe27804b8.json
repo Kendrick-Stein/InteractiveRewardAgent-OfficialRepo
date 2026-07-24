@@ -1,0 +1,168 @@
+{
+  "id": "48bb6e70-e7e7-441a-9b04-2bafe27804b8",
+  "raw_id": "7767eef2-56a3-4cea-8c9f-48c070c7d65b",
+  "snapshot": "gimp",
+  "instruction": "Please help change GIMP's theme from dark to system.",
+  "raw_instruction": "Please help change GIMP's theme from dark to light.",
+  "related_apps": [
+    "gimp"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(['ctrl', 'q']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "theme",
+        "value": "\"System\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "theme",
+        "value": "\"Light\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/7767eef2-56a3-4cea-8c9f-48c070c7d65b_trace_06ada14bc8c7_1755592327/image_0001.png",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111534",
+      "action": "pyautogui.click(122.236, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111534.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111540",
+      "action": "pyautogui.click(175.901, 646.813, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@111540.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@111548",
+      "action": "pyautogui.click(149.068, 679.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@111548.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@111557",
+      "action": "pyautogui.click(149.068, 679.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@111557.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@111605",
+      "action": "pyautogui.click(89.441, 654.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@111605.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@111613",
+      "action": "pyautogui.click(362.733, 652.747, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@111613.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@111622",
+      "action": "pyautogui.click(836.77, 905.934, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@111622.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@111632",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20260105@111632.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

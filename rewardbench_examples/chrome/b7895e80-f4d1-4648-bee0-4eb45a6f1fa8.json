@@ -1,0 +1,606 @@
+{
+  "id": "b7895e80-f4d1-4648-bee0-4eb45a6f1fa8",
+  "snapshot": "chrome",
+  "instruction": "Find a Hotel in New York City with lowest price possible for 2 adults next weekend.",
+  "source": "test_task_0",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.tripadvisor.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": [
+      "check_direct_json_object",
+      "check_direct_json_object"
+    ],
+    "conj": "or",
+    "result": [
+      {
+        "type": "active_tab_html_parse",
+        "goto_prefix": "https://www.",
+        "category": "xpath",
+        "xpathObject": {
+          "//button[@data-automation='checkin']//div[contains(@class,'Wh')]//span": "from",
+          "//button[@data-automation='checkout']//div[contains(@class,'Wh')]//span": "to",
+          "//h2[@data-automation='header_geo_title']": "city",
+          "//button[@data-automation='roomsandguests']//div[contains(@class,'Wh')]": "adult",
+          "//button[contains(@aria-label,'PRICE_LOW_TO_HIGH: Price (low to high)') or contains(@aria-label,'PRICE')]//div[contains(@class,'biGQs') and contains(@class,'SewaP')]": "rank"
+        }
+      },
+      {
+        "type": "active_tab_html_parse",
+        "goto_prefix": "https://www.",
+        "category": "xpath",
+        "xpathObject": {
+          "//button[@data-automation='checkin']//div[contains(@class,'Wh')]": "from",
+          "//button[@data-automation='checkout']//div[contains(@class,'Wh')]": "to",
+          "//h2[@data-automation='header_geo_title']": "city",
+          "//button[@data-automation='roomsandguests']//div[contains(@class,'Wh')]": "adult",
+          "//button[contains(@aria-label,'PRICE_LOW_TO_HIGH: Price (low to high)') or contains(@aria-label,'PRICE')]//div[contains(@class,'biGQs') and contains(@class,'SewaP')]": "rank"
+        }
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule_relativeTime",
+        "rules": {
+          "relativeTime": {
+            "from": "next week Saturday",
+            "to": "next week Sunday"
+          },
+          "timezone": "America/New_York",
+          "expected": {
+            "from": "{DoW}, {Month} {Day0D}",
+            "to": "{DoW}, {Month} {Day0D}",
+            "city": "New York City Hotels",
+            "adult": "Rooms/Guests1 Room, 2 Guests",
+            "rank": "Price (low to high)"
+          }
+        }
+      },
+      {
+        "type": "rule_relativeTime",
+        "rules": {
+          "relativeTime": {
+            "from": "next week Friday",
+            "to": "next week Sunday"
+          },
+          "timezone": "America/New_York",
+          "expected": {
+            "from": "Check In{DoW}, {Month} {Day0D}",
+            "to": "Check Out{DoW}, {Month} {Day0D}",
+            "city": "New York City Hotels",
+            "adult": "Rooms/Guests1 Room, 2 Guests",
+            "rank": "Price (low to high)"
+          }
+        }
+      }
+    ]
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "high",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@180407",
+      "action": "pyautogui.click(1238, 293, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@180419",
+      "action": "pyautogui.click(605, 244, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@180427",
+      "action": "pyautogui.write('booking.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@180436",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@180447",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@180502",
+      "action": "pyautogui.click(1087, 471, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@180511",
+      "action": "pyautogui.click(528, 784, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@180521",
+      "action": "pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@180537",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@180537",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@180549",
+      "action": "pyautogui.click(518, 845, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@180603",
+      "action": "pyautogui.click(1200, 200, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@180614",
+      "action": "pyautogui.click(1202, 198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@180849",
+      "action": "pyautogui.click(361, 45, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@180902",
+      "action": "pyautogui.click(864, 400, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@180902",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('google.com/travel/hotels', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@180911",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@180917",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@180933",
+      "action": "pyautogui.click(240, 216, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@180933",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@180933",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@180947",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@180947",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@181005",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@181005",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@181021",
+      "action": "pyautogui.click(288, 216, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@181021",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@181021",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@181040",
+      "action": "pyautogui.click(230, 218, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@181040",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@181040",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@181059",
+      "action": "pyautogui.click(230, 218, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@181059",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@181059",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@181121",
+      "action": "pyautogui.click(230, 218, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@181121",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@181121",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City</parameter=key>', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@181147",
+      "action": "pyautogui.click(230, 218, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@181147",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@181147",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('New York City', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@181147",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@181156",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@181232",
+      "action": "pyautogui.click(221, 50, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@181241",
+      "action": "pyautogui.click(858, 877, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@181249",
+      "action": "pyautogui.click(904, 877, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@181259",
+      "action": "pyautogui.click(1480, 643, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@181307",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@181321",
+      "action": "pyautogui.click(818, 406, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@181331",
+      "action": "pyautogui.click(797, 553, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@181337",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@181350",
+      "action": "pyautogui.scroll(-5, x=1117, y=648)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@181407",
+      "action": "pyautogui.scroll(5, x=1117, y=648)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@181420",
+      "action": "pyautogui.scroll(-5, x=1117, y=648)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@181430",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

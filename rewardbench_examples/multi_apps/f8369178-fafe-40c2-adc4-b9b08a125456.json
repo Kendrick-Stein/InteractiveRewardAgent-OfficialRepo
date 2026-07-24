@@ -1,0 +1,353 @@
+{
+  "id": "f8369178-fafe-40c2-adc4-b9b08a125456",
+  "snapshot": "chrome",
+  "instruction": "Help me to install Orchis theme from gnome-look.org and change to it for my GNOME desktop.",
+  "source": "https://itsfoss.com/install-switch-themes-gnome-shell",
+  "config": [],
+  "trajectory": "trajectories/f8369178-fafe-40c2-adc4-b9b08a125456",
+  "related_apps": [
+    "chrome",
+    "os"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "gsettings",
+            "get",
+            "org.gnome.desktop.interface",
+            "gtk-theme"
+          ],
+          "stdout": "gsettings.out"
+        }
+      }
+    ],
+    "func": "check_list",
+    "result": {
+      "type": "cache_file",
+      "path": "gsettings.out"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": [
+          "Orchis"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260304@011232",
+      "action": "pyautogui.click(35, 1040, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260304@011237",
+      "action": "pyautogui.click(960, 66, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260304@011243",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260304@011250",
+      "action": "pyautogui.click(993, 184, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260304@011256",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260304@011308",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260304@011321",
+      "action": "pyautogui.click(35, 1040, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260304@011326",
+      "action": "pyautogui.click(960, 66, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260304@011333",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260304@011340",
+      "action": "pyautogui.click(993, 184, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260304@011347",
+      "action": "pyautogui.write('https://www.gnome-look.org/p/1357889', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260304@011355",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260304@011401",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260304@011417",
+      "action": "pyautogui.click(626, 945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260304@011426",
+      "action": "pyautogui.click(541, 1069, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260304@011435",
+      "action": "time.sleep(6)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260304@011448",
+      "action": "pyautogui.click(993, 558, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260304@011454",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260304@011506",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260304@011513",
+      "action": "pyautogui.write('ls ~/Downloads/",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260304@011513",
+      "action": "grep -i orchis', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260304@011521",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260304@011529",
+      "action": "pyautogui.write('mkdir -p ~/.themes && tar -xf ~/Downloads/Orchis*.tar* -C ~/.themes/', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260304@011539",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260304@011546",
+      "action": "pyautogui.write('ls ~/.themes/",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260304@011546",
+      "action": "grep -i orchis', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260304@011554",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260304@011621",
+      "action": "pyautogui.write('gsettings set org.gnome.desktop.interface gtk-theme \"Orchis\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260304@011630",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260304@011637",
+      "action": "pyautogui.write('gsettings set org.gnome.desktop.wm.preferences theme \"Orchis\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260304@011647",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260304@011654",
+      "action": "pyautogui.write('gsettings get org.gnome.desktop.interface gtk-theme', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260304@011703",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260304@011711",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

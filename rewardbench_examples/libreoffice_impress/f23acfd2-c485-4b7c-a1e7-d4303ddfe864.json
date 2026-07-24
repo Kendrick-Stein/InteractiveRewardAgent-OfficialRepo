@@ -1,0 +1,257 @@
+{
+  "id": "f23acfd2-c485-4b7c-a1e7-d4303ddfe864",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Add a bullet point to the content of this slide. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/69_4.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864/69_4.pptx",
+            "path": "/home/user/Desktop/69_4.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/69_4.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "69_4.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": [
+      "compare_pptx_files",
+      "compare_pptx_files",
+      "compare_pptx_files",
+      "compare_pptx_files"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864/69_4_Gold.pptx",
+        "dest": "69_4_Gold.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864/69_4_Gold2.pptx",
+        "dest": "69_4_Gold2.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864/69_4_Gold_all_fonts_1.pptx",
+        "dest": "69_4_Gold_all_fonts_1.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/f23acfd2-c485-4b7c-a1e7-d4303ddfe864/69_4_Gold_all_fonts_2.pptx",
+        "dest": "69_4_Gold_all_fonts_2.pptx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/69_4.pptx",
+        "dest": "69_4.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/69_4.pptx",
+        "dest": "69_4.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/69_4.pptx",
+        "dest": "69_4.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/69_4.pptx",
+        "dest": "69_4.pptx"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130807",
+      "action": "pyautogui.click(839, 557)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130807.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130812",
+      "action": "pyautogui.click(1545, 419)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130812.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130817",
+      "action": "pyautogui.click(1587, 422)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130817.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130823",
+      "action": "pyautogui.click(1641, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130823.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130829",
+      "action": "pyautogui.click(1683, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@130829.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@130835",
+      "action": "pyautogui.click(1545, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@130835.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@130842",
+      "action": "pyautogui.click(1564, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@130842.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@130848",
+      "action": "pyautogui.click(1587, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@130848.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@130854",
+      "action": "pyautogui.click(1625, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@130854.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@130902",
+      "action": "pyautogui.click(1645, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@130902.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@130909",
+      "action": "pyautogui.click(1654, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@130909.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@130915",
+      "action": "pyautogui.click(1545, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@130915.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@130921",
+      "action": "pyautogui.click(1556, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@130921.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@130927",
+      "action": "pyautogui.click(1545, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@130927.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@130934",
+      "action": "pyautogui.click(1545, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@130934.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/69_4.pptx"
+  ]
+}

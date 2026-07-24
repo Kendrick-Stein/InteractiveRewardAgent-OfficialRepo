@@ -1,0 +1,122 @@
+{
+  "id": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89",
+  "snapshot": "base_setup",
+  "instruction": "Help me modify the folder used to store my recordings to Desktop",
+  "source": "https://docs.videolan.me/vlc-user/desktop/3.0/en/basic/recording/playing.html#choose-your-recordings-folder",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "is_vlc_recordings_folder",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "recording_file_path": "/home/user/Desktop"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113922",
+      "action": "pyautogui.click(943, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113922.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113928",
+      "action": "pyautogui.click(993, 604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113928.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113934",
+      "action": "pyautogui.click(968, 273)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113934.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113941",
+      "action": "pyautogui.click(1247, 697)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113941.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113953",
+      "action": "pyautogui.click(839, 379)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113953.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114004",
+      "action": "pyautogui.click(1247, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114004.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114018",
+      "action": "pyautogui.click(1197, 901)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@114018.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@114034",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@114034.png"
+    }
+  ],
+  "result_raw": "1"
+}

@@ -1,0 +1,176 @@
+{
+  "id": "bb8ccc78-479f-4a2f-a71e-d565e439436b",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Share this document with my team and let us edit it together in real-time. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/The Wonders of Our Solar System.docx」.",
+  "source": "https://ask.libreoffice.org/t/can-lo-be-used-for-collaboration-multi-person-real-time-document-editing/9392/6",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/bb8ccc78-479f-4a2f-a71e-d565e439436b/The%20Wonders%20of%20Our%20Solar%20System.docx",
+            "path": "/home/user/Desktop/The Wonders of Our Solar System.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/The Wonders of Our Solar System.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132015",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132015.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132019",
+      "action": "pyautogui.click(136, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132019.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132024",
+      "action": "pyautogui.click(1545, 156)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132024.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132029",
+      "action": "pyautogui.click(1139, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132029.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132036",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132036.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132041",
+      "action": "pyautogui.click(142, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132041.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132047",
+      "action": "pyautogui.click(1545, 156)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132047.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132053",
+      "action": "pyautogui.click(1139, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132053.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132059",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132059.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132105",
+      "action": "pyautogui.click(142, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132105.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132111",
+      "action": "pyautogui.click(1545, 156)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132111.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132117",
+      "action": "pyautogui.click(1139, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@132117.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@132124",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@132124.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@132131",
+      "action": "pyautogui.click(142, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@132131.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@132137",
+      "action": "pyautogui.click(1545, 156)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@132137.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/The Wonders of Our Solar System.docx"
+  ]
+}

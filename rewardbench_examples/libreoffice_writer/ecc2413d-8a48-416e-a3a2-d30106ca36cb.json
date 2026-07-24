@@ -1,0 +1,106 @@
+{
+  "id": "ecc2413d-8a48-416e-a3a2-d30106ca36cb",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Hey, can you throw in a blank page right after this one? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Sample_Statutory_Declaration.docx」.",
+  "source": "https://www.quora.com/How-can-I-insert-a-blank-page-on-libreoffice",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/ecc2413d-8a48-416e-a3a2-d30106ca36cb/Sample_Statutory_Declaration.docx",
+            "path": "/home/user/Desktop/Sample_Statutory_Declaration.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Sample_Statutory_Declaration.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Sample_Statutory_Declaration.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "contains_page_break",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "page_break_count": 5
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Sample_Statutory_Declaration.docx",
+      "dest": "Sample_Statutory_Declaration.docx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132015",
+      "action": "pyautogui.click(228, 75)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132015.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132020",
+      "action": "pyautogui.click(259, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132020.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132024",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_3_20251127@132024.png"
+    }
+  ],
+  "result_raw": "1",
+  "file_path": [
+    "/home/user/Desktop/Sample_Statutory_Declaration.docx"
+  ]
+}

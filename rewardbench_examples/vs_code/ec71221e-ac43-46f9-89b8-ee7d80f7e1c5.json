@@ -1,0 +1,145 @@
+{
+  "id": "ec71221e-ac43-46f9-89b8-ee7d80f7e1c5",
+  "snapshot": "vscode",
+  "instruction": "Please help me increase the indent of line 2 to line 10 by one tab. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/test.py」. The file before edit is located on the VM at the following path: 「/home/user/Desktop/test_before_edit.py",
+  "source": "https://stackoverflow.com/questions/47903209/how-to-shift-a-block-of-code-left-right-by-one-space-in-vscode",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/ec71221e-ac43-46f9-89b8-ee7d80f7e1c5/test.py",
+            "path": "/home/user/Desktop/test_before_edit.py"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/ec71221e-ac43-46f9-89b8-ee7d80f7e1c5/test.py",
+            "path": "/home/user/Desktop/test.py"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code",
+          "/home/user/Desktop/test.py"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "test.py - Visual Studio Code"
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey(\"ctrl\", \"s\"); time.sleep(0.5); "
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_text_file",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/ec71221e-ac43-46f9-89b8-ee7d80f7e1c5/test_gold.py",
+      "dest": "test_gold.py"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/test.py",
+      "dest": "test.py"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@111608",
+      "action": "pyautogui.moveTo(536.646, 392.637)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@111608.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@111608",
+      "action": "pyautogui.dragTo(535.652, 544.945, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@111608.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@111616",
+      "action": "pyautogui.hotkey('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@111616.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@111624",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@111624.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@111635",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_4_20251222@111635.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

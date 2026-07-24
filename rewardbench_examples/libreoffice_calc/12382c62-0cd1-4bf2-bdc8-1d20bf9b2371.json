@@ -1,0 +1,196 @@
+{
+  "id": "12382c62-0cd1-4bf2-bdc8-1d20bf9b2371",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Create a clustered column chart showing the Sales and COGS data for each week in a new sheet. Set the chart title as \"Sales & COGS\". The file to be evaluated is located on the VM at the following path: 「/home/user/WeeklySales.xlsx」.",
+  "source": "SheetCopilot@210",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/1e8df695-bd1b-45b3-b557-e7d599cf7597/WeeklySales.xlsx",
+            "path": "/home/user/WeeklySales.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/WeeklySales.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/12382c62-0cd1-4bf2-bdc8-1d20bf9b2371",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "WeeklySales.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/12382c62-0cd1-4bf2-bdc8-1d20bf9b2371/13_WeeklySales_gt1.xlsx",
+      "dest": "13_WeeklySales_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/WeeklySales.xlsx",
+      "dest": "WeeklySales.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "chart",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2",
+          "chart_props": [
+            "type",
+            "title"
+          ]
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113054",
+      "action": "pyautogui.moveTo(151, 311)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113054.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113056",
+      "action": "pyautogui.dragTo(355, 492, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113056.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113101",
+      "action": "pyautogui.click(234, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113101.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113106",
+      "action": "pyautogui.click(253, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113106.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113112",
+      "action": "pyautogui.click(974, 449)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113112.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113118",
+      "action": "pyautogui.click(1410, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113118.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113124",
+      "action": "pyautogui.rightClick(707, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113124.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113131",
+      "action": "pyautogui.click(787, 596)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113131.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113136",
+      "action": "pyautogui.typewrite('Sales & COGS')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113136.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113144",
+      "action": "pyautogui.click(1089, 739)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113144.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113149",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@113149.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/WeeklySales.xlsx"
+  ]
+}

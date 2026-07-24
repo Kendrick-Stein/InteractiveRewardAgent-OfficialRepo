@@ -1,0 +1,280 @@
+{
+  "id": "7e429b8d-a3f0-4ed0-9b58-08957d00b127",
+  "snapshot": "libreoffice_calc",
+  "instruction": "I have a lookup table for the officers of each branch. Please, here is another table in which I need to fill with the officer names according the headoffice (i.e., the branch name). Help me to complete this. The file to be evaluated is located on the VM at the following path: 「/home/user/VLOOKUP_Fill_the_form.xlsx」.",
+  "source": "https://medium.com/@divyangichaudhari17/how-to-use-vlookup-and-hlookup-in-libre-calc-3370698bb3ff",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/7e429b8d-a3f0-4ed0-9b58-08957d00b127/VLOOKUP_Fill_the_form.xlsx",
+            "path": "/home/user/VLOOKUP_Fill_the_form.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/VLOOKUP_Fill_the_form.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/7e429b8d-a3f0-4ed0-9b58-08957d00b127",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "VLOOKUP_Fill_the_form.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/7e429b8d-a3f0-4ed0-9b58-08957d00b127/VLOOKUP_Fill_the_form_gold.xlsx",
+      "dest": "VLOOKUP_Fill_the_form_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/VLOOKUP_Fill_the_form.xlsx",
+      "dest": "VLOOKUP_Fill_the_form.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113426",
+      "action": "pyautogui.click(259, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113426.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113431",
+      "action": "pyautogui.click(613, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113431.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113438",
+      "action": "pyautogui.typewrite('=VLOOKUP()')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113438.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113441",
+      "action": "pyautogui.press('left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113441.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113444",
+      "action": "pyautogui.typewrite('D2,')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113444.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113451",
+      "action": "pyautogui.moveTo(167, 341)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113451.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113454",
+      "action": "pyautogui.dragTo(269, 551, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113454.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113501",
+      "action": "pyautogui.typewrite(',2,FALSE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113501.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113503",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113503.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113510",
+      "action": "pyautogui.click(1141, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113510.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113516",
+      "action": "pyautogui.click(609, 341)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113516.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113522",
+      "action": "pyautogui.click(442, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113522.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113528",
+      "action": "pyautogui.typewrite('D2,')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113528.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113534",
+      "action": "pyautogui.moveTo(221, 341)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113534.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113537",
+      "action": "pyautogui.dragTo(370, 551, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113537.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113544",
+      "action": "pyautogui.typewrite(',2,FALSE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113544.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113546",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113546.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113552",
+      "action": "pyautogui.click(1139, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113552.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113558",
+      "action": "pyautogui.click(599, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113558.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113604",
+      "action": "pyautogui.click(515, 188)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113604.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113610",
+      "action": "pyautogui.typewrite('D3,')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113610.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/VLOOKUP_Fill_the_form.xlsx"
+  ]
+}

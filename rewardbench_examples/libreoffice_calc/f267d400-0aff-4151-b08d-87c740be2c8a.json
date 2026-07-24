@@ -1,0 +1,180 @@
+{
+  "id": "f267d400-0aff-4151-b08d-87c740be2c8a",
+  "raw_id": "3aaa4e37-dc91-482e-99af-132a612d40f3",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Could you save the current LibreOffice Calc sheet as a CSV file but select the semicolon (;) as the field delimiter? The file should have the same name as the original xlsx file.",
+  "raw_instruction": "Could you help me to export the current sheet to a csv file? Export the contents just as they are shown on the screen. Just keep the other options untouched. A default csv format is ok. The csv should share the file name with the original xlsx.",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "compare_csv",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV.csv"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "f267d400-0aff-4151-b08d-87c740be2c8a_expected.csv"
+    }
+  },
+  "raw_evaluator": {
+    "func": "compare_csv",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV.csv"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1cjyinycSAxi5oBb-dcpC85CMX9i-ggg-&export=download&authuser=0&confirm=t&uuid=b18a6fbd-8318-49ee-a62b-af22523df9e7&at=APZUnTV6dhR5_TcDg002RQ5CHmoC:1706012321261",
+      "dest": "Export_Calc_to_CSV_gold.csv"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/3aaa4e37-dc91-482e-99af-132a612d40f3/ff4f60a5-461d-4d47-a001-7e3823993795/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/3aaa4e37-dc91-482e-99af-132a612d40f3/Export_Calc_to_CSV.xlsx",
+            "path": "/home/user/Export_Calc_to_CSV.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Export_Calc_to_CSV.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@113422",
+      "action": "pyautogui.click(89.441, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@113422.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@113432",
+      "action": "pyautogui.click(145.093, 353.077, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@113432.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@113442",
+      "action": "pyautogui.click(1434.037, 910.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@113442.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@113453",
+      "action": "pyautogui.scroll(-5, x=1434.037, y=910.879)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@113453.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@113504",
+      "action": "pyautogui.scroll(-5, x=1418.137, y=975.165)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@113504.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@113516",
+      "action": "pyautogui.click(1331.677, 1000.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@113516.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@113529",
+      "action": "pyautogui.click(1549.317, 161.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@113529.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@113542",
+      "action": "pyautogui.click(1218.385, 497.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@113542.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@113554",
+      "action": "pyautogui.click(900.373, 554.835, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@113554.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@113604",
+      "action": "pyautogui.click(1184.596, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@113604.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@113615",
+      "action": "pyautogui.click(1834.534, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@113615.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@113626",
+      "action": "pyautogui.click(33.789, 606.264, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@113626.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@113639",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20260105@113639.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

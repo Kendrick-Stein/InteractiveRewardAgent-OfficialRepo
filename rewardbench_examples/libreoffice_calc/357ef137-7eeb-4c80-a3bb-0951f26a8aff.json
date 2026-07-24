@@ -1,0 +1,227 @@
+{
+  "id": "357ef137-7eeb-4c80-a3bb-0951f26a8aff",
+  "snapshot": "libreoffice_calc",
+  "instruction": "I have calculated the total work hours from the everday hours. And I have an hourly rate. Now I want to multiply the total hours with the hourly rate to get a total earned amount. However, I can't get a correct answer by directly multiply the two cells. Here the \"total hours\" is of time and \"hourly rate\" is just a number. How can I get the correct product of them? The file to be evaluated is located on the VM at the following path: 「/home/user/Multiply_Time_Number.xlsx」.",
+  "source": "https://www.reddit.com/r/excel/comments/17zny8u/calculating_total_amount_earned_from_total_hours/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/357ef137-7eeb-4c80-a3bb-0951f26a8aff/Multiply_Time_Number.xlsx",
+            "path": "/home/user/Multiply_Time_Number.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Multiply_Time_Number.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/357ef137-7eeb-4c80-a3bb-0951f26a8aff",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Multiply_Time_Number.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Multiply_Time_Number.xlsx",
+      "dest": "Multiply_Time_Number.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "check_cell",
+          "sheet_idx": 0,
+          "coordinate": "E3",
+          "props": {
+            "value": {
+              "method": "approx:0.001",
+              "ref": 191.6667
+            }
+          }
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113102",
+      "action": "pyautogui.click(480, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113102.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113108",
+      "action": "pyautogui.typewrite('=D3*24*F3')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113108.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113114",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113114.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113120",
+      "action": "pyautogui.click(480, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113120.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113126",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113126.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113132",
+      "action": "pyautogui.click(480, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113132.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113138",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113138.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113145",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113145.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113151",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113151.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113158",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113158.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113205",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113205.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113211",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113211.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113218",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113218.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113224",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113224.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113231",
+      "action": "pyautogui.click(476, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113231.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/Multiply_Time_Number.xlsx"
+  ]
+}

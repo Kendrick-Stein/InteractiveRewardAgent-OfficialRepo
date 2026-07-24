@@ -1,0 +1,89 @@
+{
+  "id": "d52d6308-ec58-42b7-a2c9-de80e4837b2b",
+  "snapshot": "gimp",
+  "instruction": "Could you help me remove the dock on the left side of the screen in the GIMP?",
+  "source": "https://superuser.com/questions/1447106/how-to-get-rid-of-the-gimp-tool-options-box",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "hide-docks",
+        "value": "yes"
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "sessionrc",
+      "dest": "sessionrc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133150",
+      "action": "pyautogui.click(541, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133150.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133155",
+      "action": "pyautogui.click(557, 188)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133155.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133200",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_3_20251127@133200.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

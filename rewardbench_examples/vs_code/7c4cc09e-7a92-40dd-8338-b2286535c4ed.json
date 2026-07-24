@@ -1,0 +1,170 @@
+{
+  "id": "7c4cc09e-7a92-40dd-8338-b2286535c4ed",
+  "snapshot": "vscode",
+  "instruction": "Please help me change the display language of VS Code to \"Arabic\" without using any extensions.",
+  "source": "",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124958",
+      "action": "pyautogui.click(472, 977)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124958.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125003",
+      "action": "pyautogui.click(568, 782)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125003.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125010",
+      "action": "pyautogui.typewrite('language')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125010.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125022",
+      "action": "pyautogui.click(845, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125022.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125035",
+      "action": "pyautogui.click(845, 443)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125035.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125051",
+      "action": "pyautogui.click(845, 473)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125051.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125105",
+      "action": "pyautogui.click(845, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125105.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125117",
+      "action": "pyautogui.click(845, 517)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125117.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125127",
+      "action": "pyautogui.click(830, 473)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@125127.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@125141",
+      "action": "pyautogui.click(839, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@125141.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@125156",
+      "action": "pyautogui.click(845, 512)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@125156.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@125207",
+      "action": "pyautogui.click(839, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@125207.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@125216",
+      "action": "pyautogui.click(845, 551)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@125216.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@125223",
+      "action": "pyautogui.click(845, 572)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@125223.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@125233",
+      "action": "pyautogui.click(845, 596)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@125233.png"
+    }
+  ],
+  "result_raw": "0"
+}

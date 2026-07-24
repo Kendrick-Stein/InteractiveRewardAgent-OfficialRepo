@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and secrets
+.env
+.venv/
+venv/
+env/
+api_key.py
+
+# Local outputs and caches
+output/
+outputs/
+results/
+reward_output/
+runs/
+run_outputs/
+cache/
+logs/
+*.log
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Large replay artifacts
+TestRewardAgentAccFile/
+test_output/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

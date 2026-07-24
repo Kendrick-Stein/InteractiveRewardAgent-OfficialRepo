@@ -1,0 +1,122 @@
+{
+  "id": "9439a27b-18ae-42d8-9778-5f68f891805e",
+  "snapshot": "vscode",
+  "instruction": "Please help me modify the setting of VS Code to keep my cursor focused on the debug console when debugging in VS Code, instead of automatically focusing back on the Editor.",
+  "source": "https://stackoverflow.com/questions/75832474/how-to-keep-cursor-in-debug-console-when-debugging-in-visual-studio-code",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "check_json_settings",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "debug.focusEditorOnBreak": false
+        }
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.config/Code/User/settings.json",
+      "dest": "settings.json"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@111145",
+      "action": "pyautogui.click(470.062, 975.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@111145.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@111151",
+      "action": "pyautogui.click(558.509, 785.275, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@111151.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@111200",
+      "action": "pyautogui.write('debug.inline Values', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@111200.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@111210",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@111210.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@111215",
+      "action": "pyautogui.hotkey('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@111215.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@111223",
+      "action": "pyautogui.write('debug.focus', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@111223.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@111233",
+      "action": "pyautogui.click(999.752, 455.934, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@111233.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@111242",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251222@111242.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

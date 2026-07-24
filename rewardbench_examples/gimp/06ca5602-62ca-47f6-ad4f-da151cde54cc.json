@@ -1,0 +1,175 @@
+{
+  "id": "06ca5602-62ca-47f6-ad4f-da151cde54cc",
+  "snapshot": "gimp",
+  "instruction": "Could you help me set the image to Palette-Based?",
+  "source": "https://stackoverflow.com/questions/74664666/how-to-export-palette-based-png-in-gimp",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/06ca5602-62ca-47f6-ad4f-da151cde54cc/computer.png",
+            "path": "/home/user/Desktop/computer.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/computer.png"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.write(\"palette_computer\");pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_palette_and_structure_sim",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/computer.png",
+      "dest": "computer.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/palette_computer.png",
+      "dest": "palette_computer.png"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133401",
+      "action": "pyautogui.click(1145, 700)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133401.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133406",
+      "action": "pyautogui.click(269, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133406.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133412",
+      "action": "pyautogui.click(295, 137)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133412.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133419",
+      "action": "pyautogui.click(295, 137)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133419.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133426",
+      "action": "pyautogui.click(570, 194)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133426.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133435",
+      "action": "pyautogui.click(1166, 806)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133435.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133445",
+      "action": "pyautogui.click(1166, 806)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133445.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133452",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@133452.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

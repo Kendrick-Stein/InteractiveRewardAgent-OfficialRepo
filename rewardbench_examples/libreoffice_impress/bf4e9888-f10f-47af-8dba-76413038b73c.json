@@ -1,0 +1,286 @@
+{
+  "id": "bf4e9888-f10f-47af-8dba-76413038b73c",
+  "snapshot": "libreoffice_impress",
+  "instruction": "I have a series of .png images named pic1.png to pic6.png saved on the Desktop. I want to create a new presentation with six blank slides(which means no textbox or any other stuff on the page), and insert one image per slide in order—pic1.png on the first slide, pic2.png on the second, and so on—following the numerical order. The goal is to prepare a presentation suitable for continuous playback in a kiosk or multimedia show. Could you help me with that? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/4.3-Template_4.29.2016.pptx」.",
+  "source": "https://help.libreoffice.org/6.4/en-US/text/simpress/guide/photo_album.html?DbPAR=IMPRESS",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/4.3-Template_4.29.2016.pptx",
+            "path": "/home/user/Desktop/4.3-Template_4.29.2016.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/4.3-Template_4.29.2016.pptx"
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic1.png",
+            "path": "/home/user/Desktop/pic1.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic2.png",
+            "path": "/home/user/Desktop/pic2.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic3.png",
+            "path": "/home/user/Desktop/pic3.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic4.png",
+            "path": "/home/user/Desktop/pic4.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic5.png",
+            "path": "/home/user/Desktop/pic5.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/pic6.png",
+            "path": "/home/user/Desktop/pic6.png"
+          }
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "4.3-Template_4.29.2016.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/bf4e9888-f10f-47af-8dba-76413038b73c/4.3-Template_4.29.2016_Gold.pptx",
+      "dest": "4.3-Template_4.29.2016_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/4.3-Template_4.29.2016.pptx",
+      "dest": "4.3-Template_4.29.2016.pptx"
+    },
+    "options": {
+      "examine_shape": false
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131215",
+      "action": "pyautogui.click(1818, 540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131215.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131219",
+      "action": "pyautogui.click(1564, 540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131219.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131223",
+      "action": "pyautogui.click(349, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131223.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131228",
+      "action": "pyautogui.click(370, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131228.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131234",
+      "action": "pyautogui.click(349, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@131234.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@131239",
+      "action": "pyautogui.click(370, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@131239.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@131246",
+      "action": "pyautogui.click(349, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@131246.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@131251",
+      "action": "pyautogui.click(370, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@131251.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@131257",
+      "action": "pyautogui.click(349, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@131257.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@131303",
+      "action": "pyautogui.click(370, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@131303.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@131308",
+      "action": "pyautogui.click(349, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@131308.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@131314",
+      "action": "pyautogui.click(370, 100)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@131314.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@131321",
+      "action": "pyautogui.click(230, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@131321.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@131326",
+      "action": "pyautogui.click(249, 103)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@131326.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@131331",
+      "action": "pyautogui.click(467, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@131331.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/4.3-Template_4.29.2016.pptx"
+  ]
+}

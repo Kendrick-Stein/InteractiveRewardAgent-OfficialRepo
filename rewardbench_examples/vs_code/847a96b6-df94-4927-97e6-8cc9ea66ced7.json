@@ -1,0 +1,162 @@
+{
+  "id": "847a96b6-df94-4927-97e6-8cc9ea66ced7",
+  "snapshot": "vscode",
+  "instruction": "Please help me open two workspaces \"/home/user/workspace1.code-workspace\" and \"/home/user/workspace2.code-workspace\" simultaneously in the same window.",
+  "source": "",
+  "config": [
+    {
+      "type": "command",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/project1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/project2"
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/847a96b6-df94-4927-97e6-8cc9ea66ced7/workspace1.code-workspace",
+            "path": "/home/user/workspace1.code-workspace"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/847a96b6-df94-4927-97e6-8cc9ea66ced7/workspace2.code-workspace",
+            "path": "/home/user/workspace2.code-workspace"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124547",
+      "action": "pyautogui.click(461, 264)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124547.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124553",
+      "action": "pyautogui.click(565, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124553.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124606",
+      "action": "pyautogui.click(664, 569)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124606.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124616",
+      "action": "pyautogui.click(1545, 156)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124616.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124629",
+      "action": "pyautogui.click(1093, 740)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124629.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124638",
+      "action": "pyautogui.click(467, 264)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124638.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124646",
+      "action": "pyautogui.click(565, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@124646.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@124653",
+      "action": "pyautogui.click(1679, 665)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@124653.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@124701",
+      "action": "pyautogui.click(1875, 242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@124701.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@124708",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@124708.png"
+    }
+  ],
+  "result_raw": "0"
+}

@@ -1,0 +1,165 @@
+{
+  "id": "a9f325aa-8c05-4e4f-8341-9e4358565f4f",
+  "snapshot": "libreoffice_calc",
+  "instruction": "I want to copy the movie titles in 'Garbage Movie Titles' column to the 'Clean Movie Titles' column. But please remove the adundant whitespaces and canonicalize the letter cases by capitalizing the first letter of each words and leave other letters as lower case. The file to be evaluated is located on the VM at the following path: 「/home/user/Movie_title_garbage_clean.xlsx」.",
+  "source": "https://www.youtube.com/shorts/A0gmEBRKXWs",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/a9f325aa-8c05-4e4f-8341-9e4358565f4f/Movie_titles_garbage_clean.xlsx",
+            "path": "/home/user/Movie_title_garbage_clean.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Movie_title_garbage_clean.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/a9f325aa-8c05-4e4f-8341-9e4358565f4f",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Movie_title_garbage_clean.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/a9f325aa-8c05-4e4f-8341-9e4358565f4f/Movie_titles_garbage_clean_gold.xlsx",
+      "dest": "Movie_title_garbage_clean_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Movie_title_garbage_clean.xlsx",
+      "dest": "Movie_title_garbage_clean.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113534",
+      "action": "pyautogui.click(624, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113534.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113539",
+      "action": "pyautogui.typewrite('=PROPER(TRIM(B2))')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113539.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113543",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113543.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113549",
+      "action": "pyautogui.click(622, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113549.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113554",
+      "action": "pyautogui.click(780, 345)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113554.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113601",
+      "action": "pyautogui.moveTo(780, 345)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113601.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113603",
+      "action": "pyautogui.dragTo(770, 913, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113603.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113609",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@113609.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Movie_title_garbage_clean.xlsx"
+  ]
+}

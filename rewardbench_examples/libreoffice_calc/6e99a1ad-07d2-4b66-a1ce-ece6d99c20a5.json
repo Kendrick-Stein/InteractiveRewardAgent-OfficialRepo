@@ -1,0 +1,180 @@
+{
+  "id": "6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Help me format column \"spent\" by keeping two decimal points.  The file to be evaluated is located on the VM at the following path: 「/home/user/Keep_Two_decimal_points.xlsx」.",
+  "source": "https://www.youtube.com/watch?v=nl-nXjJurhQ",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5/Keep_Two_decimal_points.xlsx",
+            "path": "/home/user/Keep_Two_decimal_points.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Keep_Two_decimal_points.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Keep_Two_decimal_points.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "libreoffice",
+            "--convert-to",
+            "csv:Text - txt - csv (StarCalc):44,34,UTF-8,,,,false,true,true,false,false,1",
+            "--outdir",
+            "/home/user",
+            "/home/user/Keep_Two_decimal_points.xlsx"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": [
+        "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5/Keep_Two_decimal_points_gold.xlsx",
+        "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/6e99a1ad-07d2-4b66-a1ce-ece6d99c20a5/Keep_Two_decimal_points_gold-Sheet1.csv"
+      ],
+      "dest": [
+        "Keep_Two_decimal_points_gold.xlsx",
+        "Keep_Two_decimal_points_gold-Sheet1.csv"
+      ],
+      "multi": true
+    },
+    "result": {
+      "type": "vm_file",
+      "path": [
+        "/home/user/Keep_Two_decimal_points.xlsx",
+        "/home/user/Keep_Two_decimal_points-Sheet1.csv"
+      ],
+      "dest": [
+        "Keep_Two_decimal_points.xlsx",
+        "Keep_Two_decimal_points-Sheet1.csv"
+      ],
+      "multi": true
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_print",
+          "sheet_idx0": "RNSheet1",
+          "sheet_idx1": "ENSheet1"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112310",
+      "action": "pyautogui.click(344, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112310.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112315",
+      "action": "pyautogui.rightClick(345, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112315.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112320",
+      "action": "pyautogui.click(418, 612)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112320.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112332",
+      "action": "pyautogui.click(928, 455)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112332.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112340",
+      "action": "pyautogui.click(1256, 835)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112340.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112347",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@112347.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/Keep_Two_decimal_points.xlsx"
+  ]
+}

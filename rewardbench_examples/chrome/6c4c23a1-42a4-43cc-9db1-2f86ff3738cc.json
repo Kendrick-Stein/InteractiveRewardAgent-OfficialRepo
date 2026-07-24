@@ -1,0 +1,218 @@
+{
+  "id": "6c4c23a1-42a4-43cc-9db1-2f86ff3738cc",
+  "snapshot": "chrome",
+  "instruction": "Find flights from Seattle to New York on 5th next month and only show those that can be purchased with miles.",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.delta.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_html_parse",
+      "goto_prefix": "https://www.",
+      "category": "class",
+      "class_singleObject": {
+        "mach-flight-context-info__wrapper--date": "time",
+        "mach-global-tabs-small__wrapper__tab--active": "category"
+      },
+      "class_multiObject_child": {
+        "mach-flight-context-info__wrapper__info--separator": {
+          "0": "start",
+          "1": "end"
+        }
+      }
+    },
+    "expected": {
+      "type": "rule_relativeTime",
+      "rules": {
+        "relativeTime": {
+          "from": "5th next month"
+        },
+        "expected": {
+          "start": "SEA",
+          "end": "NYC",
+          "time": "{DoW}, {Month} {Day0D}, {Year}",
+          "category": "Miles"
+        }
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123544",
+      "action": "pyautogui.click(830, 851)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123544.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123551",
+      "action": "pyautogui.click(699, 458)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123551.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123600",
+      "action": "pyautogui.typewrite('SEA')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123600.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123620",
+      "action": "pyautogui.click(830, 449)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123620.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123628",
+      "action": "pyautogui.typewrite('NYC')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123628.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123643",
+      "action": "pyautogui.click(530, 554)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123643.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123651",
+      "action": "pyautogui.click(947, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@123651.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@123658",
+      "action": "pyautogui.typewrite('NYC')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@123658.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@123707",
+      "action": "pyautogui.click(568, 554)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@123707.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@123715",
+      "action": "pyautogui.click(643, 636)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@123715.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@123725",
+      "action": "pyautogui.click(801, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@123725.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@123737",
+      "action": "pyautogui.click(1151, 872)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@123737.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@123747",
+      "action": "pyautogui.click(588, 744)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@123747.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@123758",
+      "action": "pyautogui.click(953, 875)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@123758.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@123809",
+      "action": "pyautogui.click(672, 665)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@123809.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

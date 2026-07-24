@@ -1,0 +1,183 @@
+{
+  "id": "51b11269-2ca8-4b2a-9163-f21758420e78",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Could you help me to sort the records accoring to the amounts ascendingly? The file to be evaluated is located on the VM at the following path: 「/home/user/Arrang_Value_min_to_max.xlsx」.",
+  "source": "https://www.reddit.com/r/LibreOfficeCalc/comments/186pcc6/how_to_arrange_numbers_in_a_column_from_minimum/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/51b11269-2ca8-4b2a-9163-f21758420e78/Arrang_Value_min_to_max.xlsx",
+            "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/51b11269-2ca8-4b2a-9163-f21758420e78",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Arrang_Value_min_to_max.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/51b11269-2ca8-4b2a-9163-f21758420e78/Arrang_Value_min_to_max_gold.xlsx",
+      "dest": "Arrang_Value_min_to_max_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Arrang_Value_min_to_max.xlsx",
+      "dest": "Arrang_Value_min_to_max.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@235640",
+      "action": "pyautogui.moveTo(476.025, 334.286)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@235640.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@235640",
+      "action": "pyautogui.dragTo(462.112, 694.286, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@235640.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@235648",
+      "action": "pyautogui.click(454.161, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@235648.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@235659",
+      "action": "pyautogui.click(478.012, 100.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@235659.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@235711",
+      "action": "pyautogui.click(1224.348, 461.868, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@235711.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@235720",
+      "action": "pyautogui.click(454.161, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@235720.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@235731",
+      "action": "pyautogui.click(509.814, 126.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@235731.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251221@235743",
+      "action": "pyautogui.click(834.783, 635.934, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251221@235743.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251221@235754",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251221@235754.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251221@235807",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251221@235807.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Arrang_Value_min_to_max.xlsx"
+  ]
+}

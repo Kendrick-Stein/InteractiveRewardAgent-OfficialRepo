@@ -1,0 +1,106 @@
+{
+  "id": "38f48d40-764e-4e77-a7cf-51dfce880291",
+  "snapshot": "gimp",
+  "instruction": "Could you help me trim the video located at \"/home/user/fullvideo.mp4\" within GIMP, since I only want the second to fourth second part of this video?",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/38f48d40-764e-4e77-a7cf-51dfce880291/fullvideo.mp4",
+            "path": "/home/user/fullvideo.mp4"
+          }
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133040",
+      "action": "pyautogui.click(28, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133040.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133047",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133047.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133056",
+      "action": "pyautogui.click(82, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133056.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133104",
+      "action": "pyautogui.click(119, 149)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133104.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133113",
+      "action": "pyautogui.click(142, 221)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133113.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133123",
+      "action": "pyautogui.click(274, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133123.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133130",
+      "action": "pyautogui.click(1016, 720)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133130.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133136",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@133136.png"
+    }
+  ],
+  "result_raw": "0"
+}

@@ -1,0 +1,209 @@
+{
+  "id": "4783cc41-c03c-4e1b-89b4-50658f642bd5",
+  "snapshot": "os",
+  "instruction": "Copy directory hierarchy from \"$sourceDir\" to \"$targetDir\"",
+  "source": "NL2Bash",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "sourceDir=\"/home/user/Desktop/\"\nmkdir -p \"$sourceDir\"/dir1/dir2\nmkdir -p \"$sourceDir\"/dir3/dir4",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; time.sleep(0.5); pyautogui.click(960, 540); time.sleep(0.5); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(0.5)"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Terminal"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125347",
+      "action": "pyautogui.typewrite('cp -r $sourceDir $targetDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125347.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125357",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125357.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125406",
+      "action": "pyautogui.typewrite('ls')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125406.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125408",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125408.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125420",
+      "action": "pyautogui.typewrite('mkdir sourceDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125420.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125422",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125422.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125436",
+      "action": "pyautogui.typewrite('mkdir targetDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125436.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125438",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125438.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125453",
+      "action": "pyautogui.typewrite('cp -r sourceDir targetDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125453.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125455",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125455.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125511",
+      "action": "pyautogui.typewrite('ls')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125511.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125513",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125513.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125524",
+      "action": "pyautogui.typewrite('ls sourceDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125524.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125525",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125525.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125538",
+      "action": "pyautogui.typewrite('ls targetDir')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@125538.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125540",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@125540.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@125556",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@125556.png"
+    }
+  ],
+  "result_raw": "0"
+}

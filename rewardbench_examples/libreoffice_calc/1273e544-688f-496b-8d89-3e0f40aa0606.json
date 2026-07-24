@@ -1,0 +1,147 @@
+{
+  "id": "1273e544-688f-496b-8d89-3e0f40aa0606",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Copy the \"Revenue\" column along with the header to a new sheet named \"Sheet2\". The file to be evaluated is located on the VM at the following path: 「/home/user/NetIncome.xlsx」.",
+  "source": "SheetCopilot@123",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/1273e544-688f-496b-8d89-3e0f40aa0606/NetIncome.xlsx",
+            "path": "/home/user/NetIncome.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/NetIncome.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/1273e544-688f-496b-8d89-3e0f40aa0606",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "NetIncome.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/1273e544-688f-496b-8d89-3e0f40aa0606/3_NetIncome_gt1.xlsx",
+      "dest": "3_NetIncome_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/NetIncome.xlsx",
+      "dest": "NetIncome.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@233925",
+      "action": "pyautogui.click(162.981, 294.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@233925.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@233932",
+      "action": "pyautogui.hotkey('ctrl', 'c')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@233932.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@233941",
+      "action": "pyautogui.click(193.789, 1046.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@233941.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@233955",
+      "action": "pyautogui.hotkey('ctrl', 'v')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@233955.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@234009",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@234009.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@234024",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251221@234024.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/NetIncome.xlsx"
+  ]
+}

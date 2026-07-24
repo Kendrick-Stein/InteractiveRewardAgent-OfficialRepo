@@ -1,0 +1,94 @@
+{
+  "id": "92c6d483-676d-4828-9cd6-6411ccb6cc37",
+  "raw_id": "28cc3b7e-b194-4bc9-8353-d04c0f4d56d2",
+  "snapshot": "os",
+  "instruction": "The system volume is too loud. Can you turn it down to 20%?",
+  "raw_instruction": "The volume of my system is too small. Can you help me turn up to the max volume?",
+  "related_apps": [
+    "os"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "pulseaudio --start\npactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | awk '{print $5}' | sed 's/%//g'",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "20\n"
+      }
+    }
+  },
+  "raw_evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "pulseaudio --start\npactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | awk '{print $5}' | sed 's/%//g'",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "100\n"
+      }
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/28cc3b7e-b194-4bc9-8353-d04c0f4d56d2_trace_17ab49ae1ca2_1755704454/image_0001.png",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@123224",
+      "action": "pyautogui.click(1867.329, 13.846, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@123224.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@123231",
+      "action": "pyautogui.moveTo(1887.205, 60.33)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@123231.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@123231",
+      "action": "pyautogui.dragTo(1696.398, 57.363, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@123231.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@123240",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_3_20260105@123240.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

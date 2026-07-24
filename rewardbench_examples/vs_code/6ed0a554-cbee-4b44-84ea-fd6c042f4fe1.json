@@ -1,0 +1,210 @@
+{
+  "id": "6ed0a554-cbee-4b44-84ea-fd6c042f4fe1",
+  "snapshot": "vscode",
+  "instruction": "Please help me add folder \"/home/user/data1\" and folder \"/home/user/data2\" to the current workspace.",
+  "source": "https://www.youtube.com/watch?v=B-s71n0dHUk",
+  "config": [
+    {
+      "type": "command",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/project"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/data1"
+        ]
+      }
+    },
+    {
+      "type": "command",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/data2"
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/6ed0a554-cbee-4b44-84ea-fd6c042f4fe1/project.code-workspace",
+            "path": "/home/user/project.code-workspace"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code",
+          "/home/user/project.code-workspace"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "check_json_settings",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "folders": [
+            {
+              "path": "project"
+            },
+            {
+              "path": "data1"
+            },
+            {
+              "path": "data2"
+            }
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/project.code-workspace",
+      "dest": "project.code-workspace"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124653",
+      "action": "pyautogui.click(1107, 744)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124653.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124700",
+      "action": "pyautogui.click(467, 264)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124700.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124706",
+      "action": "pyautogui.click(545, 492)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124706.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124714",
+      "action": "pyautogui.click(622, 276)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124714.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124724",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124724.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124732",
+      "action": "pyautogui.click(1166, 713)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124732.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124741",
+      "action": "pyautogui.click(461, 264)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@124741.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@124748",
+      "action": "pyautogui.click(565, 492)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@124748.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@124756",
+      "action": "pyautogui.click(632, 288)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@124756.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@124807",
+      "action": "pyautogui.click(1864, 238)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@124807.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@124819",
+      "action": "pyautogui.click(1166, 713)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@124819.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@124825",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20251127@124825.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

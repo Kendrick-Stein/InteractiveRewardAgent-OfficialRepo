@@ -1,0 +1,224 @@
+{
+  "id": "535ddd16-b9e2-4069-8c57-9beb19907999",
+  "raw_id": "734d6579-c07d-47a8-9ae2-13339795476b",
+  "snapshot": "gimp",
+  "instruction": "Could you please mirror the image horizontally?",
+  "raw_instruction": "Could you fill the background layer with green color, leaving the object layer as is?",
+  "related_apps": [
+    "gimp"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(['shift', 'ctrl', 'e']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.write('image_mirror'); pyautogui.press(['enter']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press(['enter']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_image_mirror",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/white_background_with_object.png",
+      "dest": "white_background_with_object.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/image_mirror.png",
+      "dest": "image_mirror.png"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.write(\"green_background_with_object\");pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_green_background",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/white_background_with_object.png",
+      "dest": "white_background_with_object.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/green_background_with_object.png",
+      "dest": "green_background_with_object.png"
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/734d6579-c07d-47a8-9ae2-13339795476b_trace_a04e2a5643b3_1755592327/image_0001.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/734d6579-c07d-47a8-9ae2-13339795476b/white_background_with_object.xcf",
+            "path": "/home/user/Desktop/white_background_with_object.xcf"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/734d6579-c07d-47a8-9ae2-13339795476b/white_background_with_object.png",
+            "path": "/home/user/Desktop/white_background_with_object.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/white_background_with_object.xcf"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111337",
+      "action": "pyautogui.click(268.323, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111337.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111344",
+      "action": "pyautogui.click(307.081, 227.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@111344.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@111351",
+      "action": "pyautogui.click(406.46, 227.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@111351.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@111359",
+      "action": "pyautogui.click(627.081, 227.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@111359.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@111408",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@111408.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@111418",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20260105@111418.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

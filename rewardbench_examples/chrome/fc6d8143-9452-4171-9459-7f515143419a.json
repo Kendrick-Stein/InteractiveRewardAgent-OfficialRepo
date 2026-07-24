@@ -1,0 +1,216 @@
+{
+  "id": "fc6d8143-9452-4171-9459-7f515143419a",
+  "snapshot": "chrome",
+  "instruction": "Find flights from New York–Kennedy Airport to Chicago O'Hare Airport for tomorrow.",
+  "source": "test_task_0",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.delta.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_html_parse",
+      "goto_prefix": "https://www.",
+      "category": "class",
+      "class_singleObject": {
+        "mach-flight-context-info__wrapper--date": "time"
+      },
+      "class_multiObject_child": {
+        "mach-flight-context-info__wrapper__info--separator": {
+          "0": "start",
+          "1": "end"
+        }
+      }
+    },
+    "expected": {
+      "type": "rule_relativeTime",
+      "rules": {
+        "relativeTime": {
+          "from": "tomorrow"
+        },
+        "expected": {
+          "start": "JFK",
+          "end": "ORD",
+          "time": "{DoW}, {Month} {Day0D}, {Year}"
+        }
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123836",
+      "action": "pyautogui.click(830, 851)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123836.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123843",
+      "action": "pyautogui.click(699, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123843.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123850",
+      "action": "pyautogui.click(1193, 503)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123850.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123859",
+      "action": "pyautogui.click(551, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123859.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123909",
+      "action": "pyautogui.typewrite('JFK')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123909.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123923",
+      "action": "pyautogui.click(551, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123923.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123934",
+      "action": "pyautogui.click(551, 581)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@123934.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@123944",
+      "action": "pyautogui.click(551, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@123944.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@123953",
+      "action": "pyautogui.typewrite('ORD')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@123953.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@124004",
+      "action": "pyautogui.click(551, 551)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@124004.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@124018",
+      "action": "pyautogui.click(653, 636)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@124018.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@124031",
+      "action": "pyautogui.click(987, 628)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@124031.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@124042",
+      "action": "pyautogui.click(1170, 870)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@124042.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@124054",
+      "action": "pyautogui.click(968, 882)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@124054.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@124103",
+      "action": "pyautogui.click(947, 503)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@124103.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

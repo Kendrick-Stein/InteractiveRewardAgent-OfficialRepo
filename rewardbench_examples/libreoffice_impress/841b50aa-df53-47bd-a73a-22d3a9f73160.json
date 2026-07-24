@@ -1,0 +1,167 @@
+{
+  "id": "841b50aa-df53-47bd-a73a-22d3a9f73160",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Add a note \"APP\" into the slide and give the slide a purple background color. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/181_2.pptx」.",
+  "hint": "The input is case sensitive.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/841b50aa-df53-47bd-a73a-22d3a9f73160/181_2.pptx",
+            "path": "/home/user/Desktop/181_2.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/181_2.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "181_2.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/841b50aa-df53-47bd-a73a-22d3a9f73160/181_2_Gold.pptx",
+      "dest": "181_2_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/181_2.pptx",
+      "dest": "181_2.pptx"
+    },
+    "options": {}
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131339",
+      "action": "pyautogui.click(226, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131339.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131343",
+      "action": "pyautogui.click(267, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131343.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131347",
+      "action": "pyautogui.typewrite('APP')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131347.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131353",
+      "action": "pyautogui.click(1712, 311)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131353.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131359",
+      "action": "pyautogui.click(1712, 311)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@131359.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@131405",
+      "action": "pyautogui.click(1698, 360)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@131405.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@131411",
+      "action": "pyautogui.click(1795, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@131411.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@131416",
+      "action": "pyautogui.click(1764, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@131416.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@131422",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251127@131422.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/181_2.pptx"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": "72f83cdc-bf76-4531-9a1b-eb893a13f8aa",
+  "snapshot": "gimp",
+  "instruction": "Please rotate my figure to mirror it horizontally.",
+  "source": "https://www.youtube.com/watch?v=V3slJcft6Tw",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/72f83cdc-bf76-4531-9a1b-eb893a13f8aa/berry.jpeg",
+            "path": "/home/user/Desktop/berry.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/berry.png"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "GNU Image Manipulation Program"
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.write(\"berry_mirror\");time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_image_mirror",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/berry.png",
+      "dest": "berry.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/berry_mirror.png",
+      "dest": "berry_mirror.png"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@232011",
+      "action": "pyautogui.click(318.012, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@232011.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@232018",
+      "action": "pyautogui.click(486.957, 342.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@232018.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@232025",
+      "action": "pyautogui.click(486.957, 342.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@232025.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@232033",
+      "action": "pyautogui.click(680.745, 338.242, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@232033.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@232040",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@232040.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@232052",
+      "action": "pyautogui.click(1122.981, 787.253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@232052.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251221@232107",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251221@232107.png"
+    }
+  ],
+  "result_raw": 1.0
+}

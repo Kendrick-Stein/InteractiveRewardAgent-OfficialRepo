@@ -1,0 +1,152 @@
+{
+  "id": "bb5e4c0d-f964-439c-97b6-bdb9747de3f4",
+  "snapshot": "chrome",
+  "instruction": "Can you make Bing the main search engine when I look stuff up on the internet?",
+  "source": "https://support.google.com/chrome/answer/95426?sjid=16867045591165135686-AP",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "chrome"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "google-chrome",
+            "--remote-debugging-port=1337"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 3
+        }
+      }
+    ],
+    "func": "match_in_list",
+    "result": {
+      "type": "default_search_engine"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": [
+          "Microsoft Bing",
+          "Bing"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123713",
+      "action": "pyautogui.click(1256, 242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123713.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123717",
+      "action": "pyautogui.click(1016, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123717.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123726",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123726.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123736",
+      "action": "pyautogui.click(480, 550)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123736.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123746",
+      "action": "pyautogui.click(1107, 487)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123746.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123755",
+      "action": "pyautogui.click(1037, 536)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123755.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123804",
+      "action": "pyautogui.click(1010, 748)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@123804.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@123812",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@123812.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

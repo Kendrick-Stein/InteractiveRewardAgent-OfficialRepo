@@ -1,0 +1,208 @@
+{
+  "id": "4e6fcf72-daf3-439f-a232-c434ce416af6",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Please calculate the ages of the employees according to their birthday. The file to be evaluated is located on the VM at the following path: 「/home/user/Employee_Age_By_Birthday.xlsx」.",
+  "source": "https://www.youtube.com/shorts/0uxJccNCKcE",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/4e6fcf72-daf3-439f-a232-c434ce416af6/Employee_Age_By_Birthday.xlsx",
+            "path": "/home/user/Employee_Age_By_Birthday.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Employee_Age_By_Birthday.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/4e6fcf72-daf3-439f-a232-c434ce416af6",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Employee_Age_By_Birthday.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/4e6fcf72-daf3-439f-a232-c434ce416af6/Employee_Age_By_Birthday_gold.xlsx",
+              "path": "/home/user/Employee_Age_By_Birthday_gold.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "open",
+        "parameters": {
+          "path": "/home/user/Employee_Age_By_Birthday_gold.xlsx"
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Employee_Age_By_Birthday_gold.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Employee_Age_By_Birthday_gold.xlsx",
+      "dest": "Employee_Age_By_Birthday_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Employee_Age_By_Birthday.xlsx",
+      "dest": "Employee_Age_By_Birthday.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112739",
+      "action": "pyautogui.click(434, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112739.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112744",
+      "action": "pyautogui.typewrite('=DATEDIF(C2,TODAY(),\"Y\")')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112744.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112750",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112750.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112756",
+      "action": "pyautogui.click(442, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112756.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112802",
+      "action": "pyautogui.moveTo(461, 353)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112802.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112804",
+      "action": "pyautogui.dragTo(455, 905, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112804.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112811",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@112811.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Employee_Age_By_Birthday.xlsx"
+  ]
+}

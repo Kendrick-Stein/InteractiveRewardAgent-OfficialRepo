@@ -1,0 +1,99 @@
+{
+  "id": "eabc805a-bfcf-4460-b250-ac92135819f6",
+  "snapshot": "vscode",
+  "instruction": "Please help me install the extension Python in VS Code.",
+  "source": "https://www.youtube.com/watch?v=VqCgcpAypFQ",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/eabc805a-bfcf-4460-b250-ac92135819f6",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "is_extension_installed",
+    "result": {
+      "type": "vm_command_line",
+      "command": [
+        "code",
+        "--list-extensions",
+        "|",
+        "grep",
+        "ms-python.python"
+      ]
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type": "contain",
+        "expected": "ms-python.python"
+      }
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125038",
+      "action": "pyautogui.click(472, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125038.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125049",
+      "action": "pyautogui.typewrite('python')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125049.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125102",
+      "action": "pyautogui.click(555, 377)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125102.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125110",
+      "action": "pyautogui.click(753, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125110.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125121",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@125121.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

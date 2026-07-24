@@ -1,0 +1,193 @@
+{
+  "id": "fdb7fd11-d744-4dd4-a8aa-e689912ae4e6",
+  "raw_id": "4188d3a4-077d-46b7-9c86-23e1a036f6c1",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Freeze the first column (Column A) to keep the item names always visible.",
+  "raw_instruction": "Help me freeze the range A1:B1 on this sheet to keep the headers always visible",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Freeze_row_column.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey('ctrl', 's');"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Freeze_row_column.xlsx",
+      "dest": "Freeze_row_column.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "fdb7fd11-d744-4dd4-a8aa-e689912ae4e6_expected.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "freeze",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Freeze_row_column.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Freeze_row_column.xlsx",
+      "dest": "Freeze_row_column.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1oTsiIJFiAIFaTo320izMP7ml1RDCctgD&export=download&authuser=0&confirm=t&uuid=e3ec92c6-c2bf-4a7e-8e10-c8287350c9c6&at=APZUnTXEp-KV7bido8GcENfWIxME:1705895589811",
+      "dest": "Freeze_row_column_gold.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "freeze",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        },
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/4188d3a4-077d-46b7-9c86-23e1a036f6c1/77a829c0-9e6c-49b3-a020-048a7307dace/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/4188d3a4-077d-46b7-9c86-23e1a036f6c1/Freeze_row_column2.xlsx",
+            "path": "/home/user/Freeze_row_column.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Freeze_row_column.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111743",
+      "action": "pyautogui.click(175.901, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111743.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111752",
+      "action": "pyautogui.click(218.634, 457.912, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@111752.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@111803",
+      "action": "pyautogui.click(542.609, 453.956, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@111803.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@111812",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@111812.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@111821",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20260105@111821.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

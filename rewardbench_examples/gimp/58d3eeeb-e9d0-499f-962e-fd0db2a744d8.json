@@ -1,0 +1,106 @@
+{
+  "id": "58d3eeeb-e9d0-499f-962e-fd0db2a744d8",
+  "snapshot": "gimp",
+  "instruction": "Based on the image above, translate the hidden audio conversation into French.",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/58d3eeeb-e9d0-499f-962e-fd0db2a744d8/heron.jpeg",
+            "path": "/home/user/Desktop/heron.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/heron.jpeg"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132756",
+      "action": "pyautogui.click(26, 14)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132756.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132801",
+      "action": "pyautogui.click(26, 604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132801.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132808",
+      "action": "pyautogui.click(180, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132808.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132818",
+      "action": "pyautogui.click(180, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132818.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132829",
+      "action": "pyautogui.click(180, 245)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132829.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132838",
+      "action": "pyautogui.click(372, 140)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132838.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132849",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@132849.png"
+    }
+  ],
+  "result_raw": "0"
+}

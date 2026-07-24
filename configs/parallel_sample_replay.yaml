@@ -1,0 +1,50 @@
+# Interactive Reward Agent parallel sample replay configuration.
+# Requires a compatible desktop_env installation. The recommended Docker server
+# setup is maintained at https://github.com/Computer-use-agents/GUI-Docker-Env
+
+desktop_env:
+  provider_name: docker_server
+  os_type: Ubuntu
+  action_space: pyautogui
+  base_url: http://127.0.0.1:50003
+  token: reward
+  sleep_after_execution: 0.5
+  reset_wait_seconds: 60
+  inter_step_wait_seconds: 2
+
+tasks:
+  examples_dir: rewardbench_examples
+  categories:
+    - chrome
+  task_ids: []
+  task_list_json:
+  max_tasks_per_category: 1
+  max_tasks_total:
+
+replay:
+  output_dir: runs/parallel_sample_replay
+  max_workers: 1
+  skip_existing: true
+  success_threshold: 0.8
+  epsilon: 0.0
+
+reward_agent:
+  # Set to true after the model endpoint and API key are configured.
+  # Put IRA_API_KEY and IRA_BASE_URL in a .env file (see .env.example).
+  enabled: false
+  model_id: gpt-4o
+  tool_app: auto
+  max_images: 5
+  max_steps: 30
+  # Sampling temperature sent to the LLM. Set to null for models that only
+  # accept the default temperature (e.g. OpenAI gpt-5 / o-series).
+  temperature: 0.0
+  client_type: deerapi
+  client:
+    type: deerapi
+    api_key_env: IRA_API_KEY
+    base_url_env: IRA_BASE_URL
+    base_url:
+
+logging:
+  level: INFO

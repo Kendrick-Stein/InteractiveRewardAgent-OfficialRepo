@@ -1,0 +1,487 @@
+{
+  "id": "3a7c8185-25c1-4941-bd7b-96e823c9f21f",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Sort the data according to column A in an ascending order and then create a line chart with the \"Date Time\" column on the X-axis and quantity on the Y-axis.",
+  "source": "SheetCopilot@5",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/51719eea-10bc-4246-a428-ac7c433dd4b3/BoomerangSales.xlsx",
+            "path": "/home/user/BoomerangSales.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/BoomerangSales.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/3a7c8185-25c1-4941-bd7b-96e823c9f21f",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "BoomerangSales.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/3a7c8185-25c1-4941-bd7b-96e823c9f21f/6_BoomerangSales_gt1.xlsx",
+      "dest": "6_BoomerangSales_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/BoomerangSales.xlsx",
+      "dest": "BoomerangSales.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        },
+        {
+          "type": "chart",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0",
+          "chart_props": [
+            "type"
+          ]
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@204230",
+      "action": "pyautogui.click(455, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@204236",
+      "action": "pyautogui.click(480, 99, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@204243",
+      "action": "pyautogui.click(1131, 387, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@204250",
+      "action": "pyautogui.click(758, 437, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@204257",
+      "action": "pyautogui.click(1240, 834, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@204310",
+      "action": "pyautogui.click(225, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@204319",
+      "action": "pyautogui.click(672, 378, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@204326",
+      "action": "pyautogui.click(156, 292, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@204340",
+      "action": "pyautogui.click(225, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@204348",
+      "action": "pyautogui.click(259, 125, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@204355",
+      "action": "pyautogui.click(768, 509, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@204404",
+      "action": "pyautogui.click(1104, 449, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@204411",
+      "action": "pyautogui.click(1213, 762, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@204420",
+      "action": "pyautogui.click(1419, 422, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@204432",
+      "action": "pyautogui.click(924, 584, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@204443",
+      "action": "pyautogui.write(',$Sheet1.$E$1:$E$36', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@204452",
+      "action": "pyautogui.click(1164, 584, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@204459",
+      "action": "pyautogui.click(1213, 762, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@204509",
+      "action": "pyautogui.click(1419, 762, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@204517",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('s'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@204525",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@204800",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@204818",
+      "action": "pyautogui.click(528, 448, button='left'); time.sleep(0.1); pyautogui.click(528, 448, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@204824",
+      "action": "pyautogui.click(1283, 849, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@204830",
+      "action": "pyautogui.click(528, 448, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@204836",
+      "action": "pyautogui.click(612, 650, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@204844",
+      "action": "pyautogui.click(1212, 704, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@204854",
+      "action": "pyautogui.click(924, 378, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@204908",
+      "action": "pyautogui.click(528, 448, button='left'); time.sleep(0.1); pyautogui.click(528, 448, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@204914",
+      "action": "pyautogui.click(528, 448, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@204921",
+      "action": "pyautogui.click(612, 650, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@204936",
+      "action": "pyautogui.click(1117, 481, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@204941",
+      "action": "pyautogui.click(1212, 704, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@205005",
+      "action": "pyautogui.click(924, 378, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@205014",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('s'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@205026",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@205047",
+      "action": "pyautogui.click(499, 459, button='left'); time.sleep(0.1); pyautogui.click(499, 459, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@205053",
+      "action": "pyautogui.click(499, 459, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@205059",
+      "action": "pyautogui.click(576, 654, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@205108",
+      "action": "pyautogui.click(1212, 707, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@205116",
+      "action": "pyautogui.click(960, 432, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@205123",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('s'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@205129",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

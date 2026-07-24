@@ -1,0 +1,248 @@
+{
+  "id": "4bc16d1e-0024-4357-b72a-151d7f11c5f6",
+  "raw_id": "0810415c-bde4-4443-9047-d5f70165a697",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Change the line spacing of the third paragraph to double line spacing",
+  "raw_instruction": "Make the line spacing of first two paragraph into double line spacing",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Novels_Intro_Packet.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "compare_line_spacing",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "4bc16d1e-0024-4357-b72a-151d7f11c5f6_expected.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Novels_Intro_Packet.docx",
+      "dest": "Novels_Intro_Packet.docx"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Novels_Intro_Packet.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "compare_line_spacing",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1-svVsH-l2ofufEKuN-cYrIrvXNobtATE&export=download&authuser=0&confirm=t&uuid=95ca5e2e-7fb3-4084-9f7b-a608a8277322&at=APZUnTXFO_571vyDp_r_LskPfq-j:1706796981024",
+      "dest": "Novels_Intro_Packet_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Novels_Intro_Packet.docx",
+      "dest": "Novels_Intro_Packet.docx"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/0810415c-bde4-4443-9047-d5f70165a697/12f65093-c562-41e8-af6f-035b44722e9e/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/0810415c-bde4-4443-9047-d5f70165a697/Novels_Intro_Packet.docx",
+            "path": "/home/user/Desktop/Novels_Intro_Packet.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Novels_Intro_Packet.docx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@125203",
+      "action": "pyautogui.moveTo(644.969, 560.769)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@125203.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@125203",
+      "action": "pyautogui.dragTo(1076.273, 565.714, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@125203.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@125212",
+      "action": "pyautogui.moveTo(644.969, 561.758)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@125212.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@125212",
+      "action": "pyautogui.dragTo(1080.248, 560.769, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@125212.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@125220",
+      "action": "pyautogui.click(287.205, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@125220.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@125228",
+      "action": "pyautogui.click(321.988, 255.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@125228.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@125236",
+      "action": "pyautogui.click(754.286, 694.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@125236.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@125247",
+      "action": "pyautogui.click(618.137, 792.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@125247.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@125258",
+      "action": "pyautogui.click(1370.435, 847.582, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@125258.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@125310",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@125310.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@125323",
+      "action": "pyautogui.click(84.472, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@125323.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@125336",
+      "action": "pyautogui.click(1902.112, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@125336.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@125350",
+      "action": "pyautogui.click(1906.087, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@125350.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@125403",
+      "action": "pyautogui.doubleClick(1850.435, 891.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@125403.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@125418",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20260105@125418.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

@@ -1,0 +1,294 @@
+{
+  "id": "05079b28-e775-401e-8cae-8f1483ba68bd",
+  "raw_id": "030eeff7-b492-4218-b312-701ec99ee0cc",
+  "snapshot": "thunderbird",
+  "instruction": "I find it disruptive when Thunderbird notifies me with a popup every time I receive a new email. Can you disable the new mail notification popups?",
+  "raw_instruction": "When I reply to an email, it quotes the original message but offsets it with an indentation and \">\" character. I would like to quote the original message with no indentation, and no special character. Could you help me remove the indentation and \">\" for me?",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "close_window",
+        "parameters": {
+          "window_name": "Mail.thunderbird",
+          "strict": true,
+          "by_class": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_thunderbird_prefs",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.thunderbird/t5q2a5hp.default-release/prefs.js",
+      "dest": "thunder-prefs.js"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": {
+          "mail.biff.show_alert": {
+            "method": "eq",
+            "ref": false
+          }
+        }
+      }
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "close_window",
+        "parameters": {
+          "window_name": "Mail.thunderbird",
+          "strict": true,
+          "by_class": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_thunderbird_prefs",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.thunderbird/t5q2a5hp.default-release/prefs.js",
+      "dest": "thunder-prefs.js"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": {
+          "mail.identity.id1.auto_quote": {
+            "method": "eq",
+            "ref": false
+          }
+        }
+      }
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/f201fbc3-44e6-46fc-bcaa-432f9815454c/ee831f43-553b-48a7-b9d5-a05f16cc565b/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://drive.usercontent.google.com/download?id=1EHLRWzBCOsyERkSMUnTF2pnsR0n6ZvtR&export=download&authuser=0&confirm=t&uuid=de09bd5e-bef8-499a-b599-c642af190e10&at=APZUnTXqOsQkxl0zMSX6R1Sgp_v3:1704362491712",
+            "path": "/home/user/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@125909",
+      "action": "pyautogui.click(1836.522, 78.132, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@125909.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@125919",
+      "action": "pyautogui.click(1597.019, 325.385, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@125919.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@125933",
+      "action": "pyautogui.click(212.671, 966.264, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@125933.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@125948",
+      "action": "pyautogui.click(410.435, 125.604, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@125948.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@130003",
+      "action": "pyautogui.click(212.671, 333.297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@130003.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@130014",
+      "action": "pyautogui.click(191.801, 242.308, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@130014.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@130030",
+      "action": "pyautogui.click(1053.416, 180.989, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@130030.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@130045",
+      "action": "pyautogui.write('new mail notification', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@130045.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@130100",
+      "action": "pyautogui.click(212.671, 1004.835, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@130100.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@130115",
+      "action": "pyautogui.click(410.435, 125.604, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@130115.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@130131",
+      "action": "pyautogui.click(1842.484, 89.011, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@130131.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@130146",
+      "action": "pyautogui.click(1597.019, 416.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@130146.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@130200",
+      "action": "pyautogui.click(191.801, 242.308, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@130200.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@130214",
+      "action": "pyautogui.click(1053.416, 180.989, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@130214.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@130227",
+      "action": "pyautogui.write('notification', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20260105@130227.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260105@130240",
+      "action": "pyautogui.click(443.23, 483.626, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20260105@130240.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260105@130251",
+      "action": "pyautogui.click(1902.112, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_17_20260105@130251.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260105@130302",
+      "action": "pyautogui.click(33.789, 130.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_18_20260105@130302.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260105@130314",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_19_20260105@130314.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

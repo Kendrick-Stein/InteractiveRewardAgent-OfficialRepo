@@ -1,0 +1,227 @@
+{
+  "id": "778efd0a-153f-4842-9214-f05fc176b877",
+  "snapshot": "vlc",
+  "instruction": "I'm using libreoffice impress to write slideshows. I found that the video being played by VLC media player had a good soundtrack. Please extract the audio to planet.wav and use it as background music for this slideshow.",
+  "source": "https://researchguides.case.edu/c.php?g=1286426",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/778efd0a-153f-4842-9214-f05fc176b877/Minimalist_Business_Slides.pptx",
+            "path": "/home/user/Desktop/Minimalist_Business_Slides.pptx"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/778efd0a-153f-4842-9214-f05fc176b877/planet.mp4",
+            "path": "/home/user/Desktop/planet.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Minimalist_Business_Slides.pptx"
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show /home/user/Desktop/planet.mp4",
+        "shell": true
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress",
+    "vlc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Minimalist_Business_Slides.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_audios",
+    "result": {
+      "type": "audio_in_slide",
+      "ppt_file_path": "/home/user/Desktop/Minimalist_Business_Slides.pptx",
+      "slide_index": 0,
+      "dest": "planet.wav"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/778efd0a-153f-4842-9214-f05fc176b877/planet.wav",
+      "dest": "gold_planet.wav"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@120645",
+      "action": "pyautogui.click(26, 265)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@120645.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@120649",
+      "action": "pyautogui.click(672, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@120649.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@120654",
+      "action": "pyautogui.click(734, 605)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@120654.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@120659",
+      "action": "pyautogui.click(1139, 488)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@120659.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@120705",
+      "action": "pyautogui.click(728, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@120705.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@120711",
+      "action": "pyautogui.click(791, 384)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@120711.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@120719",
+      "action": "pyautogui.click(1247, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@120719.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@120724",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@120724.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@120731",
+      "action": "pyautogui.click(1022, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@120731.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@120737",
+      "action": "pyautogui.typewrite('planet.wav')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@120737.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@120743",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@120743.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@120749",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@120749.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@120754",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@120754.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@120800",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@120800.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@120806",
+      "action": "pyautogui.click(1051, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@120806.png"
+    }
+  ],
+  "result_raw": "0"
+}

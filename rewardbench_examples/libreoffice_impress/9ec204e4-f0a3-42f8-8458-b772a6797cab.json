@@ -1,0 +1,192 @@
+{
+  "id": "9ec204e4-f0a3-42f8-8458-b772a6797cab",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Please duplicate the last two slides and insert the copies in alternating order, so the sequence becomes: original slide A, original slide B, then duplicated slide A, duplicated slide B. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx」.",
+  "source": "https://www.tiktok.com/@lil.d1rt_/video/7247574148887629083",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/9ec204e4-f0a3-42f8-8458-b772a6797cab/MLA_Workshop_061X_Works_Cited.pptx",
+            "path": "/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "MLA_Workshop_061X_Works_Cited.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": [
+      "compare_pptx_files",
+      "compare_pptx_files"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/9ec204e4-f0a3-42f8-8458-b772a6797cab/MLA_Workshop_061X_Works_Cited_Gold.pptx",
+        "dest": "MLA_Workshop_061X_Works_Cited_Gold.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/9ec204e4-f0a3-42f8-8458-b772a6797cab/MLA_Workshop_061X_Works_Cited_Gold_all_fonts.pptx",
+        "dest": "MLA_Workshop_061X_Works_Cited_Gold_all_fonts.pptx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx",
+        "dest": "MLA_Workshop_061X_Works_Cited.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx",
+        "dest": "MLA_Workshop_061X_Works_Cited.pptx"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130032",
+      "action": "pyautogui.click(180, 940)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130032.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130042",
+      "action": "pyautogui.rightClick(180, 940)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130042.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130050",
+      "action": "pyautogui.click(251, 728)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130050.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130057",
+      "action": "pyautogui.click(180, 979)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130057.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130103",
+      "action": "pyautogui.rightClick(180, 979)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@130103.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@130110",
+      "action": "pyautogui.click(259, 782)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@130110.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@130120",
+      "action": "pyautogui.click(180, 979)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@130120.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@130127",
+      "action": "pyautogui.rightClick(180, 979)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@130127.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@130133",
+      "action": "pyautogui.click(259, 782)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@130133.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@130140",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@130140.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/MLA_Workshop_061X_Works_Cited.pptx"
+  ]
+}

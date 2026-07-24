@@ -1,0 +1,882 @@
+{
+  "id": "9f3f70fc-5afc-4958-a7b7-3bb4fcb01805",
+  "snapshot": "chrome",
+  "instruction": "Browse the list of women's Nike jerseys over $60.",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.nba.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_html_parse",
+      "category": "class&url",
+      "class_multiObject": {
+        "filter-selector-link": [
+          "over $60",
+          "women",
+          "jerseys",
+          "nike"
+        ]
+      },
+      "url_include_expected": [
+        "over $60",
+        "women",
+        "jerseys",
+        "nike"
+      ]
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "over $60": true,
+          "women": true,
+          "jerseys": true,
+          "nike": true,
+          "is_other_exist": false
+        }
+      }
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@180443",
+      "action": "pyautogui.click(576, 244, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@180450",
+      "action": "pyautogui.write('nike.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@180458",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@180511",
+      "action": "pyautogui.click(1091, 297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@180528",
+      "action": "pyautogui.write(\"women's Nike jerseys\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@180547",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@180559",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@180621",
+      "action": "pyautogui.click(672, 244, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@180631",
+      "action": "pyautogui.write('nike.com/us', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@180643",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@180653",
+      "action": "pyautogui.write('nike.com/us', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@180709",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@180717",
+      "action": "pyautogui.write('nike.com/us', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@180737",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@180745",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@180808",
+      "action": "pyautogui.click(970, 859, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@180826",
+      "action": "pyautogui.click(1096, 298, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@180837",
+      "action": "pyautogui.write(\"women's Nike jerseys\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@180851",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@180900",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@180920",
+      "action": "pyautogui.click(1194, 586, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@180930",
+      "action": "pyautogui.scroll(-5, x=864, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@180939",
+      "action": "pyautogui.scroll(-5, x=864, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@180948",
+      "action": "pyautogui.scroll(-5, x=864, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@181024",
+      "action": "pyautogui.scroll(-5, x=864, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@181206",
+      "action": "pyautogui.click(35, 1040, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@181212",
+      "action": "pyautogui.click(960, 66, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@181219",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@181226",
+      "action": "pyautogui.click(993, 184, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@181233",
+      "action": "pyautogui.write('https://www.nike.com/w/womens-jerseys-37eefzv4dhzy7ok', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@181243",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@181259",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@181313",
+      "action": "pyautogui.click(576, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@181321",
+      "action": "pyautogui.write('https://www.nike.com/w/womens-jerseys-37eefzv4dhzy7ok', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@181331",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@181339",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@181356",
+      "action": "pyautogui.click(576, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@181403",
+      "action": "pyautogui.write('https://www.nike.com/w/womens-jerseys-37eefzv4dhzy7ok', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@181414",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@181427",
+      "action": "pyautogui.click(860, 227, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@181434",
+      "action": "pyautogui.click(1692, 227, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@181442",
+      "action": "pyautogui.write(\"women's jerseys\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@181451",
+      "action": "pyautogui.click(186, 313, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@181501",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@181510",
+      "action": "pyautogui.click(192, 1037, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@181517",
+      "action": "pyautogui.scroll(-5, x=192, y=756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@181542",
+      "action": "pyautogui.click(1632, 1022, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@181558",
+      "action": "pyautogui.scroll(-5, x=192, y=756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@181615",
+      "action": "pyautogui.click(1814, 184, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@181658",
+      "action": "pyautogui.click(129, 918, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@181735",
+      "action": "pyautogui.scroll(-5, x=211, y=918)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@181820",
+      "action": "pyautogui.click(129, 945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@181830",
+      "action": "pyautogui.scroll(-5, x=192, y=918)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@181841",
+      "action": "pyautogui.click(129, 974, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@181854",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@181904",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@181914",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@181928",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@182006",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@182023",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@182118",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260303@182148",
+      "action": "infeasible",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260303@182248",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260303@182337",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260303@182409",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260303@182421",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260303@182435",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260303@182452",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260303@182519",
+      "action": "pyautogui.scroll(-5, x=960, y=648)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260303@182544",
+      "action": "pyautogui.scroll(-5, x=960, y=756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260303@182554",
+      "action": "pyautogui.scroll(-5, x=960, y=864)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260303@182703",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260303@183128",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260303@183159",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260303@183212",
+      "action": "infeasible",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260303@183224",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260303@183239",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260303@183256",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260303@183314",
+      "action": "pyautogui.click(960, 540, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260303@183320",
+      "action": "pyautogui.write('passoword', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260303@183327",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260303@183420",
+      "action": "pyautogui.write('password', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260303@183426",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260303@183437",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260303@183445",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260303@183453",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260303@183503",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260303@183528",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

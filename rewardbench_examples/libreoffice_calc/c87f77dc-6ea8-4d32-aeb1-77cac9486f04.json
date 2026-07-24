@@ -1,0 +1,135 @@
+{
+  "id": "c87f77dc-6ea8-4d32-aeb1-77cac9486f04",
+  "raw_id": "3aaa4e37-dc91-482e-99af-132a612d40f3",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Please export the current sheet data to a CSV file using the UTF-8 encoding option. The name of the CSV file should match the xlsx file name.",
+  "raw_instruction": "Could you help me to export the current sheet to a csv file? Export the contents just as they are shown on the screen. Just keep the other options untouched. A default csv format is ok. The csv should share the file name with the original xlsx.",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "compare_csv",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV.csv"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "c87f77dc-6ea8-4d32-aeb1-77cac9486f04_expected.csv"
+    }
+  },
+  "raw_evaluator": {
+    "func": "compare_csv",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV.csv"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1cjyinycSAxi5oBb-dcpC85CMX9i-ggg-&export=download&authuser=0&confirm=t&uuid=b18a6fbd-8318-49ee-a62b-af22523df9e7&at=APZUnTV6dhR5_TcDg002RQ5CHmoC:1706012321261",
+      "dest": "Export_Calc_to_CSV_gold.csv"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/3aaa4e37-dc91-482e-99af-132a612d40f3/ff4f60a5-461d-4d47-a001-7e3823993795/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/3aaa4e37-dc91-482e-99af-132a612d40f3/Export_Calc_to_CSV.xlsx",
+            "path": "/home/user/Export_Calc_to_CSV.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Export_Calc_to_CSV.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@113617",
+      "action": "pyautogui.click(89.441, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@113617.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@113626",
+      "action": "pyautogui.click(145.093, 353.077, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@113626.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@113639",
+      "action": "pyautogui.click(1434.037, 910.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@113639.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@113651",
+      "action": "pyautogui.hotkey('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@113651.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@113700",
+      "action": "pyautogui.click(1331.677, 1004.835, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@113700.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@113711",
+      "action": "pyautogui.click(1549.317, 161.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@113711.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@113722",
+      "action": "pyautogui.click(1189.565, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@113722.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@113731",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20260105@113731.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

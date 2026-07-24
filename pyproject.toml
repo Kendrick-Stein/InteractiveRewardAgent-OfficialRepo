@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interactive-reward-agent"
+version = "0.1.0"
+description = "Interactive Reward Agent for GUI task-completion evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "smolagents",
+    "openai",
+    "python-dotenv",
+    "Pillow",
+    "requests",
+    "backoff",
+    "playwright",
+    "PyYAML",
+    "openpyxl",
+    "python-docx",
+    "python-pptx",
+]
+
+[project.optional-dependencies]
+# Fallback HTML-to-PDF backends for visualization (Playwright is the default).
+pdf = ["pdfkit", "weasyprint"]
+
+[project.scripts]
+ira-parallel-sample-replay = "ira_replay.parallel_sample_replay:main"
+
+[tool.setuptools.packages.find]
+include = ["RewardAgent*", "visualization*", "ira_replay*"]

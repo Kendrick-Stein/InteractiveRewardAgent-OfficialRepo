@@ -1,0 +1,139 @@
+{
+  "id": "3720f614-37fd-4d04-8a6b-76f54f8c222d",
+  "snapshot": "chrome",
+  "instruction": "I am more familiar with Korean as I am from Korea. I want to use chrome with my mother tongue. Could you help me change the Chrome interface language to Korean? ",
+  "source": "https://superuser.com/questions/984668/change-interface-language-of-chrome-to-english",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@122825",
+      "action": "pyautogui.click(34, 63)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@122825.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@122833",
+      "action": "pyautogui.click(1256, 238)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@122833.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@122839",
+      "action": "pyautogui.click(1016, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@122839.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@122852",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@122852.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@122912",
+      "action": "pyautogui.click(480, 685)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@122912.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@122927",
+      "action": "pyautogui.click(1068, 433)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@122927.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@122936",
+      "action": "pyautogui.click(968, 380)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@122936.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@122950",
+      "action": "pyautogui.typewrite('Korean')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@122950.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@123002",
+      "action": "pyautogui.click(609, 433)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@123002.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@123012",
+      "action": "pyautogui.click(1033, 789)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@123012.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@123026",
+      "action": "pyautogui.click(1114, 656)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@123026.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@123042",
+      "action": "pyautogui.click(1083, 665)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@123042.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@123057",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20251127@123057.png"
+    }
+  ],
+  "result_raw": "0"
+}

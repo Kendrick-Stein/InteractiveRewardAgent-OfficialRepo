@@ -1,0 +1,816 @@
+{
+  "id": "535364ea-05bd-46ea-9937-9f55c68507e8",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Create two pivot tables in a new sheet named \"Sheet2\" showing the total revenue for each product and sales channel.",
+  "source": "SheetCopilot@180",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/535364ea-05bd-46ea-9937-9f55c68507e8/SummerSales.xlsx",
+            "path": "/home/user/SummerSales.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/SummerSales.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/535364ea-05bd-46ea-9937-9f55c68507e8",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "SummerSales.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/535364ea-05bd-46ea-9937-9f55c68507e8/5_SummerSales_gt1.xlsx",
+      "dest": "5_SummerSales_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/SummerSales.xlsx",
+      "dest": "SummerSales.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "pivot_table",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2",
+          "pivot_props": [
+            "col_fields",
+            "filter",
+            "row_fields",
+            "data_fields"
+          ]
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@191500",
+      "action": "pyautogui.click(33, 613, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@191508",
+      "action": "pyautogui.click(259, 81, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@191515",
+      "action": "pyautogui.click(248, 78, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@191522",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('l'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@191531",
+      "action": "pyautogui.write('/home/user/shared/', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@191538",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@191549",
+      "action": "pyautogui.click(553, 400, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@191615",
+      "action": "pyautogui.click(192, 135, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@191621",
+      "action": "pyautogui.click(163, 211, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@191631",
+      "action": "pyautogui.click(662, 81, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@191637",
+      "action": "pyautogui.write('shared', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@191658",
+      "action": "pyautogui.click(192, 524, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@191705",
+      "action": "pyautogui.click(384, 167, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@191711",
+      "action": "pyautogui.click(835, 157, button='left'); time.sleep(0.1); pyautogui.click(835, 157, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@191718",
+      "action": "pyautogui.click(374, 157, button='left'); time.sleep(0.1); pyautogui.click(374, 157, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@191728",
+      "action": "pyautogui.click(835, 157, button='left'); time.sleep(0.1); pyautogui.click(835, 157, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@191737",
+      "action": "pyautogui.click(970, 84, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@191854",
+      "action": "pyautogui.click(33, 613, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@191900",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('l'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@191906",
+      "action": "pyautogui.write('/home/user/shared', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@191912",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@191946",
+      "action": "pyautogui.click(553, 400, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@191954",
+      "action": "pyautogui.click(970, 84, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@192150",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@192243",
+      "action": "pyautogui.click(242, 1043, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@192249",
+      "action": "pyautogui.click(323, 853, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@192255",
+      "action": "pyautogui.click(1231, 795, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@192301",
+      "action": "pyautogui.write('Product', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@192309",
+      "action": "pyautogui.click(232, 313, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@192315",
+      "action": "pyautogui.write('Total Revenue ($)', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@192322",
+      "action": "pyautogui.click(148, 337, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@192327",
+      "action": "pyautogui.write('Doublers', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@192333",
+      "action": "pyautogui.click(148, 356, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@192338",
+      "action": "pyautogui.write('Sunshine', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@192345",
+      "action": "pyautogui.click(148, 379, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@192350",
+      "action": "pyautogui.click(148, 366, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@192355",
+      "action": "pyautogui.write('Crested Beau»', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@192403",
+      "action": "pyautogui.click(221, 366, button='left'); time.sleep(0.1); pyautogui.click(221, 366, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@192410",
+      "action": "pyautogui.write('»', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@192419",
+      "action": "pyautogui.click(148, 391, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@192424",
+      "action": "pyautogui.click(148, 378, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@192430",
+      "action": "pyautogui.write('Quad', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@192437",
+      "action": "pyautogui.click(148, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@192442",
+      "action": "pyautogui.write('Carlota', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@192449",
+      "action": "pyautogui.click(148, 428, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@192455",
+      "action": "pyautogui.click(148, 415, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@192502",
+      "action": "pyautogui.write('Majectic Beau»', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@192509",
+      "action": "pyautogui.click(221, 415, button='left'); time.sleep(0.1); pyautogui.click(221, 415, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@192515",
+      "action": "pyautogui.write('»', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@192553",
+      "action": "pyautogui.click(507, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@192559",
+      "action": "pyautogui.click(538, 537, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@192605",
+      "action": "pyautogui.click(897, 564, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@192616",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@192622",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@192725",
+      "action": "pyautogui.write('Sub CreatePivotTables()\\n    Dim oDoc As Object\\n    Dim oSheet1 As Object\\n    Dim oSheet2 As Object\\n    Dim oCell As Object\\n    Dim i As Long, lastRow As Long\\n    \\n    oDoc = ThisComponent\\n    oSheet1 = oDoc.Sheets.getByName(\"Sheet1\")\\n    \\n    \\' Delete Sheet2 if exists and recreate\\n    If oDoc.Sheets.hasByName(\"Sheet2\") Then\\n        oDoc.Sheets.removeByName(\"Sheet2\")\\n    End If\\n    oDoc.Sheets.insertNewByName(\"Sheet2\", 1)\\n    oSheet2 = oDoc.Sheets.getByName(\"Sheet2\")\\n    \\n    \\' Find last row in Sheet1\\n    lastRow = 1\\n    Do While oSheet1.getCellByPosition(0, lastRow).getString() <> \"\"\\n        lastRow = lastRow + 1\\n    Loop\\n    lastRow = lastRow - 1 \\' last data row index (0-based)\\n    \\n    \\' Columns in Sheet1 (0-based): E=4 Sales Channel, F=5 Product, G=6 Revenue\\n    \\n    \\' --- Pivot Table 1: Total Revenue by Product ---\\n    oSheet2.getCellByPosition(0,0).setString(\"Product\")\\n    oSheet2.getCellByPosition(1,0).setString(\"Total Revenue ($)\")\\n    \\n    \\' Collect unique products\\n    Dim products() As String\\n    Dim pCount As Integer\\n    pCount = 0\\n    ReDim products(0)\\n    \\n    For i = 1 To lastRow\\n        Dim prod As String\\n        prod = oSheet1.getCellByPosition(5, i).getString()\\n        Dim found As Boolean\\n        found = False\\n        Dim j As Integer\\n        For j = 0 To pCount - 1\\n            If products(j) = prod Then\\n                found = True\\n                Exit For\\n            End If\\n        Next j\\n        If Not found And prod <> \"\" Then\\n            ReDim Preserve products(pCount)\\n            products(pCount) = prod\\n            pCount = pCount + 1\\n        End If\\n    Next i\\n    \\n    \\' Write products and sum revenues\\n    For j = 0 To pCount - 1\\n        oSheet2.getCellByPosition(0, j+1).setString(products(j))\\n        Dim total As Double\\n        total = 0\\n        For i = 1 To lastRow\\n            If oSheet1.getCellByPosition(5, i).getString() = products(j) Then\\n                total = total + oSheet1.getCellByPosition(6, i).getValue()\\n            End If\\n        Next i\\n        oSheet2.getCellByPosition(1, j+1).setValue(total)\\n    Next j\\n    \\n    \\' --- Pivot Table 2: Total Revenue by Sales Channel ---\\n    Dim startRow2 As Integer\\n    startRow2 = pCount + 3 \\' leave a blank row gap\\n    \\n    oSheet2.getCellByPosition(0, startRow2).setString(\"Sales Channel\")\\n    oSheet2.getCellByPosition(1, startRow2).setString(\"Total Revenue ($)\")\\n    \\n    \\' Collect unique sales channels\\n    Dim channels() As String\\n    Dim cCount As Integer\\n    cCount = 0\\n    ReDim channels(0)\\n    \\n    For i = 1 To lastRow\\n        Dim ch As String\\n        ch = oSheet1.getCellByPosition(4, i).getString()\\n        Dim foundC As Boolean\\n        foundC = False\\n        For j = 0 To cCount - 1\\n            If channels(j) = ch Then\\n                foundC = True\\n                Exit For\\n            End If\\n        Next j\\n        If Not foundC And ch <> \"\" Then\\n            ReDim Preserve channels(cCount)\\n            channels(cCount) = ch\\n            cCount = cCount + 1\\n        End If\\n    Next i\\n    \\n    \\' Write channels and sum revenues\\n    For j = 0 To cCount - 1\\n        oSheet2.getCellByPosition(0, startRow2 + j + 1).setString(channels(j))\\n        Dim totalC As Double\\n        totalC = 0\\n        For i = 1 To lastRow\\n            If oSheet1.getCellByPosition(4, i).getString() = channels(j) Then\\n                totalC = totalC + oSheet1.getCellByPosition(6, i).getValue()\\n            End If\\n        Next i\\n        oSheet2.getCellByPosition(1, startRow2 + j + 1).setValue(totalC)\\n    Next j\\n    \\n    \\' Save the document\\n    oDoc.store()\\n    \\n    MsgBox \"Done! Pivot tables created on Sheet2.\"\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@192909",
+      "action": "pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@192909",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=1152, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@193129",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('delete'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Sub CreatePivotTables()\\n    Dim oDoc As Object\\n    Dim oSheet1 As Object\\n    Dim oSheet2 As Object\\n    Dim oCell As Object\\n    Dim i As Long, lastRow As Long\\n\\n    oDoc = ThisComponent\\n    oSheet1 = oDoc.Sheets.getByName(\"Sheet1\")\\n\\n    \\' Delete Sheet2 if exists and recreate\\n    If oDoc.Sheets.hasByName(\"Sheet2\") Then\\n        oDoc.Sheets.removeByName(\"Sheet2\")\\n    End If\\n    oDoc.Sheets.insertNewByName(\"Sheet2\", 1)\\n    oSheet2 = oDoc.Sheets.getByName(\"Sheet2\")\\n\\n    \\' Find last row in Sheet1\\n    lastRow = 1\\n    Do While oSheet1.getCellByPosition(0, lastRow).getString() <> \"\"\\n        lastRow = lastRow + 1\\n    Loop\\n    lastRow = lastRow - 1 \\' last data row index (0-based)\\n\\n    \\' Columns in Sheet1 (0-based): E=4 Sales Channel, F=5 Product, G=6 Revenue\\n\\n    \\' --- Pivot Table 1: Total Revenue by Product ---\\n    oSheet2.getCellByPosition(0,0).setString(\"Product\")\\n    oSheet2.getCellByPosition(1,0).setString(\"Total Revenue ($)\")\\n\\n    \\' Collect unique products\\n    Dim products() As String\\n    Dim pCount As Integer\\n    pCount = 0\\n    ReDim products(0)\\n\\n    For i = 1 To lastRow\\n        Dim prod As String\\n        prod = oSheet1.getCellByPosition(5, i).getString()\\n        Dim found As Boolean\\n        found = False\\n        Dim j As Integer\\n        For j = 0 To pCount - 1\\n            If products(j) = prod Then\\n                found = True\\n                Exit For\\n            End If\\n        Next j\\n        If Not found And prod <> \"\" Then\\n            ReDim Preserve products(pCount)\\n            products(pCount) = prod\\n            pCount = pCount + 1\\n        End If\\n    Next i\\n\\n    \\' Write products and sum revenues\\n    For j = 0 To pCount - 1\\n        oSheet2.getCellByPosition(0, j+1).setString(products(j))\\n        Dim total As Double\\n        total = 0\\n        For i = 1 To lastRow\\n            If oSheet1.getCellByPosition(5, i).getString() = products(j) Then\\n                total = total + oSheet1.getCellByPosition(6, i).getValue()\\n            End If\\n        Next i\\n        oSheet2.getCellByPosition(1, j+1).setValue(total)\\n    Next j\\n\\n    \\' --- Pivot Table 2: Total Revenue by Sales Channel ---\\n    Dim startRow2 As Integer\\n    startRow2 = pCount + 3 \\' leave a blank row gap\\n\\n    oSheet2.getCellByPosition(0, startRow2).setString(\"Sales Channel\")\\n    oSheet2.getCellByPosition(1, startRow2).setString(\"Total Revenue ($)\")\\n\\n    \\' Collect unique sales channels\\n    Dim channels() As String\\n    Dim cCount As Integer\\n    cCount = 0\\n    ReDim channels(0)\\n\\n    For i = 1 To lastRow\\n        Dim ch As String\\n        ch = oSheet1.getCellByPosition(4, i).getString()\\n        Dim foundC As Boolean\\n        foundC = False\\n        For j = 0 To cCount - 1\\n            If channels(j) = ch Then\\n                foundC = True\\n                Exit For\\n            End If\\n        Next j\\n        If Not foundC And ch <> \"\" Then\\n            ReDim Preserve channels(cCount)\\n            channels(cCount) = ch\\n            cCount = cCount + 1\\n        End If\\n    Next i\\n\\n    \\' Write channels and sum revenues\\n    For j = 0 To cCount - 1\\n        oSheet2.getCellByPosition(0, startRow2 + j + 1).setString(channels(j))\\n        Dim totalC As Double\\n        totalC = 0\\n        For i = 1 To lastRow\\n            If oSheet1.getCellByPosition(4, i).getString() = channels(j) Then\\n                totalC = totalC + oSheet1.getCellByPosition(6, i).getValue()\\n            End If\\n        Next i\\n        oSheet2.getCellByPosition(1, startRow2 + j + 1).setValue(totalC)\\n    Next j\\n\\n    \\' Save the document\\n    oDoc.store()\\n\\n    MsgBox \"Done! Pivot tables created on Sheet2.\"\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=1152, y=324)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(528, 147, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260303@193129",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(520, 149, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260303@193324",
+      "action": "pyautogui.press('f5')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260303@193324",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260303@193324",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(33, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260303@193324",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(33, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260303@193420",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260303@193420",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('alt'); pyautogui.press('tab'); pyautogui.keyUp('alt')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260303@193420",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('alt'); pyautogui.press('tab'); pyautogui.keyUp('alt')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260303@193420",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(1903, 39, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260303@193441",
+      "action": "pyautogui.click(1200, 616, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260303@193452",
+      "action": "pyautogui.click(1903, 39, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260303@193502",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

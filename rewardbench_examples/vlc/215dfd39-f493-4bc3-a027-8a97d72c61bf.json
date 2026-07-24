@@ -1,0 +1,471 @@
+{
+  "id": "215dfd39-f493-4bc3-a027-8a97d72c61bf",
+  "snapshot": "chrome",
+  "instruction": "Can you disable the cone icon in the splash screen? I am tired of its skeuomorphic design.",
+  "source": "https://superuser.com/questions/1224784/how-to-change-vlcs-splash-screen",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "vlc"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": "vlc --no-audio --no-video-title-show",
+          "shell": true
+        }
+      }
+    ],
+    "func": "check_qt_bgcone",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected_qt_bgcone": 0
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260304@024558",
+      "action": "pyautogui.click(36, 608, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260304@024609",
+      "action": "pyautogui.click(505, 305, button='left'); time.sleep(0.1); pyautogui.click(505, 305, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260304@024618",
+      "action": "pyautogui.click(607, 405, button='left'); time.sleep(0.1); pyautogui.click(607, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260304@024637",
+      "action": "pyautogui.press('printscreen')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260304@024645",
+      "action": "pyautogui.click(960, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260304@024652",
+      "action": "pyautogui.click(960, 985, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260304@024711",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260304@024906",
+      "action": "pyautogui.click(1056, 540, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260304@024912",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('p'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260304@024922",
+      "action": "pyautogui.scroll(-5, x=956, y=594)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260304@024930",
+      "action": "pyautogui.click(637, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260304@024941",
+      "action": "pyautogui.click(672, 251, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260304@024947",
+      "action": "pyautogui.write('splash', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260304@024956",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260304@024956",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('logo', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260304@025007",
+      "action": "pyautogui.click(856, 253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260304@025019",
+      "action": "pyautogui.click(586, 391, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260304@025029",
+      "action": "pyautogui.click(576, 901, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260304@025039",
+      "action": "pyautogui.click(637, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260304@025047",
+      "action": "pyautogui.click(586, 391, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260304@025056",
+      "action": "pyautogui.scroll(-5, x=730, y=486)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260304@025105",
+      "action": "pyautogui.click(672, 251, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260304@025105",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('splash', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260304@025118",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260304@025118",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('logo', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260304@025128",
+      "action": "pyautogui.click(856, 253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260304@025138",
+      "action": "pyautogui.click(576, 901, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260304@025153",
+      "action": "pyautogui.click(240, 13, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260304@025201",
+      "action": "pyautogui.click(355, 216, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260304@025211",
+      "action": "pyautogui.click(1296, 903, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260304@025218",
+      "action": "pyautogui.click(943, 372, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260304@025225",
+      "action": "pyautogui.click(989, 605, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260304@025233",
+      "action": "pyautogui.click(637, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260304@025240",
+      "action": "pyautogui.click(586, 769, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260304@025249",
+      "action": "pyautogui.scroll(-5, x=730, y=594)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260304@025320",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260304@025328",
+      "action": "pyautogui.write('grep -n \"splash\\\\|logo\\\\|cone\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260304@025337",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260304@025356",
+      "action": "pyautogui.write('grep \"qt-splash\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260304@025356",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260304@025407",
+      "action": "pyautogui.write('echo \"qt-splash=0\" >> ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260304@025407",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260304@025417",
+      "action": "pyautogui.write('grep \"splash\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260304@025417",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260304@025429",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    }
+  ],
+  "result_raw": "0"
+}

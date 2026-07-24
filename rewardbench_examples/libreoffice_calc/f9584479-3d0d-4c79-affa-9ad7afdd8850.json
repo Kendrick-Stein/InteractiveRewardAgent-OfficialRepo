@@ -1,0 +1,226 @@
+{
+  "id": "f9584479-3d0d-4c79-affa-9ad7afdd8850",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Fill the missing rows and columns which show the total value The file to be evaluated is located on the VM at the following path: 「/home/user/Quarterly_Product_Sales_by_Zone.xlsx」.",
+  "source": "https://youtube.com/shorts/feldd-Pn48c?si=9xJiem2uAHm6Jshb",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/f9584479-3d0d-4c79-affa-9ad7afdd8850/Quarterly_Product_Sales_by_Zone.xlsx",
+            "path": "/home/user/Quarterly_Product_Sales_by_Zone.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Quarterly_Product_Sales_by_Zone.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/f9584479-3d0d-4c79-affa-9ad7afdd8850",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Quarterly_Product_Sales_by_Zone.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/f9584479-3d0d-4c79-affa-9ad7afdd8850/Quarterly_Product_Sales_by_Zone_gold.xlsx",
+      "dest": "Quarterly_Product_Sales_by_Zone_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Quarterly_Product_Sales_by_Zone.xlsx",
+      "dest": "Quarterly_Product_Sales_by_Zone.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113317",
+      "action": "pyautogui.click(530, 401)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113317.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113322",
+      "action": "pyautogui.typewrite('=SUM(B6:E6)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113322.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113328",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113328.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113334",
+      "action": "pyautogui.click(530, 437)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113334.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113341",
+      "action": "pyautogui.typewrite('=SUM(B9:E9)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113341.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113348",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113348.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113354",
+      "action": "pyautogui.click(530, 584)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113354.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113401",
+      "action": "pyautogui.typewrite('=SUM(B16:E16)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113401.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113407",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113407.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113413",
+      "action": "pyautogui.click(541, 609)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113413.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113420",
+      "action": "pyautogui.typewrite('=SUM(B17:E17)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113420.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113428",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113428.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113436",
+      "action": "pyautogui.click(541, 636)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113436.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113443",
+      "action": "pyautogui.typewrite('=SUM(B19:E19)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113443.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113450",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113450.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Quarterly_Product_Sales_by_Zone.xlsx"
+  ]
+}

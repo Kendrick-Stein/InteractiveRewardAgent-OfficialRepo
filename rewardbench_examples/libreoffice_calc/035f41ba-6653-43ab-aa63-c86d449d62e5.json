@@ -1,0 +1,240 @@
+{
+  "id": "035f41ba-6653-43ab-aa63-c86d449d62e5",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Help me fill in the Gross profit column by subtracting all the available expenses including discounts, allowances, material and labor charges, and overhead from the actual sale, i.e., the sales after deducting the returns. Then under column A named \"Year_Profit\" in a new sheet, display the Year Column in Sheet 1 as text appended by a \"_\" with the corresponding integer digits of Gross Profit value. The file to be evaluated is located on the VM at the following path: 「/home/user/IncomeStatement2.xlsx」.",
+  "source": "SheetCopilot@92",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/035f41ba-6653-43ab-aa63-c86d449d62e5/IncomeStatement2.xlsx",
+            "path": "/home/user/IncomeStatement2.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/IncomeStatement2.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/035f41ba-6653-43ab-aa63-c86d449d62e5",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "IncomeStatement2.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/035f41ba-6653-43ab-aa63-c86d449d62e5/5_IncomeStatement2_gt1.xlsx",
+      "dest": "5_IncomeStatement2_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/IncomeStatement2.xlsx",
+      "dest": "IncomeStatement2.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RNSheet1",
+          "sheet_idx1": "ENSheet1"
+        },
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112810",
+      "action": "pyautogui.click(1299, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112810.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112814",
+      "action": "pyautogui.typewrite('=B2-E2')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112814.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112820",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112820.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112827",
+      "action": "pyautogui.click(1304, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112827.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112834",
+      "action": "pyautogui.moveTo(1353, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112834.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112837",
+      "action": "pyautogui.dragTo(1356, 473, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112837.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112844",
+      "action": "pyautogui.click(242, 1044)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112844.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@112851",
+      "action": "pyautogui.rightClick(242, 1044)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@112851.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112858",
+      "action": "pyautogui.click(317, 847)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112858.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@112905",
+      "action": "pyautogui.click(1224, 792)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@112905.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@112913",
+      "action": "pyautogui.click(153, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@112913.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@112922",
+      "action": "pyautogui.typewrite('=\"Year_\" & INT(Sheet1.J2)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@112922.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@112931",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@112931.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@112937",
+      "action": "pyautogui.click(161, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@112937.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@112944",
+      "action": "pyautogui.typewrite('=\"Year_\" & INT(Sheet1.J3)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@112944.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@112951",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@112951.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/IncomeStatement2.xlsx"
+  ]
+}

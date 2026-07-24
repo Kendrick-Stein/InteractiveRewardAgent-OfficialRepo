@@ -1,0 +1,304 @@
+{
+  "id": "68fddd34-c195-4ec3-9711-0d2de1516fbc",
+  "raw_id": "12382c62-0cd1-4bf2-bdc8-1d20bf9b2371",
+  "snapshot": "libreoffice_calc",
+  "instruction": "In a new column calculate the Profit by substracting COGS from Sales. Then create a bar chart to visualize the profit per week.",
+  "raw_instruction": "Create a clustered column chart showing the Sales and COGS data for each week in a new sheet. Set the chart title as \"Sales & COGS\".",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "WeeklySales.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey('ctrl', 's');"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "68fddd34-c195-4ec3-9711-0d2de1516fbc_expected.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/WeeklySales.xlsx",
+      "dest": "WeeklySales.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "chart",
+          "sheet_idx0": "RNSheet6",
+          "sheet_idx1": "ENSheet6",
+          "chart_props": [
+            "type",
+            "title"
+          ]
+        }
+      ]
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "WeeklySales.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.google.com/uc?id=14DqiKT9DgU5KwXCngD6sYBymBrbvvSlk&export=download",
+      "dest": "13_WeeklySales_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/WeeklySales.xlsx",
+      "dest": "WeeklySales.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "chart",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2",
+          "chart_props": [
+            "type",
+            "title"
+          ]
+        }
+      ]
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/12382c62-0cd1-4bf2-bdc8-1d20bf9b2371/b88927a9-c333-4cc7-99b0-2c69830c4ea5/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/1e8df695-bd1b-45b3-b557-e7d599cf7597/WeeklySales.xlsx",
+            "path": "/home/user/WeeklySales.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/WeeklySales.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@112017",
+      "action": "pyautogui.click(427.329, 333.297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@112017.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@112030",
+      "action": "pyautogui.write('=B2-C2', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@112030.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@112036",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@112036.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@112046",
+      "action": "pyautogui.click(454.161, 326.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@112046.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@112101",
+      "action": "pyautogui.click(466.087, 334.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@112101.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@112114",
+      "action": "pyautogui.click(433.292, 331.319, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@112114.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@112128",
+      "action": "pyautogui.moveTo(462.112, 326.374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@112128.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@112128",
+      "action": "pyautogui.dragTo(462.112, 496.484, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@112128.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@112143",
+      "action": "pyautogui.moveTo(122.236, 305.604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@112143.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@112143",
+      "action": "pyautogui.dragTo(472.05, 500.44, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@112143.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@112159",
+      "action": "pyautogui.click(227.578, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@112159.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@112214",
+      "action": "pyautogui.click(253.416, 125.604, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@112214.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@112230",
+      "action": "pyautogui.click(783.106, 437.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@112230.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@112246",
+      "action": "pyautogui.click(1224.348, 759.56, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@112246.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@112300",
+      "action": "pyautogui.click(1418.137, 759.56, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@112300.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@112315",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@112315.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@112330",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20260105@112330.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

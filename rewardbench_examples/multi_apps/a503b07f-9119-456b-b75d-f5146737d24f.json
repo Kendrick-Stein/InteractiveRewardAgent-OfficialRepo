@@ -1,0 +1,314 @@
+{
+  "id": "a503b07f-9119-456b-b75d-f5146737d24f",
+  "snapshot": "os",
+  "instruction": "I have an image of my receipt located in /home/user. I'm looking to transform it into a PDF file. Can you assist me with this task? Save the resulting PDF as \"receipt.pdf\" on the desktop.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/a503b07f-9119-456b-b75d-f5146737d24f/OIP.jpg",
+            "path": "/home/user/OIP.jpg"
+          }
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/a503b07f-9119-456b-b75d-f5146737d24f",
+  "related_apps": [
+    "os",
+    "gimp",
+    "pdf"
+  ],
+  "evaluator": {
+    "func": "compare_pdf_images",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/a503b07f-9119-456b-b75d-f5146737d24f/receipt_Gold.pdf",
+      "dest": "receipt_Gold.pdf"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/receipt.pdf",
+      "dest": "receipt.pdf"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260304@003545",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260304@003552",
+      "action": "pyautogui.write('ls /home/user/', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260304@003600",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260304@003613",
+      "action": "pyautogui.write('convert /home/user/OIP.jpg /home/user/Desktop/receipt.pdf', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260304@003626",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260304@003638",
+      "action": "pyautogui.write('img2pdf /home/user/OIP.jpg -o /home/user/Desktop/receipt.pdf', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260304@003649",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260304@003658",
+      "action": "pyautogui.write('sudo apt install img2pdf', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260304@003707",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260304@003715",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260304@003724",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260304@003733",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260304@003744",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260304@003800",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260304@003825",
+      "action": "pyautogui.click(1849, 1007, button='left'); time.sleep(0.1); pyautogui.click(1849, 1007, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260304@003833",
+      "action": "pyautogui.click(1632, 158, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260304@003841",
+      "action": "pyautogui.click(1461, 211, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260304@003848",
+      "action": "pyautogui.click(1430, 513, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260304@003855",
+      "action": "pyautogui.scroll(-5, x=1430, y=513)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260304@003903",
+      "action": "pyautogui.scroll(-5, x=1430, y=513)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260304@003910",
+      "action": "pyautogui.click(1344, 467, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260304@003917",
+      "action": "pyautogui.click(1609, 150, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260304@003924",
+      "action": "pyautogui.click(88, 72, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260304@003931",
+      "action": "pyautogui.click(134, 484, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260304@003938",
+      "action": "pyautogui.click(451, 484, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260304@004004",
+      "action": "pyautogui.click(1346, 793, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260304@004011",
+      "action": "pyautogui.click(457, 244, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260304@004017",
+      "action": "pyautogui.write('receipt', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260304@004025",
+      "action": "pyautogui.click(1548, 162, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260304@004031",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

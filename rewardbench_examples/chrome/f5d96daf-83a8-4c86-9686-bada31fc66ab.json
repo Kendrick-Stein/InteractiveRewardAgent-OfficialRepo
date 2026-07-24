@@ -1,0 +1,158 @@
+{
+  "id": "f5d96daf-83a8-4c86-9686-bada31fc66ab",
+  "snapshot": "chrome",
+  "instruction": "Compare iPhone 15 Pro Max with iPhone 14 Pro Max and iPhone 13 Pro Max",
+  "source": "Mind2Web",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.apple.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_url_parse",
+      "goto_prefix": "https://www.",
+      "parse_keys": [
+        "modelList"
+      ],
+      "split_list": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "modelList": [
+            "iphone-15-pro-max",
+            "iphone-14-pro-max",
+            "iphone-13-pro-max"
+          ]
+        },
+        "ignore_list_order": true
+      }
+    }
+  },
+  "proxy": true,
+  "possibility_of_env_change": "medium",
+  "fixed_ip": false,
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@122608",
+      "action": "pyautogui.click(599, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@122608.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@122616",
+      "action": "pyautogui.click(1055, 774)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@122616.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@122622",
+      "action": "pyautogui.click(1122, 824)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@122622.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@122633",
+      "action": "pyautogui.click(1139, 569)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@122633.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@122647",
+      "action": "pyautogui.click(780, 766)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@122647.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@122658",
+      "action": "pyautogui.click(626, 497)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@122658.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@122707",
+      "action": "pyautogui.click(1139, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@122707.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@122717",
+      "action": "pyautogui.click(978, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@122717.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@122727",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251127@122727.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

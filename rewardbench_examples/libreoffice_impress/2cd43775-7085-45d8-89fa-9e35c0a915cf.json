@@ -1,0 +1,142 @@
+{
+  "id": "2cd43775-7085-45d8-89fa-9e35c0a915cf",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Enable auto-save every 3min for me, so that I don't need to hit \"ctrl-s\" that much",
+  "source": "https://www.libreofficehelp.com/enable-autosave-libreoffice/",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "libreoffice",
+          "--impress"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "func": "check_auto_saving_time",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.config/libreoffice/4/user/registrymodifications.xcu",
+      "dest": "registrymodifications.xcu"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "minutes": 3
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@002825",
+      "action": "pyautogui.click(482.981, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@002825.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@002838",
+      "action": "pyautogui.click(517.764, 503.407, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@002838.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@002851",
+      "action": "pyautogui.click(608.199, 576.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@002851.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@002904",
+      "action": "pyautogui.click(517.764, 576.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@002904.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@002919",
+      "action": "pyautogui.click(569.441, 603.297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@002919.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@002936",
+      "action": "pyautogui.click(826.832, 396.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@002936.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@002952",
+      "action": "pyautogui.click(1139.876, 396.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@002952.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@003009",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@003009.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@003026",
+      "action": "pyautogui.write('3', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@003026.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@003042",
+      "action": "pyautogui.click(1436.025, 857.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@003042.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@003053",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_11_20251222@003053.png"
+    }
+  ],
+  "result_raw": 1.0
+}

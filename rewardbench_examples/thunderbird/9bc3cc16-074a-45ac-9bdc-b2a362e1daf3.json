@@ -1,0 +1,190 @@
+{
+  "id": "9bc3cc16-074a-45ac-9bdc-b2a362e1daf3",
+  "snapshot": "thunderbird",
+  "instruction": "Could you help me back up all the email files in my inbox to ~/emails.bak? Please save them separately in eml format.",
+  "source": "https://www.quora.com/How-do-I-backup-email-files-in-Mozilla-Thunderbird",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/thunderbird/dd84e895-72fd-4023-a336-97689ded257c/thunderbird-profile.tar.gz",
+            "path": "/home/user/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "command",
+        "parameters": {
+          "command": [
+            "ls",
+            "-R",
+            "/home/user/emails.bak"
+          ],
+          "stdout": "emails.bak.ls"
+        }
+      }
+    ],
+    "func": "check_list",
+    "result": {
+      "type": "cache_file",
+      "path": "emails.bak.ls"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": [
+          "歡迎使用新的 Outlook.com 帳戶.*\\.eml",
+          "A Test E-mail.*\\.eml"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132523",
+      "action": "pyautogui.click(199, 196)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132523.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132527",
+      "action": "pyautogui.rightClick(515, 225)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132527.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132532",
+      "action": "pyautogui.click(584, 766)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132532.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132537",
+      "action": "pyautogui.click(1568, 207)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132537.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132544",
+      "action": "pyautogui.typewrite('emails.bak')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132544.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132550",
+      "action": "pyautogui.click(1529, 289)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132550.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132559",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132559.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132605",
+      "action": "pyautogui.rightClick(515, 225)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132605.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132612",
+      "action": "pyautogui.click(584, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132612.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132619",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132619.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132625",
+      "action": "pyautogui.click(1141, 630)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132625.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132630",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20251127@132630.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

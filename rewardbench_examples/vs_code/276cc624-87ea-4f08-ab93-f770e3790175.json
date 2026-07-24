@@ -1,0 +1,122 @@
+{
+  "id": "276cc624-87ea-4f08-ab93-f770e3790175",
+  "snapshot": "vscode",
+  "instruction": "Please help me set the current user's line length for code wrapping to 50 characters in VS Code.",
+  "source": "https://www.quora.com/unanswered/How-do-you-set-the-line-length-in-Visual-Studio-Code",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "check_json_settings",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "editor.wordWrapColumn": 50
+        }
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.config/Code/User/settings.json",
+      "dest": "settings.json"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@111300",
+      "action": "pyautogui.hotkey('ctrl', ',')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@111300.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@111307",
+      "action": "pyautogui.write('wrap', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@111307.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@111317",
+      "action": "pyautogui.click(1139.876, 609.231, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@111317.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@111329",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@111329.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@111339",
+      "action": "pyautogui.write('50', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@111339.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@111354",
+      "action": "pyautogui.click(1287.95, 486.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@111354.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@111410",
+      "action": "pyautogui.click(1020.621, 531.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@111410.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@111424",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251222@111424.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

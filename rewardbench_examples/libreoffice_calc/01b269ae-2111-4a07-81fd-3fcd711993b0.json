@@ -1,0 +1,412 @@
+{
+  "id": "01b269ae-2111-4a07-81fd-3fcd711993b0",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Fill all the blank cells in B1:E30 with the value in the cell above it. Finish the work and don't touch irrelevant regions, even if they are blank.",
+  "source": "https://www.youtube.com/shorts/VrUzPTIwQ04",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/01b269ae-2111-4a07-81fd-3fcd711993b0/Student_Level_Fill_Blank.xlsx",
+            "path": "/home/user/Student_Level_Fill_Blank.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Student_Level_Fill_Blank.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/01b269ae-2111-4a07-81fd-3fcd711993b0",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Student_Level_Fill_Blank.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/01b269ae-2111-4a07-81fd-3fcd711993b0/Student_Level_Fill_Blank_gold.xlsx",
+      "dest": "Student_Level_Fill_Blank_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Student_Level_Fill_Blank.xlsx",
+      "dest": "Student_Level_Fill_Blank.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@201953",
+      "action": "pyautogui.click(507, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@202002",
+      "action": "pyautogui.click(543, 537, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@202014",
+      "action": "pyautogui.click(897, 564, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@202103",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@202108",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@202132",
+      "action": "pyautogui.write(\"Sub FillBlanks()\\n    Dim oSheet As Object\\n    Dim oCell As Object\\n    Dim oCellAbove As Object\\n    Dim r As Integer, c As Integer\\n    \\n    oSheet = ThisComponent.Sheets.getByIndex(0)\\n    \\n    ' Columns B=1, C=2, D=3, E=4; Rows 1-30 (0-indexed: 0-29)\\n    For c = 1 To 4\\n        For r = 0 To 29\\n            oCell = oSheet.getCellByPosition(c, r)\\n            If oCell.getType() = 0 Then  ' 0 = EMPTY\\n                If r > 0 Then\\n                    oCellAbove = oSheet.getCellByPosition(c, r - 1)\\n                    ' Copy value based on type\\n                    If oCellAbove.getType() = 1 Then  ' NUMERIC\\n                        oCell.setValue(oCellAbove.getValue())\\n                    ElseIf oCellAbove.getType() = 2 Then  ' STRING\\n                        oCell.setString(oCellAbove.getString())\\n                    End If\\n                End If\\n            End If\\n        Next r\\n    Next c\\nEnd Sub\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@202231",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('z'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@202237",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@202242",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@202300",
+      "action": "pyautogui.write('Sub FillBlanks()', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@202307",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@202313",
+      "action": "pyautogui.write('Dim oSheet As Object', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@202320",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@202325",
+      "action": "pyautogui.write('Dim oCell As Object', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@202331",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@202337",
+      "action": "pyautogui.write('Dim oCellAbove As Object', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@202344",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@202349",
+      "action": "pyautogui.write('Dim r As Integer, c As Integer', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@202403",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@202409",
+      "action": "pyautogui.write('oSheet = ThisComponent.Sheets.getByIndex(0)', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@202422",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@202428",
+      "action": "pyautogui.write(\"' Columns B=1, C=2, D=3, E=4; Rows 1-30 (0-indexed: 0-29)\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@202437",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@202442",
+      "action": "pyautogui.write('For c = 1 To 4', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@202452",
+      "action": "pyautogui.press('home')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@202527",
+      "action": "pyautogui.click(864, 270, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@202533",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@202539",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@202555",
+      "action": "pyautogui.write('Sub FillBlanks()\\nDim oSheet As Object\\nDim oCell As Object\\nDim oCellAbove As Object\\nDim r As Integer\\nDim c As Integer\\noSheet = ThisComponent.Sheets.getByIndex(0)\\nFor c = 1 To 4\\nFor r = 0 To 29\\noCell = oSheet.getCellByPosition(c, r)\\nIf oCell.getType() = 0 Then\\nIf r > 0 Then\\noCellAbove = oSheet.getCellByPosition(c, r - 1)\\nIf oCellAbove.getType() = 1 Then\\noCell.setValue(oCellAbove.getValue())\\nElseIf oCellAbove.getType() = 2 Then\\noCell.setString(oCellAbove.getString())\\nEnd If\\nEnd If\\nEnd If\\nNext r\\nNext c\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@202638",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@202658",
+      "action": "pyautogui.click(534, 511, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@202711",
+      "action": "pyautogui.press('f5')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@202718",
+      "action": "pyautogui.click(518, 146, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@202730",
+      "action": "pyautogui.click(33, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@202736",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('s'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@202744",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

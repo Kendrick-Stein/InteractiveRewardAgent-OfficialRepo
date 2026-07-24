@@ -1,0 +1,235 @@
+{
+  "id": "a53f80cd-4a90-4490-8310-097b011433f6",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Set the font color of the title in slides 2 to 3 as black and bold the title. Also, delete the personal information (including the icons)in slide 4. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/21_0.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/a53f80cd-4a90-4490-8310-097b011433f6/21_0.pptx",
+            "path": "/home/user/Desktop/21_0.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/21_0.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "21_0.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": [
+      "compare_pptx_files",
+      "compare_pptx_files"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/a53f80cd-4a90-4490-8310-097b011433f6/21_0_Gold.pptx",
+        "dest": "21_0_Gold.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/a53f80cd-4a90-4490-8310-097b011433f6/21_0_Gold_all_fonts_3.pptx",
+        "dest": "21_0_Gold_all_fonts_3.pptx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/21_0.pptx",
+        "dest": "21_0.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/21_0.pptx",
+        "dest": "21_0.pptx"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130319",
+      "action": "pyautogui.click(172, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130319.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130325",
+      "action": "pyautogui.click(847, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130325.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130330",
+      "action": "pyautogui.click(1549, 276)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130330.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130339",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130339.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130347",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@130347.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@130354",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@130354.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@130403",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@130403.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@130412",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@130412.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@130421",
+      "action": "pyautogui.click(1564, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@130421.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@130430",
+      "action": "pyautogui.click(1545, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@130430.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@130437",
+      "action": "pyautogui.click(180, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@130437.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@130444",
+      "action": "pyautogui.click(830, 427)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@130444.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@130451",
+      "action": "pyautogui.click(1545, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@130451.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@130459",
+      "action": "pyautogui.click(1570, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@130459.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@130506",
+      "action": "pyautogui.click(1568, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@130506.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/21_0.pptx"
+  ]
+}

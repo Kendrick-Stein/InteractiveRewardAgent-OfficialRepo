@@ -1,0 +1,167 @@
+{
+  "id": "62f7fd55-0687-4a43-b6e1-3eda16fc6252",
+  "snapshot": "gimp",
+  "instruction": "Could you help me convert the image located at \"/home/user/logo.png\" to \".svg\" format by GIMP?",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/62f7fd55-0687-4a43-b6e1-3eda16fc6252/logo.png",
+            "path": "/home/user/logo.png"
+          }
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132710",
+      "action": "pyautogui.click(28, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132710.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132716",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132716.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132723",
+      "action": "pyautogui.click(82, 71)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132723.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132728",
+      "action": "pyautogui.click(119, 149)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132728.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132735",
+      "action": "pyautogui.click(136, 221)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132735.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132741",
+      "action": "pyautogui.click(322, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132741.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132748",
+      "action": "pyautogui.click(1016, 720)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132748.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132753",
+      "action": "pyautogui.click(84, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132753.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132759",
+      "action": "pyautogui.click(84, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132759.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132805",
+      "action": "pyautogui.click(84, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132805.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132811",
+      "action": "pyautogui.click(130, 234)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132811.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132818",
+      "action": "pyautogui.click(292, 425)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@132818.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@132826",
+      "action": "pyautogui.click(1016, 720)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@132826.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@132834",
+      "action": "pyautogui.click(84, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@132834.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@132841",
+      "action": "pyautogui.click(147, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@132841.png"
+    }
+  ],
+  "result_raw": "0"
+}

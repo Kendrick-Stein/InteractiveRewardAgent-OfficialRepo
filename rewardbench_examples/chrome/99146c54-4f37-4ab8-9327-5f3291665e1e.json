@@ -1,0 +1,140 @@
+{
+  "id": "99146c54-4f37-4ab8-9327-5f3291665e1e",
+  "snapshot": "chrome",
+  "instruction": "Please help me set Chrome to delete my browsing data automatically every time I close the browser.",
+  "source": "https://www.youtube.com/watch?v=v0kxqB7Xa6I",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "chrome"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "google-chrome",
+            "--remote-debugging-port=1337"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 3
+        }
+      }
+    ],
+    "func": "exact_match",
+    "result": {
+      "type": "data_delete_automacally"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "true"
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@122539",
+      "action": "pyautogui.click(1256, 242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@122539.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@122544",
+      "action": "pyautogui.click(1016, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@122544.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@122553",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@122553.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@122601",
+      "action": "pyautogui.click(480, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@122601.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@122612",
+      "action": "pyautogui.click(634, 784)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@122612.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@122621",
+      "action": "pyautogui.click(943, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@122621.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@122641",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@122641.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

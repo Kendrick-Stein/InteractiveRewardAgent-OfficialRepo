@@ -1,0 +1,239 @@
+{
+  "id": "2bd59342-0664-4ccb-ba87-79379096cc08",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Make sparkline charts for each order id with the data from Jan to Mar in the \"Chart\" column. The file to be evaluated is located on the VM at the following path: 「/home/user/OrderId_Month_Chart.xlsx」.",
+  "source": "https://www.youtube.com/shorts/L3Z-F1QTQFY",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/2bd59342-0664-4ccb-ba87-79379096cc08/OrderId_Month_Chart.xlsx",
+            "path": "/home/user/OrderId_Month_Chart.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/OrderId_Month_Chart.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/2bd59342-0664-4ccb-ba87-79379096cc08",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113249",
+      "action": "pyautogui.click(599, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113249.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113255",
+      "action": "pyautogui.typewrite('=SPARKLINE(C2:E2)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113255.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113258",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113258.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113303",
+      "action": "pyautogui.click(607, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113303.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113308",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113308.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113316",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113316.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113318",
+      "action": "pyautogui.typewrite('S')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113318.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113325",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113325.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113331",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113331.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113333",
+      "action": "pyautogui.typewrite('C')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113333.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113340",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113340.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113347",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113347.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113349",
+      "action": "pyautogui.typewrite('S')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113349.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113355",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113355.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113402",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113402.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113404",
+      "action": "pyautogui.typewrite('P')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113404.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113411",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113411.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113419",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113419.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113422",
+      "action": "pyautogui.typewrite('S')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113422.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113430",
+      "action": "pyautogui.click(434, 183)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113430.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113438",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113438.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113441",
+      "action": "pyautogui.typewrite('P')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113441.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/OrderId_Month_Chart.xlsx"
+  ]
+}

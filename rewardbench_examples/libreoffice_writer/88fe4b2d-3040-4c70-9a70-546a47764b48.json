@@ -1,0 +1,235 @@
+{
+  "id": "88fe4b2d-3040-4c70-9a70-546a47764b48",
+  "snapshot": "libreoffice_writer",
+  "instruction": "I am making a guideline for students of my course and would like to separate each sentence in the the first paragraph to improve readability. Please separate each sentence by creating one empty line space after each of them, as I am having hard time separating them one by one. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx」.",
+  "source": "https://stackoverflow.com/questions/56554555/libreoffice-writer-how-to-create-empty-line-space-after-every-period-in-a-par",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/88fe4b2d-3040-4c70-9a70-546a47764b48/CCCH9003_Tutorial_guidelines.docx",
+            "path": "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "CCCH9003_Tutorial_guidelines.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": [
+      "compare_docx_files",
+      "compare_docx_files",
+      "compare_docx_files"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/88fe4b2d-3040-4c70-9a70-546a47764b48/CCCH9003_Tutorial_guidelines_Gold_1.docx",
+        "dest": "CCCH9003_Tutorial_guidelines_Gold_1.docx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/88fe4b2d-3040-4c70-9a70-546a47764b48/CCCH9003_Tutorial_guidelines_Gold_2.docx",
+        "dest": "CCCH9003_Tutorial_guidelines_Gold_2.docx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/88fe4b2d-3040-4c70-9a70-546a47764b48/CCCH9003_Tutorial_guidelines_Gold_3.docx",
+        "dest": "CCCH9003_Tutorial_guidelines_Gold_3.docx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx",
+        "dest": "CCCH9003_Tutorial_guidelines.docx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx",
+        "dest": "CCCH9003_Tutorial_guidelines.docx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx",
+        "dest": "CCCH9003_Tutorial_guidelines.docx"
+      }
+    ],
+    "options": [
+      {
+        "ignore_blanks": false
+      },
+      {
+        "ignore_blanks": false
+      },
+      {
+        "ignore_blanks": false
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132115",
+      "action": "pyautogui.click(824, 411)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132115.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132120",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132120.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132125",
+      "action": "pyautogui.click(824, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132125.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132131",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132131.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132137",
+      "action": "pyautogui.click(782, 489)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132137.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132143",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132143.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132148",
+      "action": "pyautogui.click(791, 532)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132148.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132154",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132154.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132159",
+      "action": "pyautogui.click(780, 595)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132159.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132205",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132205.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132211",
+      "action": "pyautogui.click(880, 610)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132211.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132216",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@132216.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@132221",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20251127@132221.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/CCCH9003_Tutorial_guidelines.docx"
+  ]
+}

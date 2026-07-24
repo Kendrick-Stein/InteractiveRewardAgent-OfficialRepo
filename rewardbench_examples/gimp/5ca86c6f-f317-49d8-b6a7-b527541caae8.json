@@ -1,0 +1,94 @@
+{
+  "id": "5ca86c6f-f317-49d8-b6a7-b527541caae8",
+  "snapshot": "gimp",
+  "instruction": "Could you help me download the logo of the University of Hong Kong in '.png' format using only GIMP's built-in features, without launching a separate web browser?",
+  "source": "",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132743",
+      "action": "pyautogui.click(34, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132743.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132752",
+      "action": "pyautogui.click(96, 69)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132752.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132800",
+      "action": "pyautogui.click(115, 149)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132800.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132808",
+      "action": "pyautogui.click(151, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132808.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132819",
+      "action": "pyautogui.click(153, 429)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132819.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132829",
+      "action": "pyautogui.click(161, 270)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132829.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132835",
+      "action": "pyautogui.click(161, 308)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132835.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132841",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@132841.png"
+    }
+  ],
+  "result_raw": "0"
+}

@@ -1,0 +1,11 @@
+smolagents
+openai
+python-dotenv
+Pillow
+requests
+backoff
+playwright
+PyYAML
+openpyxl
+python-docx
+python-pptx

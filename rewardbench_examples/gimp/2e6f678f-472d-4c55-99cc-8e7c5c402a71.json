@@ -1,0 +1,183 @@
+{
+  "id": "2e6f678f-472d-4c55-99cc-8e7c5c402a71",
+  "snapshot": "gimp",
+  "instruction": "Please batch process all images on the desktop by increasing their brightness to 50, instead of adjusting them individually within GIMP.",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/2e6f678f-472d-4c55-99cc-8e7c5c402a71/squirrel.jpeg",
+            "path": "/home/user/Desktop/squirrel.jpeg"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/2e6f678f-472d-4c55-99cc-8e7c5c402a71/panda.jpeg",
+            "path": "/home/user/Desktop/panda.jpeg"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/2e6f678f-472d-4c55-99cc-8e7c5c402a71/heron.jpeg",
+            "path": "/home/user/Desktop/heron.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133238",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133238.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133245",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133245.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133249",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133249.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133254",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133254.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133301",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133301.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133307",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133307.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133313",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133313.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133319",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@133319.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@133326",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@133326.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@133333",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@133333.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@133339",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@133339.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@133345",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@133345.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@133351",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@133351.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@133357",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@133357.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@133403",
+      "action": "pyautogui.click(221, 534)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@133403.png"
+    }
+  ],
+  "result_raw": "0"
+}

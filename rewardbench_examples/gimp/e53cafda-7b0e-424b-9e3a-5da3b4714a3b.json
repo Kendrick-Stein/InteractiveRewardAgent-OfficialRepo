@@ -1,0 +1,153 @@
+{
+  "id": "e53cafda-7b0e-424b-9e3a-5da3b4714a3b",
+  "raw_id": "b148e375-fe0b-4bec-90e7-38632b0d73c2",
+  "snapshot": "gimp",
+  "instruction": "Please help me add a new layer and name it 'Circle'.",
+  "raw_instruction": "Could you assist me in adding a new layer and naming it 'Square'?",
+  "related_apps": [
+    "gimp"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(['ctrl', 'q']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "layer-new-name",
+        "value": "\"Circle\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "layer-new-name",
+        "value": "\"Square\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/b148e375-fe0b-4bec-90e7-38632b0d73c2_trace_f8b2dffedbb2_1755592327/image_0001.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/b148e375-fe0b-4bec-90e7-38632b0d73c2/white_background.xcf",
+            "path": "/home/user/Desktop/white_background.xcf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/white_background.xcf"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111428",
+      "action": "pyautogui.click(321.988, 79.121, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111428.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111436",
+      "action": "pyautogui.click(362.733, 102.857, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@111436.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@111443",
+      "action": "pyautogui.write('Circle', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@111443.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@111451",
+      "action": "pyautogui.click(1267.081, 860.44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@111451.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@111459",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20260105@111459.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

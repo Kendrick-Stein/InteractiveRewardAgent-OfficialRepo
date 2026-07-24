@@ -1,0 +1,1353 @@
+{
+  "id": "a5bbbcd5-b398-4c91-83d4-55e1e31bbb81",
+  "snapshot": "chrome",
+  "instruction": "Enable VLC Minimal Interface in window mode so the bottom playback controls are hidden, and make sure the setting persists after restarting VLC. I often multitask on my computer, and the persistent toolbar in VLC is very distracting.",
+  "source": "https://superuser.com/questions/776056/how-to-hide-bottom-toolbar-in-vlc",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "vlc"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": "vlc --no-audio --no-video-title-show",
+          "shell": true
+        }
+      }
+    ],
+    "func": "check_qt_minimal_view",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected_qt_minimal_view": 1
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260304@024351",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('p'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260304@024416",
+      "action": "pyautogui.click(651, 897, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260304@024438",
+      "action": "pyautogui.scroll(-5, x=730, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260304@024438",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(-5, x=720, y=486)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260304@024447",
+      "action": "pyautogui.click(605, 448, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260304@024508",
+      "action": "pyautogui.click(605, 448, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260304@024525",
+      "action": "pyautogui.click(701, 254, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260304@024826",
+      "action": "pyautogui.write('Show controls in full screen onlyWait, no, the type function just needs the content. Let me correct that:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no, the type function\\'s parameter is \"content\", so just:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no, I messed up the syntax. Let me do it properly:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no, the correct way is to use the type function with content as the string, no extra characters. Let me fix that:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no, I\\'m making a mistake. Let me just type the text correctly:\\n\\nThe search bar is active, so I need to type \"Show controls in full screen only\" into it. So the correct tool call is:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no, I keep adding the  by mistake. Let me remove that. The correct content is just the text:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"Show controls in full screen onlyWait, no! I'm making a syntax error. Let me stop. The correct tool call is:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"Show controls in full screen onlyWait, no! I'm repeating the mistake. Let me just write the correct tool call:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, I\\'m getting confused. Let me look at the function definition: the type function has a parameter \"content\" which is the string to type. So the correct call is:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, no! I\\'m doing it again. Let me just type the text properly, without the  suffix. The content is \"Show controls in full screen only\". So:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen only', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('Show controls in full screen onlyWait, I\\'m making a mistake here. Let me just use a shorter search term, like \"controls in full screen\" to make it easier. Maybe that will find the option. Let\\'s type \"controls in full screen\" instead.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screenWait, no, again with the . I need to stop that. Let me just type the text correctly:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screen', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screenWait, I\\'m really messing up the syntax. Let me look at the function definition again:\\n\\nThe type function has a parameter \"content\" which is the string to type. So the correct tool call is:\\n\\n{\"name\": \"type\", \"parameters\": {\"content\": \"controls in full screen\"}}\\n\\nWhich in the required format is:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screen', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"controls in full screenWait, no! I'm still adding the . I need to stop that. Let me just write the content as plain text, no HTML tags. The correct call is:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screen', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('controls in full screenWait, I\\'m going in circles. Let me just use a simpler search term, like \"minimal interface\". Let\\'s type that instead.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, no, again with the . I need to fix this. The correct way is:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"minimal interfaceWait, I'm making a mistake in the syntax. Let me just copy the correct format:\\n\\nThe tool call should be:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, I\\'m accidentally adding the  at the end. I need to remove that. The content is just \"minimal interface\", no . Let me do it correctly this time.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, I think I\\'m having a typo issue. Let me just use the hotkey to clear the search bar first: Ctrl+A to select all, then Delete, then type the correct text. Let\\'s do that:\\n\\nFirst, press Ctrl+A to select all text in the search bar (though it\\'s empty now, but just to be sure), then Delete, then type \"minimal interface\".', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.keyDown('a'); pyautogui.press('backspace'); pyautogui.keyUp('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, no, the backspace will clear it. Then type the text correctly.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"minimal interfaceWait, I'm still adding the . I think I'm confused with the click function's point parameter. No, the type function's content is just the string to type, no coordinates or tags. So the correct call is:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, I\\'m making a mistake here. Let me look at the previous steps: when I clicked the search bar, it was empty. So I need to type \"minimal interface\" into it, without any extra characters. The correct tool call is:\\n\\n{\"name\": \"type\", \"parameters\": {\"content\": \"minimal interface\"}}\\n\\nWhich in the required format is:', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interface', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"minimal interfaceWait, no! I'm still doing it. Let me just write the tool call properly, without the :\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"minimal interface\\n\\nYes! That's right. The content is just the text, no HTML tags. I was confusing the click function's point parameter with the type function's content. Okay, now let's execute that.\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('minimal interfaceWait, I\\'m going crazy. Let me just use a different approach. Instead of searching, let\\'s navigate manually. The task says: switch to All settings, then navigate to Interface > Main interfaces > Qt. Wait, maybe I need to expand Interface first? Wait, no, Interface is already expanded, showing Control interfaces, Hotkeys settings, Main interfaces. Wait, Main interfaces is a sub-item under Interface, but when I click Main interfaces, it doesn\\'t show Qt. Wait, maybe I need to click on \"Main interfaces\" and then look for Qt in the right pane? No, the right pane shows extra interface modules, including Qt interface. Wait, no, the task says \"Interface > Main interfaces > Qt\" — so Qt is a sub-sub-item. Wait, maybe I need to scroll up the left pane? Wait, no, let\\'s look again: the left pane has Interface, then under it, Control interfaces, Hotkeys settings, Main interfaces, Playlist... Wait, maybe Main interfaces has a sub-item Qt, but it\\'s not visible because the left pane is scrolled down? Wait, no, when I scrolled down, I saw Playlist, Stream output, etc. Wait, let\\'s scroll up the left pane to see if there\\'s a Qt sub-item under Main interfaces.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=730, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=730, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=730, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=730, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(643, 362, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(637, 363, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(607, 449, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(607, 449, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(637, 471, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(634, 473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(908, 556, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(904, 554, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(1213, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('alt'); pyautogui.press('f4'); pyautogui.keyUp('alt')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(33, 270, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(35, 271, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260304@024826",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260304@025448",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260304@025455",
+      "action": "pyautogui.write('pkill -f vlc; sleep 2', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260304@025503",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260304@025515",
+      "action": "pyautogui.write('grep -q \"qt-fs-controller\" ~/.config/vlc/vlcrc && sed -i \\'s/^.*qt-fs-controller=.*/qt-fs-controller=1/\\' ~/.config/vlc/vlcrc || echo \"qt-fs-controller=1\" >> ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260304@025531",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260304@025539",
+      "action": "pyautogui.write(\"sed -i 's/^#qt-fs-controller=.*/qt-fs-controller=1/' ~/.config/vlc/vlcrc\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260304@025550",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260304@025558",
+      "action": "pyautogui.write('grep \"qt-fs-controller\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260304@025608",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260304@025616",
+      "action": "pyautogui.write('vlc &\\nsleep 4', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260304@025703",
+      "action": "pyautogui.write('grep -A2 -B2 qt-fs-controller ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260304@025712",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260304@025721",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260304@025731",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260304@025738",
+      "action": "pyautogui.click(432, 50, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260304@025759",
+      "action": "pyautogui.write('cat ~/.config/vlc/vlcrc",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260304@025759",
+      "action": "grep -A5 -B5 qt-fs-controller', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260304@025812",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('u'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260304@025812",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('cat ~/.config/vlc/vlcrc",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260304@025812",
+      "action": "grep -A5 -B5 qt-fs-controller', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260304@025825",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('u'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260304@025825",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('cat ~/.config/vlc/vlcrc",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260304@025825",
+      "action": "grep -A5 -B5 qt-fs-controller', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 89,
+      "action_timestamp": "20260304@025836",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 90,
+      "action_timestamp": "20260304@025844",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 91,
+      "action_timestamp": "20260304@025853",
+      "action": "pyautogui.write('ller', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 92,
+      "action_timestamp": "20260304@025853",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 93,
+      "action_timestamp": "20260304@025902",
+      "action": "pyautogui.write('grep \"qt-fs-controller\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 94,
+      "action_timestamp": "20260304@025902",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 95,
+      "action_timestamp": "20260304@025923",
+      "action": "pyautogui.write('pkill -f vlc; sleep 2; vlc & sleep 4', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 96,
+      "action_timestamp": "20260304@025923",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 97,
+      "action_timestamp": "20260304@025933",
+      "action": "time.sleep(4)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 98,
+      "action_timestamp": "20260304@025954",
+      "action": "pyautogui.write('grep -B10 qt-fs-controller ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 99,
+      "action_timestamp": "20260304@025954",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 100,
+      "action_timestamp": "20260304@030038",
+      "action": "pyautogui.click(993, 372, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 101,
+      "action_timestamp": "20260304@030045",
+      "action": "pyautogui.click(1056, 472, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 102,
+      "action_timestamp": "20260304@030103",
+      "action": "pyautogui.press('print')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 103,
+      "action_timestamp": "20260304@030112",
+      "action": "pyautogui.click(1056, 899, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 104,
+      "action_timestamp": "20260304@030119",
+      "action": "pyautogui.click(960, 983, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 105,
+      "action_timestamp": "20260304@030126",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('q'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 106,
+      "action_timestamp": "20260304@030137",
+      "action": "pyautogui.click(672, 486, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 107,
+      "action_timestamp": "20260304@030144",
+      "action": "pyautogui.write('vlc &', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 108,
+      "action_timestamp": "20260304@030151",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 109,
+      "action_timestamp": "20260304@030219",
+      "action": "pyautogui.click(993, 372, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 110,
+      "action_timestamp": "20260304@030235",
+      "action": "pyautogui.press('print')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 111,
+      "action_timestamp": "20260304@030242",
+      "action": "pyautogui.click(864, 486, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 112,
+      "action_timestamp": "20260304@030249",
+      "action": "pyautogui.press('print')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 113,
+      "action_timestamp": "20260304@030256",
+      "action": "pyautogui.click(960, 983, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 114,
+      "action_timestamp": "20260304@030303",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 115,
+      "action_timestamp": "20260304@030340",
+      "action": "pyautogui.click(480, 486, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 116,
+      "action_timestamp": "20260304@030347",
+      "action": "pyautogui.write('pkill -f vlc; sleep 2', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 117,
+      "action_timestamp": "20260304@030355",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 118,
+      "action_timestamp": "20260304@030415",
+      "action": "pyautogui.write('if grep -q \"^qt-minimal-view=\" ~/.config/vlc/vlcrc; then', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 119,
+      "action_timestamp": "20260304@030425",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 120,
+      "action_timestamp": "20260304@030433",
+      "action": "pyautogui.write(\"sed -i 's/^qt-minimal-view=.*/qt-minimal-view=1/' ~/.config/vlc/vlcrc\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 121,
+      "action_timestamp": "20260304@030444",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 122,
+      "action_timestamp": "20260304@030451",
+      "action": "pyautogui.write('elif grep -q \"^#qt-minimal-view=\" ~/.config/vlc/vlcrc; then', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 123,
+      "action_timestamp": "20260304@030501",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 124,
+      "action_timestamp": "20260304@030509",
+      "action": "pyautogui.write(\"sed -i 's/^#qt-minimal-view=.*/qt-minimal-view=1/' ~/.config/vlc/vlcrc\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 125,
+      "action_timestamp": "20260304@030520",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 126,
+      "action_timestamp": "20260304@030526",
+      "action": "pyautogui.write('else', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 127,
+      "action_timestamp": "20260304@030534",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 128,
+      "action_timestamp": "20260304@030541",
+      "action": "pyautogui.write('echo \"qt-minimal-view=1\" >> ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 129,
+      "action_timestamp": "20260304@030551",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 130,
+      "action_timestamp": "20260304@030557",
+      "action": "pyautogui.write('fi', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 131,
+      "action_timestamp": "20260304@030605",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 132,
+      "action_timestamp": "20260304@030612",
+      "action": "pyautogui.write('grep \"qt-minimal-view\" ~/.config/vlc/vlcrc', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 133,
+      "action_timestamp": "20260304@030622",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 134,
+      "action_timestamp": "20260304@030630",
+      "action": "pyautogui.write('vlc &', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 135,
+      "action_timestamp": "20260304@030639",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 136,
+      "action_timestamp": "20260304@030649",
+      "action": "time.sleep(4)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 137,
+      "action_timestamp": "20260304@030702",
+      "action": "pyautogui.click(956, 486, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 138,
+      "action_timestamp": "20260304@030709",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('q'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 139,
+      "action_timestamp": "20260304@030717",
+      "action": "pyautogui.write('vlc &', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 140,
+      "action_timestamp": "20260304@030750",
+      "action": "time.sleep(4)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 141,
+      "action_timestamp": "20260304@030804",
+      "action": "pyautogui.click(703, 50, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 142,
+      "action_timestamp": "20260304@030814",
+      "action": "pyautogui.click(33, 270, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 143,
+      "action_timestamp": "20260304@030823",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    }
+  ],
+  "result_raw": "1"
+}

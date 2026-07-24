@@ -1,0 +1,113 @@
+{
+  "id": "7b1e1ff9-bb85-49be-b01d-d6424be18cd0",
+  "snapshot": "thunderbird",
+  "instruction": "Could you help me open up the profile management tabpage in Thunderbird? I want the profile management tabpage inside Thunderbird app, but not the profile chooser dialog during app launch.",
+  "source": "https://www.quora.com/How-do-I-open-a-Thunderbird-profile-manager-utility",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/thunderbird/dd84e895-72fd-4023-a336-97689ded257c/thunderbird-profile.tar.gz",
+            "path": "/home/user/Desktop/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "-f",
+          "/home/user/Desktop/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "result": {
+      "type": "accessibility_tree"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": [
+        {
+          "selectors": [
+            "application[name=Thunderbird] page-tab-list[attr|id=\"tabmail-tabs\"]>page-tab[name=\"About Profiles\"]"
+          ]
+        }
+      ]
+    },
+    "func": "check_accessibility_tree"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132354",
+      "action": "pyautogui.click(1837, 86)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132354.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132358",
+      "action": "pyautogui.click(1602, 442)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132358.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132402",
+      "action": "pyautogui.click(1624, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132402.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132407",
+      "action": "pyautogui.click(1306, 395)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132407.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132413",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@132413.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

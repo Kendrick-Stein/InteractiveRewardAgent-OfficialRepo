@@ -1,0 +1,199 @@
+{
+  "id": "0a0faba3-5580-44df-965d-f562a99b291c",
+  "snapshot": "libreoffice_writer",
+  "instruction": "I would like to make the first three words of the sentence left-aligned and the rest right-aligned. I basically want to have some empty space in the middle to add some photos. Assume that every sentence will have at least three words. Could you help me on alignment for me using tabstops? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/04 CHIN9505 EBook Purchasing info 2021 Jan.docx」.",
+  "source": "https://stackoverflow.com/questions/64528055/how-to-make-part-of-my-sentence-left-aligned-and-rest-as-right-aligned",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/0a0faba3-5580-44df-965d-f562a99b291c/04%20CHIN9505%20EBook%20Purchasing%20info%202021%20Jan.docx",
+            "path": "/home/user/Desktop/04 CHIN9505 EBook Purchasing info 2021 Jan.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/04 CHIN9505 EBook Purchasing info 2021 Jan.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "04 CHIN9505 EBook Purchasing info 2021 Jan.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "check_tabstops",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/0a0faba3-5580-44df-965d-f562a99b291c/04%20CHIN9505%20EBook%20Purchasing%20info%202021%20Jan_Gold.docx",
+      "dest": "04 CHIN9505 EBook Purchasing info 2021 Jan_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/04 CHIN9505 EBook Purchasing info 2021 Jan.docx",
+      "dest": "04 CHIN9505 EBook Purchasing info 2021 Jan.docx"
+    },
+    "options": {
+      "word_number_split_by_tabstop": 3,
+      "index": 0
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132150",
+      "action": "pyautogui.moveTo(418, 487)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132150.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132152",
+      "action": "pyautogui.dragTo(588, 494, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132152.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132157",
+      "action": "pyautogui.rightClick(570, 497)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132157.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132201",
+      "action": "pyautogui.click(643, 665)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132201.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132207",
+      "action": "pyautogui.click(839, 665)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132207.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132213",
+      "action": "pyautogui.click(791, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132213.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132219",
+      "action": "pyautogui.click(907, 395)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132219.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132225",
+      "action": "pyautogui.click(872, 397)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132225.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132231",
+      "action": "pyautogui.click(1353, 362)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132231.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132237",
+      "action": "pyautogui.click(1368, 868)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132237.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132243",
+      "action": "pyautogui.click(609, 487)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132243.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132250",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132250.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132255",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20251127@132255.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Desktop/04 CHIN9505 EBook Purchasing info 2021 Jan.docx"
+  ]
+}

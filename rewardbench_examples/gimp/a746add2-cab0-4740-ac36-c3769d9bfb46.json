@@ -1,0 +1,143 @@
+{
+  "id": "a746add2-cab0-4740-ac36-c3769d9bfb46",
+  "snapshot": "gimp",
+  "instruction": "Help me open up the Vignette filter window.",
+  "source": "https://www.youtube.com/watch?v=_L_MMU22bAw",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/a746add2-cab0-4740-ac36-c3769d9bfb46/dog_with_background.png",
+            "path": "/home/user/Desktop/dog_with_background.png"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/dog_with_background.png"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; pyautogui.press([\"esc\"]);time.sleep(1);pyautogui.hotkey([\"ctrl\", \"q\"]);time.sleep(1);"
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; pyautogui.press([\"right\"]);time.sleep(1);pyautogui.press([\"enter\"])"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_include_exclude",
+    "result": {
+      "type": "vm_command_line",
+      "command": "cat /home/user/.config/GIMP/2.10/action-history",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "include": [
+          "filters-vignette"
+        ],
+        "exclude": [
+          "error",
+          "failed",
+          "not found"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132718",
+      "action": "pyautogui.click(1187, 701)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132718.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132723",
+      "action": "pyautogui.click(472, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132723.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132729",
+      "action": "pyautogui.click(541, 265)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132729.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132736",
+      "action": "pyautogui.click(541, 265)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132736.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132743",
+      "action": "pyautogui.click(803, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132743.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132752",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@132752.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

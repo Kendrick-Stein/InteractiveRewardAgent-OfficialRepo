@@ -1,0 +1,125 @@
+{
+  "id": "7b7617bd-57cc-468e-9c91-40c4ec2bcb3d",
+  "snapshot": "gimp",
+  "instruction": "Set the minimum number of undo steps to 100.",
+  "source": "https://www.youtube.com/watch?v=G_PjQAy0iiU",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "undo-levels",
+        "value": "100"
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132612",
+      "action": "pyautogui.click(130, 76)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132612.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132617",
+      "action": "pyautogui.click(180, 640)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132617.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132623",
+      "action": "pyautogui.click(599, 554)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132623.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132629",
+      "action": "pyautogui.press('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132629.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132633",
+      "action": "pyautogui.typewrite('100')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132633.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132639",
+      "action": "pyautogui.click(830, 859)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132639.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132645",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@132645.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

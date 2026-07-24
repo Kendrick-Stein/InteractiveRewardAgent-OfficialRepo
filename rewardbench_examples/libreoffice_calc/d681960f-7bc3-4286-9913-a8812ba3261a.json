@@ -1,0 +1,289 @@
+{
+  "id": "d681960f-7bc3-4286-9913-a8812ba3261a",
+  "snapshot": "libreoffice_calc",
+  "instruction": "According to the scale table shown above, calculate and give each student a grade in the table below The file to be evaluated is located on the VM at the following path: 「/home/user/Student_Grades_and_Remarks.xlsx」.",
+  "source": "https://www.youtube.com/shorts/d7U1S_IsTVM",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/d681960f-7bc3-4286-9913-a8812ba3261a/Student_Grades_and_Remarks.xlsx",
+            "path": "/home/user/Student_Grades_and_Remarks.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Student_Grades_and_Remarks.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/d681960f-7bc3-4286-9913-a8812ba3261a",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Student_Grades_and_Remarks.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/d681960f-7bc3-4286-9913-a8812ba3261a/Student_Grades_and_Remarks_gold.xlsx",
+      "dest": "Student_Grades_and_Remarks_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Student_Grades_and_Remarks.xlsx",
+      "dest": "Student_Grades_and_Remarks.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112850",
+      "action": "pyautogui.click(541, 470)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112850.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112856",
+      "action": "pyautogui.typewrite('=VLOOKUP(E10,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112856.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112858",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112858.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112904",
+      "action": "pyautogui.click(541, 489)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112904.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112910",
+      "action": "pyautogui.typewrite('=VLOOKUP(E11,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112910.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112913",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112913.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112919",
+      "action": "pyautogui.click(541, 508)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112919.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112927",
+      "action": "pyautogui.typewrite('=VLOOKUP(E13,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112927.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112929",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112929.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@112936",
+      "action": "pyautogui.click(541, 529)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@112936.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112942",
+      "action": "pyautogui.typewrite('=VLOOKUP(E14,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112942.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112945",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112945.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@112951",
+      "action": "pyautogui.click(541, 548)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@112951.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113000",
+      "action": "pyautogui.typewrite('=VLOOKUP(E15,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113000.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113003",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113003.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113011",
+      "action": "pyautogui.click(541, 566)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113011.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113019",
+      "action": "pyautogui.typewrite('=VLOOKUP(E16,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113019.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113022",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113022.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113028",
+      "action": "pyautogui.click(541, 585)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113028.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113035",
+      "action": "pyautogui.typewrite('=VLOOKUP(E17,$D$2:$E$7,2,TRUE)')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113035.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113038",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113038.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113044",
+      "action": "pyautogui.click(541, 605)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113044.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Student_Grades_and_Remarks.xlsx"
+  ]
+}

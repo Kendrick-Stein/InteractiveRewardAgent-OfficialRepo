@@ -1,0 +1,85 @@
+{
+  "id": "ae78f875-5b98-4907-bbb5-9c737fc68c03",
+  "snapshot": "chrome",
+  "instruction": "Could you please change the number of search results displayed on one page to 50? I find that having more results visible at once significantly enhances my research efficiency, as it reduces the need to constantly click through multiple pages. ",
+  "source": "https://support.google.com/chrome/thread/219988391/increase-search-results-per-page?hl=en",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123237",
+      "action": "pyautogui.click(34, 60)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123237.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123245",
+      "action": "pyautogui.click(34, 60)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123245.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123256",
+      "action": "pyautogui.click(1256, 242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123256.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123310",
+      "action": "pyautogui.click(1078, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123310.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123320",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123320.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123333",
+      "action": "pyautogui.click(480, 550)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123333.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123344",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@123344.png"
+    }
+  ],
+  "result_raw": "0"
+}

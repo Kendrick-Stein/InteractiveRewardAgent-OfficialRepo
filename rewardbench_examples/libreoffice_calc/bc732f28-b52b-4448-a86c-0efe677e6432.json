@@ -1,0 +1,251 @@
+{
+  "id": "bc732f28-b52b-4448-a86c-0efe677e6432",
+  "raw_id": "51b11269-2ca8-4b2a-9163-f21758420e78",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Please filter the records so only entries with amounts greater than $5,000 are displayed.",
+  "raw_instruction": "Could you help me to sort the records accoring to the amounts ascendingly?",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Arrang_Value_min_to_max.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey('ctrl', 's');"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "bc732f28-b52b-4448-a86c-0efe677e6432_expected.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Arrang_Value_min_to_max.xlsx",
+      "dest": "filtered.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Arrang_Value_min_to_max.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1gZq47ls5eD-YpRH8MIeEYOpYwAAUR_Ua&export=download&authuser=0&confirm=t&uuid=085c84a0-eb3f-4fe8-9fa0-6d2495985cc0&at=APZUnTVtt_9I5I8emixgM2hbnjMh:1706002085970",
+      "dest": "Arrang_Value_min_to_max_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Arrang_Value_min_to_max.xlsx",
+      "dest": "Arrang_Value_min_to_max.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/51b11269-2ca8-4b2a-9163-f21758420e78/c26a8ba3-30e8-4256-a977-1a4369e164cf/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/51b11269-2ca8-4b2a-9163-f21758420e78/Arrang_Value_min_to_max.xlsx",
+            "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@113353",
+      "action": "pyautogui.click(476.025, 294.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@113353.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@113400",
+      "action": "pyautogui.click(454.161, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@113400.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@113411",
+      "action": "pyautogui.click(494.907, 175.055, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@113411.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@113422",
+      "action": "pyautogui.click(515.776, 317.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@113422.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@113432",
+      "action": "pyautogui.click(494.907, 508.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@113432.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@113442",
+      "action": "pyautogui.click(1101.118, 532.088, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@113442.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@113453",
+      "action": "pyautogui.click(940.124, 609.231, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@113453.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@113504",
+      "action": "pyautogui.click(1205.466, 532.088, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@113504.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@113516",
+      "action": "pyautogui.write('5000', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@113516.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@113529",
+      "action": "pyautogui.click(1293.913, 730.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@113529.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@113542",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@113542.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@113554",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20260105@113554.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

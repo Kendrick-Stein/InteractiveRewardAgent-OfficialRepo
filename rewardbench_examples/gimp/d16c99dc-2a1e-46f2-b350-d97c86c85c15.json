@@ -1,0 +1,281 @@
+{
+  "id": "d16c99dc-2a1e-46f2-b350-d97c86c85c15",
+  "snapshot": "gimp",
+  "instruction": "Could you assist me with resizing the dog layer of an image? I need to adjust the height to 512 pixels while maintaining the original aspect ratio? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/dog_with_background_two_layers.xcf」. The file before edits is located on the VM at the following path: 「/home/user/Desktop/dog_with_background_before_edit.png」.",
+  "source": "https://stackoverflow.com/questions/75185543/use-gimp-to-resize-image-in-one-layer-only",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/d16c99dc-2a1e-46f2-b350-d97c86c85c15/dog_with_background.png",
+            "path": "/home/user/Desktop/dog_with_background.png"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/d16c99dc-2a1e-46f2-b350-d97c86c85c15/dog_with_background_two_layers.xcf",
+            "path": "/home/user/Desktop/dog_with_background_before_edit.xcf"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/d16c99dc-2a1e-46f2-b350-d97c86c85c15/dog_with_background_two_layers.xcf",
+            "path": "/home/user/Desktop/dog_with_background_two_layers.xcf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/dog_with_background_before_edit.xcf"
+        ]
+      }
+    },
+    {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "GNU Image Manipulation Program"
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);time.sleep(1);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; pyautogui.write(\"dog_with_background_before_edit\");time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 1
+        }
+      },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/dog_with_background_two_layers.xcf"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "GNU Image Manipulation Program"
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);time.sleep(1);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; pyautogui.write(\"resized\");time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": [
+      "check_image_size",
+      "check_structure_sim_resized"
+    ],
+    "conj": "and",
+    "expected": [
+      {
+        "type": "rule",
+        "rules": {
+          "height": 512,
+          "ignore_transparent": true
+        }
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/dog_with_background.png",
+        "dest": "dog_with_background.png"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/resized.png",
+        "dest": "resized.png"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/resized.png",
+        "dest": "resized.png"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@231749",
+      "action": "pyautogui.click(305.093, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@231749.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@231804",
+      "action": "pyautogui.click(364.72, 428.242, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@231804.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@231815",
+      "action": "pyautogui.click(960.994, 577.582, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@231815.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@231827",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@231827.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@231837",
+      "action": "pyautogui.write('512', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@231837.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@231843",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@231843.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@231852",
+      "action": "pyautogui.click(1129.938, 730.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@231852.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251221@231900",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251221@231900.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251221@231909",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251221@231909.png"
+    }
+  ],
+  "result_raw": 1.0
+}

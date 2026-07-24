@@ -1,0 +1,119 @@
+{
+  "id": "a1af9f1c-50d5-4bc3-a51e-4d9b425ff638",
+  "snapshot": "thunderbird",
+  "instruction": "Due to certain security considerations and the nature of my work, I prefer not to configure an incoming email service in Thunderbird. However, I still need to send emails. Can you help me set up Thunderbird to send emails from anonym-x2024@outlook.com without configuring its incoming email service?",
+  "source": "https://superuser.com/questions/1764409/how-to-send-email-with-thunderbird-without-configuring-an-incoming-email-service",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/thunderbird/15c3b339-88f7-4a86-ab16-e71c58dcb01e/thunderbird-profile-blank.tar.gz",
+            "path": "/home/user/thunderbird-profile-blank.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile-blank.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/99146c54-4f37-4ab8-9327-5f3291665e1e",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132538",
+      "action": "pyautogui.click(455, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132538.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132543",
+      "action": "pyautogui.click(269, 458)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132543.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132550",
+      "action": "pyautogui.typewrite('anonym-x2024@outlook.com')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132550.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132557",
+      "action": "pyautogui.click(259, 535)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132557.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132605",
+      "action": "pyautogui.typewrite('your_password')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132605.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132613",
+      "action": "pyautogui.click(509, 625)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132613.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132621",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@132621.png"
+    }
+  ],
+  "result_raw": "0"
+}

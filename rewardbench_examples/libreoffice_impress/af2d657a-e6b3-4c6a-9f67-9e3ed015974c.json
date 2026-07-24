@@ -1,0 +1,175 @@
+{
+  "id": "af2d657a-e6b3-4c6a-9f67-9e3ed015974c",
+  "snapshot": "libreoffice_impress",
+  "instruction": "In the first slide, insert the title \"Happy Family\" and make the font style \"Microsoft JhengHei\". The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/9_1.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/af2d657a-e6b3-4c6a-9f67-9e3ed015974c/9_1.pptx",
+            "path": "/home/user/Desktop/9_1.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/9_1.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "9_1.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/af2d657a-e6b3-4c6a-9f67-9e3ed015974c/9_1_Gold.pptx",
+      "dest": "9_1_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/9_1.pptx",
+      "dest": "9_1.pptx"
+    },
+    "options": {
+      "examine_alignment": false,
+      "examine_font_underline": false,
+      "examine_font_size": false,
+      "examine_font_bold": false,
+      "examine_font_italic": false,
+      "examine_color_rgb": false,
+      "examine_strike_through": false,
+      "examine_bullets": false
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@004225",
+      "action": "pyautogui.click(880.497, 353.077, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@004225.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@004232",
+      "action": "pyautogui.write('Happy Family', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@004232.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@004240",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@004240.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@004248",
+      "action": "pyautogui.click(1638.758, 236.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@004248.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@004255",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@004255.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@004304",
+      "action": "pyautogui.write('Microsoft JhengHei', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@004304.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@004315",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@004315.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@004325",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@004325.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@004336",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251222@004336.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/9_1.pptx"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "aa3a8974-2e85-438b-b29e-a64df44deb4b",
+  "snapshot": "libreoffice_calc",
+  "instruction": "I'm working on a project and need to resize cells in a spreadsheet to fit onto one page and export to PDF for efficient presentation. Could you help me on this? Keep the name of PDF the same as the spreadsheet and place it under my home directory. The file to be evaluated is located on the VM at the following path: 「/home/user/Resize_Cells_Fit_Page.xlsx」.",
+  "source": "https://www.quora.com/Libre-Office-Calc-How-do-I-resize-all-cells-in-a-sheet-to-make-them-fit-to-1-page-for-printing-and-exporting-as-PDF",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/aa3a8974-2e85-438b-b29e-a64df44deb4b/Resize_Cells_Fit_Page.xlsx",
+            "path": "/home/user/Resize_Cells_Fit_Page.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Resize_Cells_Fit_Page.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/aa3a8974-2e85-438b-b29e-a64df44deb4b",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "func": [
+      "check_pdf_pages",
+      "compare_pdfs"
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Resize_Cells_Fit_Page.pdf",
+        "dest": "Resize_Cells_Fit_Page.pdf"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Resize_Cells_Fit_Page.pdf",
+        "dest": "Resize_Cells_Fit_Page.pdf"
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule",
+        "rules": {
+          "relation": "eq",
+          "ref_value": 1
+        }
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/aa3a8974-2e85-438b-b29e-a64df44deb4b/Resize_Cells_Fit_Page_gt.pdf",
+        "dest": "Resize_Cells_Fit_Page_gt.pdf"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112842",
+      "action": "pyautogui.click(324, 535)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112842.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112846",
+      "action": "pyautogui.click(292, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112846.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112853",
+      "action": "pyautogui.click(344, 380)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112853.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112859",
+      "action": "pyautogui.click(761, 302)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112859.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112906",
+      "action": "pyautogui.click(1316, 842)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112906.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112913",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112913.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@112920",
+      "action": "pyautogui.click(161, 482)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@112920.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112927",
+      "action": "pyautogui.click(1347, 802)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112927.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@112933",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@112933.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@112939",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@112939.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Resize_Cells_Fit_Page.xlsx"
+  ]
+}

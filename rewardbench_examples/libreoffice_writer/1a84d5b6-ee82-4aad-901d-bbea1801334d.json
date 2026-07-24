@@ -1,0 +1,203 @@
+{
+  "id": "1a84d5b6-ee82-4aad-901d-bbea1801334d",
+  "raw_id": "b21acd93-60fd-4127-8a43-2f5178f4a830",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Please apply double line spacing (2.0) and maintain a consistent font size of 10.5 throughout the entire document.",
+  "raw_instruction": "I have been practicing professional writing lately. Now I am writing essay which requires one paragraph each for introduction, body and conclusion with single-space for introduction, double-space for body then one-and-a-half-space for conclusion. The font size of this essay is 12. Could you help me on this?",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "CCHU9045_Course_Outline_2019-20.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      }
+    ],
+    "func": "compare_line_spacing",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "1a84d5b6-ee82-4aad-901d-bbea1801334d_expected.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx",
+      "dest": "Thesis_Draft.docx"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "CCHU9045_Course_Outline_2019-20.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "compare_line_spacing",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.google.com/uc?id=16LN7uYSSXk_xwgc4IZXnN2Z1nCmPJfLm&export=download",
+      "dest": "CCHU9045_Course_Outline_2019-20_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx",
+      "dest": "CCHU9045_Course_Outline_2019-20.docx"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/b21acd93-60fd-4127-8a43-2f5178f4a830/d21a3eed-e332-48e7-8dac-a5b7b065966b/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/b21acd93-60fd-4127-8a43-2f5178f4a830/CCHU9045_Course_Outline_2019-20.docx",
+            "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@125231",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@125231.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@125237",
+      "action": "pyautogui.click(287.205, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@125237.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@125247",
+      "action": "pyautogui.click(323.975, 252.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@125247.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@125259",
+      "action": "pyautogui.click(754.286, 694.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@125259.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@125310",
+      "action": "pyautogui.click(621.118, 792.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@125310.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@125323",
+      "action": "pyautogui.click(1370.435, 847.582, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@125323.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@125336",
+      "action": "pyautogui.click(661.863, 147.363, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@125336.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@125350",
+      "action": "pyautogui.click(598.261, 287.802, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@125350.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@125403",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@125403.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@125418",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20260105@125418.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

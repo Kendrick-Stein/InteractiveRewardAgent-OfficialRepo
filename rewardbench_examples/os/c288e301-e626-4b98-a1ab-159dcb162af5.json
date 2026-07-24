@@ -1,0 +1,84 @@
+{
+  "id": "c288e301-e626-4b98-a1ab-159dcb162af5",
+  "snapshot": "os",
+  "instruction": "Please set the default Python version to Python4 on my Ubuntu system.",
+  "source": "https://stackoverflow.com/questions/41986507/unable-to-set-default-python-version-to-python3-in-ubuntu",
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125811",
+      "action": "pyautogui.click(32, 631)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125811.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125817",
+      "action": "pyautogui.click(46, 11)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125817.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125823",
+      "action": "pyautogui.typewrite('terminal')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125823.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125832",
+      "action": "pyautogui.click(987, 188)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125832.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125844",
+      "action": "pyautogui.typewrite('python4 --version')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125844.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125856",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125856.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125906",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@125906.png"
+    }
+  ],
+  "result_raw": "0"
+}

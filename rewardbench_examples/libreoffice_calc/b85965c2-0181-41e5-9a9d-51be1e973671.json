@@ -1,0 +1,272 @@
+{
+  "id": "b85965c2-0181-41e5-9a9d-51be1e973671",
+  "raw_id": "1334ca3e-f9e3-4db8-9ca7-b4c653be7d17",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Ensure the zoom level is reset to 100% for proper editing.",
+  "raw_instruction": "The cells are so big that I can not click on the cell I want, zoom out a little bit.",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Zoom_Out_Oversized_Cells.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey('ctrl', '0');"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Zoom_Out_Oversized_Cells.xlsx",
+      "dest": "Zoom_Out_Oversized_Cells.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "b85965c2-0181-41e5-9a9d-51be1e973671_expected.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "zoom",
+          "sheet_idx": 0,
+          "method": "eq",
+          "ref": 100
+        },
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Zoom_Out_Oversized_Cells.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Zoom_Out_Oversized_Cells.xlsx",
+      "dest": "Zoom_Out_Oversized_Cells.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1sX_roln3dNbXat0umlAIwZrW2eBmLkLE&export=download&authuser=0&confirm=t&uuid=a8f92992-86bd-43f4-92ce-9e4d99dca980&at=APZUnTUDPJVW_y6QeI9vlxlHAS0Q:1705851308643",
+      "dest": "Zoom_Out_Oversized_Cells_gold.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "zoom",
+          "sheet_idx": 0,
+          "method": "lt",
+          "ref": 260
+        },
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/1334ca3e-f9e3-4db8-9ca7-b4c653be7d17/a4b2b2b8-fb49-4dd3-94b5-5c3d75aa15d3/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/1334ca3e-f9e3-4db8-9ca7-b4c653be7d17/Zoom_Out_Oversized_Cells.xlsx",
+            "path": "/home/user/Zoom_Out_Oversized_Cells.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Zoom_Out_Oversized_Cells.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111821",
+      "action": "pyautogui.click(1743.106, 1070.11, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111821.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111833",
+      "action": "pyautogui.click(1741.118, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@111833.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@111843",
+      "action": "pyautogui.click(1745.093, 1070.11, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@111843.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@111853",
+      "action": "pyautogui.click(1747.081, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@111853.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@111905",
+      "action": "pyautogui.click(1862.36, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@111905.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@111918",
+      "action": "pyautogui.click(1823.602, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@111918.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@111931",
+      "action": "pyautogui.click(1862.36, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@111931.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@111945",
+      "action": "pyautogui.click(1796.77, 1071.099, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@111945.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@111958",
+      "action": "pyautogui.click(177.888, 79.121, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@111958.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@112014",
+      "action": "pyautogui.click(212.671, 630.989, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@112014.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@112030",
+      "action": "pyautogui.click(523.727, 760.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@112030.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@112046",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@112046.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@112101",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20260105@112101.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

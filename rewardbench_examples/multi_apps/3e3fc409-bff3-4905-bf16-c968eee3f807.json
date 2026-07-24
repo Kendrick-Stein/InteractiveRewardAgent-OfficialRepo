@@ -1,0 +1,224 @@
+{
+  "id": "3e3fc409-bff3-4905-bf16-c968eee3f807",
+  "snapshot": "chrome",
+  "instruction": "I'm a huge movie fan and have kept a record of all the movies I've watched. I'm curious to find out if there are any films released before 2024 from the IMDB Top 30 list that I haven't seen yet. Help me create another sheet 'unseen_movies' in the opened Excel. This sheet should share the same headers and sort the results according to IMDB rankings from high to low.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.imdb.com"
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/3e3fc409-bff3-4905-bf16-c968eee3f807/movies.xlsx",
+            "path": "/home/user/Desktop/movies.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "libreoffice",
+          "--calc",
+          "/home/user/Desktop/movies.xlsx"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_calc",
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/movies.xlsx",
+      "dest": "movies.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/3e3fc409-bff3-4905-bf16-c968eee3f807/gold_movies.xlsx",
+      "dest": "gold_movies.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RNunseen_movies",
+          "sheet_idx1": "ENunseen_movies"
+        }
+      ]
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@121339",
+      "action": "pyautogui.click(194, 1044)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@121339.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@121344",
+      "action": "pyautogui.typewrite('unseen_movies')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@121344.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@121351",
+      "action": "pyautogui.click(147, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@121351.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@121357",
+      "action": "pyautogui.typewrite('title')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@121357.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@121405",
+      "action": "pyautogui.click(226, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@121405.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@121411",
+      "action": "pyautogui.typewrite('year')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@121411.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@121418",
+      "action": "pyautogui.click(311, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@121418.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@121425",
+      "action": "pyautogui.typewrite('imdb_ranking')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@121425.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@121432",
+      "action": "pyautogui.click(397, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@121432.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@121440",
+      "action": "pyautogui.typewrite('status')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@121440.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@121447",
+      "action": "pyautogui.click(401, 1044)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@121447.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@121454",
+      "action": "pyautogui.click(1224, 793)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@121454.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@121500",
+      "action": "pyautogui.typewrite('title')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@121500.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@121509",
+      "action": "pyautogui.click(228, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@121509.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@121516",
+      "action": "pyautogui.typewrite('year')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@121516.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

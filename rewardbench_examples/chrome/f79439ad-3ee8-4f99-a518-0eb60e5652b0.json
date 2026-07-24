@@ -1,0 +1,206 @@
+{
+  "id": "f79439ad-3ee8-4f99-a518-0eb60e5652b0",
+  "snapshot": "chrome",
+  "instruction": "Search for a one way flight from Dublin to Vienna on 10th next month for 2 adults.",
+  "source": "test_task_2",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.ryanair.com/gb/en"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_url_parse",
+      "goto_prefix": "https://www.",
+      "parse_keys": [
+        "originIata",
+        "destinationIata",
+        "tpAdults",
+        "tpTeens",
+        "tpChildren",
+        "tpStartDate",
+        "isReturn"
+      ],
+      "replace": {
+        "tpStartDate": "time"
+      }
+    },
+    "expected": {
+      "type": "rule_relativeTime",
+      "rules": {
+        "relativeTime": {
+          "from": "10th next month"
+        },
+        "expected": {
+          "originIata": "DUB",
+          "destinationIata": "VIE",
+          "tpAdults": "2",
+          "tpTeens": "0",
+          "tpChildren": "0",
+          "time": "{Year}-{Month0D}-{DayD}",
+          "isReturn": "false"
+        }
+      }
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124417",
+      "action": "pyautogui.click(1051, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124417.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124424",
+      "action": "pyautogui.click(515, 415)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124424.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124432",
+      "action": "pyautogui.click(568, 478)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124432.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124441",
+      "action": "pyautogui.typewrite('Dublin')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124441.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124452",
+      "action": "pyautogui.click(565, 482)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124452.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124503",
+      "action": "pyautogui.click(862, 478)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124503.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124512",
+      "action": "pyautogui.typewrite('Vienna')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@124512.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@124524",
+      "action": "pyautogui.click(914, 713)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@124524.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@124537",
+      "action": "pyautogui.click(960, 806)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@124537.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@124550",
+      "action": "pyautogui.click(1139, 800)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@124550.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@124604",
+      "action": "pyautogui.click(824, 724)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@124604.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@124617",
+      "action": "pyautogui.click(1218, 470)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@124617.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@124626",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20251127@124626.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

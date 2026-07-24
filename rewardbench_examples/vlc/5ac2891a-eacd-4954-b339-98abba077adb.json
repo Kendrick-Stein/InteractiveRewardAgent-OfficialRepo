@@ -1,0 +1,75 @@
+{
+  "id": "5ac2891a-eacd-4954-b339-98abba077adb",
+  "snapshot": "base_setup",
+  "instruction": "My VLC Media Player has been auto-closing once the video ends. It is very annoying. Could you help me prevent the VLC Media Player from auto-closing once the video ends?",
+  "source": "https://superuser.com/questions/1412810/how-to-prevent-vlc-media-player-from-auto-closing-after-video-end#:%7E:text=Click%20on%20%22Media%22on%20the,VLC%20player%20after%20video%20ending",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114006",
+      "action": "pyautogui.click(943, 370)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114006.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114012",
+      "action": "pyautogui.click(993, 598)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114012.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114024",
+      "action": "pyautogui.click(941, 740)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114024.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114038",
+      "action": "pyautogui.click(1197, 896)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114038.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114052",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@114052.png"
+    }
+  ],
+  "result_raw": "0"
+}

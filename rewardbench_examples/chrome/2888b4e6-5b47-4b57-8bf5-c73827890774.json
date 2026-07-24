@@ -1,0 +1,1168 @@
+{
+  "id": "2888b4e6-5b47-4b57-8bf5-c73827890774",
+  "snapshot": "chrome",
+  "instruction": "Show me all men's large-size short-sleeve shirts with a discount of 50% or more.",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.macys.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "url_path_parse",
+      "goto_prefix": "https://www.",
+      "parse_keys": [
+        "mens_clothing",
+        "shirts",
+        "Men_regular_size_t",
+        "Price_discount_range",
+        "short_sleeve"
+      ]
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "mens_clothing": true,
+          "shirts": true,
+          "Men_regular_size_t": "L",
+          "Price_discount_range": "50_PERCENT_ off & more",
+          "short_sleeve": true
+        }
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "medium",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@181202",
+      "action": "pyautogui.click(1240, 292, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@181211",
+      "action": "pyautogui.click(662, 200, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@181219",
+      "action": "pyautogui.write('amazon.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@181228",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@181235",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@181253",
+      "action": "pyautogui.click(837, 297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@181305",
+      "action": "pyautogui.write(\"men's short sleeve shirts large size 50% or more discount\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@181317",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@181327",
+      "action": "pyautogui.click(1204, 200, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@181341",
+      "action": "pyautogui.click(134, 756, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@181357",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@181411",
+      "action": "pyautogui.scroll(-5, x=192, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@181439",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@181521",
+      "action": "pyautogui.scroll(5, x=221, y=486)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@181532",
+      "action": "pyautogui.scroll(5, x=202, y=270)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@181550",
+      "action": "pyautogui.click(252, 579, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@181550",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.click(136, 777, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@181627",
+      "action": "pyautogui.scroll(-5, x=192, y=810)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@181642",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@181701",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@181713",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@181727",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@181751",
+      "action": "pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@181806",
+      "action": "pyautogui.click(864, 143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@181806",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@181814",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@181837",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@181859",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@181916",
+      "action": "pyautogui.scroll(5, x=192, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@181931",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@181940",
+      "action": "pyautogui.scroll(-5, x=1152, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@181957",
+      "action": "pyautogui.click(768, 141, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@181957",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@181957",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"men's short sleeve shirts large size 50% off or more\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@181957",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@182016",
+      "action": "pyautogui.click(672, 140, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@182016",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@182016",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"men's short sleeve shirts large 50% off or more\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@182016",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@182032",
+      "action": "pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@182032",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@182032",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@182032",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@182032",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@182045",
+      "action": "pyautogui.click(192, 324, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@182045",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@182045",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@182045",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@182045",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@182045",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@182103",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@182116",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@182128",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@182142",
+      "action": "pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@182142",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@182142",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@182142",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@182142",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@182209",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@182307",
+      "action": "pyautogui.click(36, 1041, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@182315",
+      "action": "pyautogui.click(956, 66, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260303@182320",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260303@182327",
+      "action": "pyautogui.click(993, 184, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260303@182334",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260303@182348",
+      "action": "pyautogui.write('https://www.amazon.com/s?k=men%27s+short+sleeve+shirt&rh=n%3A1040660%2Cp_n_size_browse-vebin%3A1285088011%2Cp_n_pct-off-with-tax%3A2755191011&s=review-rank', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260303@182403",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260303@182410",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260303@182423",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260303@182434",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260303@182447",
+      "action": "pyautogui.click(132, 186, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260303@182455",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260303@182502",
+      "action": "pyautogui.press('home')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260303@182511",
+      "action": "pyautogui.click(864, 189, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260303@182517",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260303@182524",
+      "action": "pyautogui.write(\"men's short sleeve shirt large\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260303@182533",
+      "action": "pyautogui.click(1455, 189, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260303@182540",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260303@182553",
+      "action": "pyautogui.scroll(-5, x=192, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260303@182601",
+      "action": "pyautogui.scroll(-5, x=192, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260303@182609",
+      "action": "pyautogui.click(144, 251, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260303@182616",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260303@182633",
+      "action": "pyautogui.click(528, 189, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260303@182640",
+      "action": "pyautogui.click(557, 798, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260303@182647",
+      "action": "pyautogui.click(1461, 189, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260303@182728",
+      "action": "pyautogui.click(960, 189, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260303@182734",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260303@182741",
+      "action": "pyautogui.write('men short sleeve shirt large 50% off', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260303@182751",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 89,
+      "action_timestamp": "20260303@182807",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 90,
+      "action_timestamp": "20260303@182825",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 91,
+      "action_timestamp": "20260303@182844",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 92,
+      "action_timestamp": "20260303@182904",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 93,
+      "action_timestamp": "20260303@182913",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 94,
+      "action_timestamp": "20260303@182948",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 95,
+      "action_timestamp": "20260303@183028",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 96,
+      "action_timestamp": "20260303@183057",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 97,
+      "action_timestamp": "20260303@183128",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 98,
+      "action_timestamp": "20260303@183134",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 99,
+      "action_timestamp": "20260303@183141",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 100,
+      "action_timestamp": "20260303@183153",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 101,
+      "action_timestamp": "20260303@183202",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 102,
+      "action_timestamp": "20260303@183208",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 103,
+      "action_timestamp": "20260303@183217",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 104,
+      "action_timestamp": "20260303@183223",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 105,
+      "action_timestamp": "20260303@183236",
+      "action": "pyautogui.moveTo(1914, 914); pyautogui.dragTo(1914, 1064, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 106,
+      "action_timestamp": "20260303@183244",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 107,
+      "action_timestamp": "20260303@183254",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 108,
+      "action_timestamp": "20260303@183301",
+      "action": "pyautogui.click(1098, 903, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 109,
+      "action_timestamp": "20260303@183310",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 110,
+      "action_timestamp": "20260303@183324",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 111,
+      "action_timestamp": "20260303@183335",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 112,
+      "action_timestamp": "20260303@183346",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 113,
+      "action_timestamp": "20260303@183356",
+      "action": "pyautogui.moveTo(1914, 324); pyautogui.dragTo(1914, 1064, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 114,
+      "action_timestamp": "20260303@183404",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 115,
+      "action_timestamp": "20260303@183410",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 116,
+      "action_timestamp": "20260303@183424",
+      "action": "pyautogui.click(1148, 719, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 117,
+      "action_timestamp": "20260303@183431",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 118,
+      "action_timestamp": "20260303@183440",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 119,
+      "action_timestamp": "20260303@183451",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 120,
+      "action_timestamp": "20260303@183508",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 121,
+      "action_timestamp": "20260303@183521",
+      "action": "pyautogui.moveTo(1914, 324); pyautogui.dragTo(1914, 1064, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

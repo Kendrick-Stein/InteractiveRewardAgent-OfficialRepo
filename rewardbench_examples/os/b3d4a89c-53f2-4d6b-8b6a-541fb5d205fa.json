@@ -1,0 +1,67 @@
+{
+  "id": "b3d4a89c-53f2-4d6b-8b6a-541fb5d205fa",
+  "snapshot": "os",
+  "instruction": "I want to switch on the Bluetooth. Can you help me?",
+  "source": "https://help.ubuntu.com/lts/ubuntu-help/bluetooth-turn-on-off.html.en",
+  "trajectory": "trajectories/",
+  "config": [],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125824",
+      "action": "pyautogui.click(1891, 10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125824.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125833",
+      "action": "pyautogui.click(1660, 189)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125833.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125841",
+      "action": "pyautogui.click(584, 256)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125841.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125851",
+      "action": "pyautogui.click(1320, 164)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125851.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125903",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@125903.png"
+    }
+  ],
+  "result_raw": "0"
+}

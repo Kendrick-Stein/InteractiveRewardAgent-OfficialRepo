@@ -1,0 +1,257 @@
+{
+  "id": "cc07b127-4bcd-404b-b27f-9fadc06128b2",
+  "raw_id": "6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Please remove all the yellow highlight from my document because they were used for editing purposes. Save the document after ensuring none of the words are highlighted.",
+  "raw_instruction": "I have been editing my document and some words that needed to be rewritten are highlighted in yellow. As I fixed those words, please help me remove all highlight. I want to make sure that there is no highlight word.",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "sample-recruitment-phone-script.odt - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      }
+    ],
+    "func": "check_highlighted_words",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "cc07b127-4bcd-404b-b27f-9fadc06128b2_expected.odt"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/sample-recruitment-phone-script.odt",
+      "dest": "sample-recruitment-phone-script.odt"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "sample-recruitment-phone-script.odt - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      }
+    ],
+    "func": "check_highlighted_words",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1Qxz3EjHuiLa8yZaCr1DJHwEOSd6U-cjY&export=download&authuser=0&confirm=t&uuid=c502680e-51f9-4e4f-90d0-58b123a09b3d&at=APZUnTXN2UX9EuvB1PZoJ5koJwmQ:1706544440969",
+      "dest": "sample-recruitment-phone-script_Gold.odt"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/sample-recruitment-phone-script.odt",
+      "dest": "sample-recruitment-phone-script.odt"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2/788101bc-34a8-4c41-9dda-9ad981ea36e9/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2/sample-recruitment-phone-script.odt",
+            "path": "/home/user/Desktop/sample-recruitment-phone-script.odt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/sample-recruitment-phone-script.odt"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@124446",
+      "action": "pyautogui.moveTo(1080.248, 905.934)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@124446.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@124446",
+      "action": "pyautogui.dragTo(1283.975, 963.297, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@124446.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@124458",
+      "action": "pyautogui.click(1036.522, 148.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@124458.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@124505",
+      "action": "pyautogui.click(1265.093, 490.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@124505.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@124513",
+      "action": "pyautogui.click(1036.522, 148.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@124513.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@124523",
+      "action": "pyautogui.click(1265.093, 490.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@124523.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@124536",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@124536.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@124550",
+      "action": "pyautogui.click(989.814, 148.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@124550.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@124604",
+      "action": "pyautogui.click(1265.093, 490.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@124604.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@124615",
+      "action": "pyautogui.click(1036.522, 150.33, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@124615.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@124628",
+      "action": "pyautogui.click(1022.609, 204.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@124628.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@124640",
+      "action": "pyautogui.click(1036.522, 150.33, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@124640.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@124651",
+      "action": "pyautogui.click(1022.609, 204.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@124651.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@124702",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@124702.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@124714",
+      "action": "pyautogui.scroll(-5, x=1458.882, y=584.505)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@124714.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@124726",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_15_20260105@124726.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

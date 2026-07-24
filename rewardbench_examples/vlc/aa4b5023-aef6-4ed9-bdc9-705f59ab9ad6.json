@@ -1,0 +1,194 @@
+{
+  "id": "aa4b5023-aef6-4ed9-bdc9-705f59ab9ad6",
+  "snapshot": "base_setup",
+  "instruction": "Hey, could you turn this video the right way up for me? And once it's flipped around, could you save it for me with the name '1984_Apple_Macintosh_Commercial.mp4' on the main screen where all my files are?",
+  "source": "https://www.dedoimedo.com/computers/vlc-rotate-videos.html",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vlc/aa4b5023-aef6-4ed9-bdc9-705f59ab9ad6/flipped_1984_Apple_Macintosh_Commercial.mp4",
+            "path": "/home/user/Desktop/flipped_1984_Apple_Macintosh_Commercial.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show /home/user/Desktop/flipped_1984_Apple_Macintosh_Commercial.mp4",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "compare_videos",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vlc/aa4b5023-aef6-4ed9-bdc9-705f59ab9ad6/1984_Apple_Macintosh_Commercial.mp4",
+      "dest": "1984_Apple_Macintosh_Commercial_gold.mp4"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "1984_Apple_Macintosh_Commercial.mp4",
+      "dest": "1984_Apple_Macintosh_Commercial.mp4"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114159",
+      "action": "pyautogui.click(664, 370)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114159.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114207",
+      "action": "pyautogui.click(722, 608)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114207.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114215",
+      "action": "pyautogui.click(1122, 476)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114215.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114225",
+      "action": "pyautogui.click(811, 385)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114225.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114237",
+      "action": "pyautogui.click(1241, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@114237.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114248",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114248.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114257",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@114257.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@114307",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@114307.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@114317",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@114317.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@114329",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@114329.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@114339",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@114339.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@114348",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@114348.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@114357",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@114357.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@114408",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@114408.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@114420",
+      "action": "pyautogui.click(1045, 756)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@114420.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

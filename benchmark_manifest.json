@@ -1,0 +1,22 @@
+{
+  "categories": {
+    "chrome": 37,
+    "gimp": 34,
+    "libreoffice_calc": 59,
+    "libreoffice_impress": 50,
+    "libreoffice_writer": 32,
+    "multi_apps": 28,
+    "os": 28,
+    "thunderbird": 16,
+    "vlc": 19,
+    "vs_code": 18
+  },
+  "category_count": 10,
+  "name": "GUI-RewardBench",
+  "total_trajectories": 321,
+  "verification_types": {
+    "artifact_verification": 192,
+    "hidden_state": 89,
+    "visible_state": 40
+  }
+}

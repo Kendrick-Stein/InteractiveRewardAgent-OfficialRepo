@@ -1,0 +1,110 @@
+{
+  "id": "dd91a0ee-4571-4ce3-94dd-c6fcfd95e113",
+  "raw_id": "e0df059f-28a6-4169-924f-b9623e7184cc",
+  "snapshot": "os",
+  "instruction": "I have a directory named 'todo_list_Jan_1'. Can you help me delete it?",
+  "raw_instruction": "I have a directory named \"todo_list_Jan_1\". Can you help me change its name into \"todo_list_Jan_2\"?",
+  "related_apps": [
+    "os"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "[ ! -d ~/Desktop/todo_list_Jan_1 ] && echo 'Directory deleted.' || echo 'Directory still exists.'",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "Directory deleted.\n"
+      }
+    }
+  },
+  "raw_evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "[ -d ~/Desktop/todo_list_Jan_2 ] && echo 'Directory exists.' || echo 'Directory does not exist.'",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "Directory exists.\n"
+      }
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/e0df059f-28a6-4169-924f-b9623e7184cc_trace_f8354e13af19_1755704454/image_0001.png",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "echo 'password' | sudo -S mkdir ~/Desktop/todo_list_Jan_1",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@122734",
+      "action": "pyautogui.click(33.789, 606.264, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@122734.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@122745",
+      "action": "pyautogui.click(1850.435, 893.077, button='right')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@122745.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@122757",
+      "action": "pyautogui.click(1704.348, 694.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@122757.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@122811",
+      "action": "pyautogui.click(1218.385, 606.264, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@122811.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@122827",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20260105@122827.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

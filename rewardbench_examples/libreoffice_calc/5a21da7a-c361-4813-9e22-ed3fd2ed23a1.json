@@ -1,0 +1,296 @@
+{
+  "id": "5a21da7a-c361-4813-9e22-ed3fd2ed23a1",
+  "raw_id": "51b11269-2ca8-4b2a-9163-f21758420e78",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Can you create a filter to show only records with 'Facebook' as the product?",
+  "raw_instruction": "Could you help me to sort the records accoring to the amounts ascendingly?",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Arrang_Value_min_to_max.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey('ctrl', 's');"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "5a21da7a-c361-4813-9e22-ed3fd2ed23a1_expected.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Arrang_Value_min_to_max.xlsx",
+      "dest": "filtered.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Arrang_Value_min_to_max.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1gZq47ls5eD-YpRH8MIeEYOpYwAAUR_Ua&export=download&authuser=0&confirm=t&uuid=085c84a0-eb3f-4fe8-9fa0-6d2495985cc0&at=APZUnTVtt_9I5I8emixgM2hbnjMh:1706002085970",
+      "dest": "Arrang_Value_min_to_max_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Arrang_Value_min_to_max.xlsx",
+      "dest": "Arrang_Value_min_to_max.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/51b11269-2ca8-4b2a-9163-f21758420e78/c26a8ba3-30e8-4256-a977-1a4369e164cf/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/51b11269-2ca8-4b2a-9163-f21758420e78/Arrang_Value_min_to_max.xlsx",
+            "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Arrang_Value_min_to_max.xlsx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@112014",
+      "action": "pyautogui.click(367.702, 294.725, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@112014.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@112030",
+      "action": "pyautogui.click(454.161, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@112030.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@112046",
+      "action": "pyautogui.click(500.87, 175.055, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@112046.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@112101",
+      "action": "pyautogui.click(1128.944, 605.275, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@112101.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@112114",
+      "action": "pyautogui.click(412.422, 315.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@112114.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@112128",
+      "action": "pyautogui.click(331.925, 646.813, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@112128.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@112143",
+      "action": "pyautogui.click(331.925, 613.187, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@112143.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@112159",
+      "action": "pyautogui.click(331.925, 613.187, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@112159.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@112214",
+      "action": "pyautogui.click(464.099, 810.989, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@112214.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@112230",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@112230.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@112246",
+      "action": "pyautogui.click(412.422, 318.462, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@112246.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@112301",
+      "action": "pyautogui.click(331.925, 670.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@112301.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@112315",
+      "action": "pyautogui.click(331.925, 688.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@112315.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@112330",
+      "action": "pyautogui.click(337.888, 585.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@112330.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@112343",
+      "action": "pyautogui.click(466.087, 831.758, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20260105@112343.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260105@112358",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20260105@112358.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260105@112403",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_16_20260105@112403.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

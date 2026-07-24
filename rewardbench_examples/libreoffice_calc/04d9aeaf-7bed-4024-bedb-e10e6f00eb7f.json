@@ -1,0 +1,226 @@
+{
+  "id": "04d9aeaf-7bed-4024-bedb-e10e6f00eb7f",
+  "snapshot": "libreoffice_calc",
+  "instruction": "In a new sheet with 4 headers \"Year\", \"CA changes\", \"FA changes\", and \"OA changes\", calculate the percentage annual changes compared to last year in 2015 to 2019 for the Current Assets, Fixed Assets, and Other Assets columns.  The file to be evaluated is located on the VM at the following path: 「/home/user/SmallBalanceSheet.xlsx」.",
+  "source": "SheetCopilot@168",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/04d9aeaf-7bed-4024-bedb-e10e6f00eb7f/SmallBalanceSheet.xlsx",
+            "path": "/home/user/SmallBalanceSheet.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/SmallBalanceSheet.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/04d9aeaf-7bed-4024-bedb-e10e6f00eb7f",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "SmallBalanceSheet.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/04d9aeaf-7bed-4024-bedb-e10e6f00eb7f/4_SmallBalanceSheet_gt1.xlsx",
+      "dest": "4_SmallBalanceSheet_gt1.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/SmallBalanceSheet.xlsx",
+      "dest": "SmallBalanceSheet.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RNSheet2",
+          "sheet_idx1": "ENSheet2"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112616",
+      "action": "pyautogui.click(403, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112616.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112621",
+      "action": "pyautogui.click(455, 303)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112621.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112627",
+      "action": "pyautogui.click(1224, 792)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112627.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112635",
+      "action": "pyautogui.typewrite('Year')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112635.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112642",
+      "action": "pyautogui.click(215, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112642.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112649",
+      "action": "pyautogui.typewrite('CA changes')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112649.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@112656",
+      "action": "pyautogui.click(311, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@112656.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112704",
+      "action": "pyautogui.typewrite('FA changes')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112704.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@112713",
+      "action": "pyautogui.click(392, 318)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@112713.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@112720",
+      "action": "pyautogui.typewrite('OA changes')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@112720.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@112726",
+      "action": "pyautogui.click(151, 339)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@112726.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@112731",
+      "action": "pyautogui.typewrite('2015')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@112731.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@112738",
+      "action": "pyautogui.click(151, 357)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@112738.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@112743",
+      "action": "pyautogui.typewrite('2016')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@112743.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@112750",
+      "action": "pyautogui.click(151, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@112750.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/SmallBalanceSheet.xlsx"
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "id": "936321ce-5236-426a-9a20-e0e3c5dc536f",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Could you help me convert the text seperated by commas to a table? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx」.",
+  "source": "https://www.youtube.com/watch?v=l25Evu4ohKg",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/936321ce-5236-426a-9a20-e0e3c5dc536f/Graphemes_Sound_Letter_Patterns.docx",
+            "path": "/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Graphemes_Sound_Letter_Patterns_Gold.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(2); "
+          ]
+        }
+      }
+    ],
+    "func": [
+      "compare_docx_tables",
+      "compare_docx_tables"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/936321ce-5236-426a-9a20-e0e3c5dc536f/Graphemes_Sound_Letter_Patterns_Gold.docx",
+        "dest": "Graphemes_Sound_Letter_Patterns_Gold.docx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/936321ce-5236-426a-9a20-e0e3c5dc536f/Graphemes_Sound_Letter_Patterns_Gold_2.docx",
+        "dest": "Graphemes_Sound_Letter_Patterns_Gold_2.docx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx",
+        "dest": "Graphemes_Sound_Letter_Patterns.docx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx",
+        "dest": "Graphemes_Sound_Letter_Patterns.docx"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131713",
+      "action": "pyautogui.moveTo(484, 682)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131713.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131715",
+      "action": "pyautogui.dragTo(830, 771, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131715.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131719",
+      "action": "pyautogui.click(407, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131719.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131725",
+      "action": "pyautogui.click(449, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131725.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131730",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131730.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131736",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@131736.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@131741",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@131741.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@131747",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@131747.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@131755",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@131755.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@131802",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@131802.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@131809",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@131809.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@131816",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@131816.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@131821",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@131821.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@131827",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@131827.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@131833",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@131833.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@131839",
+      "action": "pyautogui.click(791, 528)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@131839.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/Graphemes_Sound_Letter_Patterns.docx"
+  ]
+}

@@ -1,0 +1,1195 @@
+{
+  "id": "0bf05a7d-b28b-44d2-955a-50b41e24012a",
+  "snapshot": "libreoffice_calc",
+  "instruction": "I would like to copy all the numbers in the 'Old ID' column to the 'New 7 Digit Id' column, and pad them with zeros in front, to fill them up to seven digits. Finish the work and don't touch irrelevant regions, even if they are blank.",
+  "source": "https://www.youtube.com/shorts/FPAQaDTS8VY",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/0bf05a7d-b28b-44d2-955a-50b41e24012a/Customers_New_7digit_Id.xlsx",
+            "path": "/home/user/Customers_New_7digit_Id.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Customers_New_7digit_Id.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/0bf05a7d-b28b-44d2-955a-50b41e24012a",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Customers_New_7digit_Id.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "libreoffice",
+            "--convert-to",
+            "csv:Text - txt - csv (StarCalc):44,34,UTF-8,,,,false,true,true,false,false,1",
+            "--outdir",
+            "/home/user",
+            "/home/user/Customers_New_7digit_Id.xlsx"
+          ]
+        }
+      }
+    ],
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": [
+        "/home/user/Customers_New_7digit_Id.xlsx",
+        "/home/user/Customers_New_7digit_Id-Sheet1.csv"
+      ],
+      "dest": [
+        "Customers_New_7digit_Id.xlsx",
+        "Customers_New_7digit_Id-Sheet1.csv"
+      ],
+      "multi": true
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": [
+        "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/0bf05a7d-b28b-44d2-955a-50b41e24012a/Customers_New_7digit_Id_gold.xlsx",
+        "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/0bf05a7d-b28b-44d2-955a-50b41e24012a/Customers_New_7digit_Id_gold.csv"
+      ],
+      "dest": [
+        "Customers_New_7digit_Id_gold.xlsx",
+        "Customers_New_7digit_Id_gold-Sheet1.csv"
+      ],
+      "multi": true
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_print",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@192019",
+      "action": "pyautogui.click(33, 610, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@192031",
+      "action": "pyautogui.click(252, 81, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@192038",
+      "action": "pyautogui.click(242, 82, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@192044",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('l'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@192050",
+      "action": "pyautogui.write('/home/user/shared/', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@192057",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@192110",
+      "action": "pyautogui.click(557, 400, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@192120",
+      "action": "pyautogui.click(1248, 594, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@192250",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@192325",
+      "action": "pyautogui.click(507, 73, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@192333",
+      "action": "pyautogui.click(538, 537, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@192338",
+      "action": "pyautogui.click(897, 564, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@192348",
+      "action": "pyautogui.moveTo(465, 177); pyautogui.dragTo(465, 242, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@192359",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@192408",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@192431",
+      "action": "pyautogui.write('Sub FillNewId()\\n    Dim oDoc As Object\\n    Dim oSheet As Object\\n    Dim oCell As Object\\n    Dim oldIdCol As Integer\\n    Dim newIdCol As Integer\\n    Dim headerRow As Integer\\n    Dim lastRow As Long\\n    Dim i As Long\\n    Dim oldVal As String\\n    Dim newVal As String\\n    \\n    oDoc = ThisComponent\\n    oSheet = oDoc.Sheets.getByIndex(0)\\n    \\n    \\' Find header row and columns by scanning row 0\\n    Dim found As Boolean\\n    Dim oldIdColIdx As Integer\\n    Dim newIdColIdx As Integer\\n    oldIdColIdx = -1\\n    newIdColIdx = -1\\n    \\n    Dim r As Integer\\n    Dim c As Integer\\n    For r = 0 To 10\\n        For c = 0 To 20\\n            Dim cellStr As String\\n            cellStr = Trim(oSheet.getCellByPosition(c, r).getString())\\n            If InStr(LCase(cellStr), \"old id\") > 0 Or LCase(cellStr) = \"old id\" Then\\n                oldIdColIdx = c\\n            End If\\n            If InStr(LCase(cellStr), \"new 7\") > 0 Or InStr(LCase(cellStr), \"new7\") > 0 Then\\n                newIdColIdx = c\\n            End If\\n        Next c\\n        If oldIdColIdx >= 0 And newIdColIdx >= 0 Then\\n            headerRow = r\\n            Exit For\\n        End If\\n    Next r\\n    \\n    If oldIdColIdx < 0 Or newIdColIdx < 0 Then\\n        MsgBox \"Could not find columns!\"\\n        Exit Sub\\n    End If\\n    \\n    \\' Find last row with data in Old ID column\\n    lastRow = headerRow + 1\\n    Do While oSheet.getCellByPosition(oldIdColIdx, lastRow).getString() <> \"\"\\n        lastRow = lastRow + 1\\n    Loop\\n    lastRow = lastRow - 1\\n    \\n    \\' Fill New 7 Digit Id column\\n    For i = headerRow + 1 To lastRow\\n        oldVal = Trim(oSheet.getCellByPosition(oldIdColIdx, i).getString())\\n        If oldVal <> \"\" Then\\n            \\' Remove any decimal part if number\\n            If InStr(oldVal, \".\") > 0 Then\\n                oldVal = Left(oldVal, InStr(oldVal, \".\") - 1)\\n            End If\\n            newVal = String(7 - Len(oldVal), \"0\") & oldVal\\n            Dim newCell As Object\\n            newCell = oSheet.getCellByPosition(newIdColIdx, i)\\n            newCell.setString(newVal)\\n        End If\\n    Next i\\n    \\n    \\' Save the file\\n    oDoc.store()\\n    \\n    MsgBox \"Done! Filled rows \" & (headerRow + 2) & \" to \" & (lastRow + 1)\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@192614",
+      "action": "pyautogui.click(520, 149, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@192623",
+      "action": "pyautogui.press('f5')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@192630",
+      "action": "pyautogui.click(993, 603, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@192641",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@192648",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@192711",
+      "action": "pyautogui.write('Sub FillNewId()\\n    Dim oDoc As Object\\n    Dim oSheet As Object\\n    Dim oCell As Object\\n    Dim oldIdCol As Integer\\n    Dim newIdCol As Integer\\n    Dim headerRow As Integer\\n    Dim lastRow As Long\\n    Dim i As Long\\n    Dim oldVal As String\\n    Dim newVal As String\\n    \\n    oDoc = ThisComponent\\n    oSheet = oDoc.Sheets.getByIndex(0)\\n    \\n    \\' Find header row and columns by scanning row 0\\n    Dim found As Boolean\\n    Dim oldIdColIdx As Integer\\n    Dim newIdColIdx As Integer\\n    oldIdColIdx = -1\\n    newIdColIdx = -1\\n    \\n    Dim r As Integer\\n    Dim c As Integer\\n    For r = 0 To 10\\n        For c = 0 To 20\\n            Dim cellStr As String\\n            cellStr = Trim(oSheet.getCellByPosition(c, r).getString())\\n            If InStr(LCase(cellStr), \"old id\") > 0 Or LCase(cellStr) = \"old id\" Then\\n                oldIdColIdx = c\\n            End If\\n            If InStr(LCase(cellStr), \"new 7\") > 0 Or InStr(LCase(cellStr), \"new7\") > 0 Then\\n                newIdColIdx = c\\n            End If\\n        Next c\\n        If oldIdColIdx >= 0 And newIdColIdx >= 0 Then\\n            headerRow = r\\n            Exit For\\n        End If\\n    Next r\\n    \\n    If oldIdColIdx < 0 Or newIdColIdx < 0 Then\\n        MsgBox \"Could not find columns!\"\\n        Exit Sub\\n    End If\\n    \\n    \\' Find last row with data in Old ID column\\n    lastRow = headerRow + 1\\n    Do While oSheet.getCellByPosition(oldIdColIdx, lastRow).getString() <> \"\"\\n        lastRow = lastRow + 1\\n    Loop\\n    lastRow = lastRow - 1\\n    \\n    \\' Fill New 7 Digit Id column\\n    For i = headerRow + 1 To lastRow\\n        oldVal = Trim(oSheet.getCellByPosition(oldIdColIdx, i).getString())\\n        If oldVal <> \"\" Then\\n            \\' Remove any decimal part if number\\n            If InStr(oldVal, \".\") > 0 Then\\n                oldVal = Left(oldVal, InStr(oldVal, \".\") - 1)\\n            End If\\n            newVal = String(7 - Len(oldVal), \"0\") & oldVal\\n            Dim newCell As Object\\n            newCell = oSheet.getCellByPosition(newIdColIdx, i)\\n            newCell.setString(newVal)\\n        End If\\n    Next i\\n    \\n    \\' Save the file\\n    oDoc.store()\\n    \\n    MsgBox \"Done! Filled rows \" & (headerRow + 2) & \" to \" & (lastRow + 1)\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@192850",
+      "action": "pyautogui.scroll(5, x=1905, y=378)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@192902",
+      "action": "pyautogui.scroll(5, x=1905, y=184)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@192924",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@192931",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@192957",
+      "action": "pyautogui.write('Sub FillNewId()\\\\n    Dim oDoc As Object\\\\n    Dim oSheet As Object\\\\n    Dim oCell As Object\\\\n    Dim oldIdCol As Integer\\\\n    Dim newIdCol As Integer\\\\n    Dim headerRow As Integer\\\\n    Dim lastRow As Long\\\\n    Dim i As Long\\\\n    Dim oldVal As String\\\\n    Dim newVal As String\\\\n\\\\n    oDoc = ThisComponent\\\\n    oSheet = oDoc.Sheets.getByIndex(0)\\\\n\\\\n    \\' Find header row and columns by scanning row 0\\\\n    Dim found As Boolean\\\\n    Dim oldIdColIdx As Integer\\\\n    Dim newIdColIdx As Integer\\\\n    oldIdColIdx = -1\\\\n    newIdColIdx = -1\\\\n\\\\n    Dim r As Integer\\\\n    Dim c As Integer\\\\n    For r = 0 To 10\\\\n        For c = 0 To 20\\\\n            Dim cellStr As String\\\\n            cellStr = Trim(oSheet.getCellByPosition(c, r).getString())\\\\n            If InStr(LCase(cellStr), \\\\\"old id\\\\\") > 0 Or LCase(cellStr) = \\\\\"old id\\\\\" Then\\\\n                oldIdColIdx = c\\\\n            End If\\\\n            If InStr(LCase(cellStr), \\\\\"new 7\\\\\") > 0 Or InStr(LCase(cellStr), \\\\\"new7\\\\\") > 0 Then\\\\n                newIdColIdx = c\\\\n            End If\\\\n        Next c\\\\n        If oldIdColIdx >= 0 And newIdColIdx >= 0 Then\\\\n            headerRow = r\\\\n            Exit For\\\\n        End If\\\\n    Next r\\\\n\\\\n    If oldIdColIdx < 0 Or newIdColIdx < 0 Then\\\\n        MsgBox \\\\\"Could not find columns!\\\\\"\\\\n        Exit Sub\\\\n    End If\\\\n\\\\n    \\' Find last row with data in Old ID column\\\\n    lastRow = headerRow + 1\\\\n    Do While oSheet.getCellByPosition(oldIdColIdx, lastRow).getString() <> \\\\\"\\\\\"\\\\n        lastRow = lastRow + 1\\\\n    Loop\\\\n    lastRow = lastRow - 1\\\\n\\\\n    \\' Fill New 7 Digit Id column\\\\n    For i = headerRow + 1 To lastRow\\\\n        oldVal = Trim(oSheet.getCellByPosition(oldIdColIdx, i).getString())\\\\n        If oldVal <> \\\\\"\\\\\" Then\\\\n            \\' Remove any decimal part if number\\\\n            If InStr(oldVal, \\\\\".\\\\\") > 0 Then\\\\n                oldVal = Left(oldVal, InStr(oldVal, \\\\\".\\\\\") - 1)\\\\n            End If\\\\n            newVal = String(7 - Len(oldVal), \\\\\"0\\\\\") & oldVal\\\\n            Dim newCell As Object\\\\n            newCell = oSheet.getCellByPosition(newIdColIdx, i)\\\\n            newCell.setString(newVal)\\\\n        End If\\\\n    Next i\\\\n\\\\n    \\' Save the file\\\\n    oDoc.store()\\\\n\\\\n    MsgBox \\\\\"Done! Filled rows \\\\\" & (headerRow + 2) & \\\\\" to \\\\\" & (lastRow + 1)\\\\nEnd Sub', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@193148",
+      "action": "pyautogui.write('Sub FillNewId()', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@193158",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@193204",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@193213",
+      "action": "pyautogui.write('Sub FillNewId()', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@193221",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@193227",
+      "action": "pyautogui.write('Dim oDoc As Object', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@193235",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@193311",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@193319",
+      "action": "pyautogui.write('find /home/user -name \"*.xlsx\" 2>/dev/null', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@193327",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@193355",
+      "action": "pyautogui.write('python3 << \\'EOF\\'\\nimport subprocess\\nimport glob\\nimport os\\n\\n# Find the file\\nfiles = glob.glob(\\'/home/user/**/*.xlsx\\', recursive=True) + glob.glob(\\'/root/**/*.xlsx\\', recursive=True) + glob.glob(\\'/home/**/*.xlsx\\', recursive=True)\\nprint(\"Found files:\", files)\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@193421",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@193427",
+      "action": "pyautogui.write('exit()', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@193427",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@193434",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@193440",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@193452",
+      "action": "pyautogui.write('python3 << \\'EOF\\'\\nimport subprocess\\nimport glob\\nimport os\\n\\n# Find the file\\nfiles = glob.glob(\\'/home/user/**/*.xlsx\\', recursive=True) + glob.glob(\\'/root/**/*.xlsx\\', recursive=True) + glob.glob(\\'/home/**/*.xlsx\\', recursive=True)\\nprint(\"Found files:\", files)\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@193537",
+      "action": "pyautogui.write(\"python3 << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@193537",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@193557",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@193606",
+      "action": "pyautogui.write(\"python3 << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@193606",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@193624",
+      "action": "pyautogui.write(\"python3 << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@193624",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@193639",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@193714",
+      "action": "pyautogui.write('python3 << \\'EOF\\'\\nimport openpyxl\\n\\nfilepath = None\\nimport glob\\nfiles = glob.glob(\\'/home/user/**/*.xlsx\\', recursive=True) + glob.glob(\\'/root/**/*.xlsx\\', recursive=True)\\nif files:\\n    filepath = files[0]\\n    print(f\"Using file: {filepath}\")\\nelse:\\n    print(\"File not found!\")\\n    exit(1)\\n\\nwb = openpyxl.load_workbook(filepath)\\nws = wb.active\\n\\n# Find header row and column indices\\nold_id_col = None\\nnew_id_col = None\\nheader_row = None\\n\\nfor row in ws.iter_rows():\\n    for cell in row:\\n        if cell.value and \\'old id\\' in str(cell.value).lower():\\n            old_id_col = cell.column\\n            header_row = cell.row\\n        if cell.value and \\'new 7\\' in str(cell.value).lower():\\n            new_id_col = cell.column\\n    if old_id_col and new_id_col:\\n        break\\n\\nprint(f\"Header row: {header_row}, Old ID col: {old_id_col}, New 7 Digit Id col: {new_id_col}\")\\n\\n# Fill in the new 7 digit id column\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\n    if old_cell.value is not None and str(old_cell.value).strip() != \\'\\':\\n        old_val = str(int(float(str(old_cell.value))))\\n        new_val = old_val.zfill(7)\\n        new_cell.value = new_val\\n        print(f\"Row {row_num}: {old_val} -> {new_val}\")\\n\\nwb.save(filepath)\\nprint(\"File saved successfully!\")\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@193714",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@193836",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@193844",
+      "action": "pyautogui.write('sudo apt install python3-openpyxl', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@193844",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@193854",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@193854",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@193903",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@193903",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260303@193915",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260303@193915",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260303@193925",
+      "action": "pyautogui.write('pip3 install openpyxl --user', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260303@193925",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260303@193933",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260303@194019",
+      "action": "pyautogui.write('python3 << \\'EOF\\'\\nimport openpyxl\\n\\nfilepath = None\\nimport glob\\nfiles = glob.glob(\\'/home/user/**/*.xlsx\\', recursive=True) + glob.glob(\\'/root/**/*.xlsx\\', recursive=True)\\nif files:\\n    filepath = files[0]\\n    print(f\"Using file: {filepath}\")\\nelse:\\n    print(\"File not found!\")\\n    exit(1)\\n\\nwb = openpyxl.load_workbook(filepath)\\nws = wb.active\\n\\n# Find header row and column indices\\nold_id_col = None\\nnew_id_col = None\\nheader_row = None\\n\\nfor row in ws.iter_rows():\\n    for cell in row:\\n        if cell.value and \\'old id\\' in str(cell.value).lower():\\n            old_id_col = cell.column\\n            header_row = cell.row\\n        if cell.value and \\'new 7\\' in str(cell.value).lower():\\n            new_id_col = cell.column\\n    if old_id_col and new_id_col:\\n        break\\n\\nprint(f\"Header row: {header_row}, Old ID col: {old_id_col}, New 7 Digit Id col: {new_id_col}\")\\n\\n# Fill in the new 7 digit id column\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\n    if old_cell.value is not None and str(old_cell.value).strip() != \\'\\':\\n        old_val = str(int(float(str(old_cell.value))))\\n        new_val = old_val.zfill(7)\\n        new_cell.value = new_val\\n        print(f\"Row {row_num}: {old_val} -> {new_val}\")\\n\\nwb.save(filepath)\\nprint(\"File saved successfully!\")\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260303@194019",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260303@194145",
+      "action": "pyautogui.write('nano script.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260303@194145",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260303@194153",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('d'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260303@194525",
+      "action": "pyautogui.write('printf \\'import openpyxl\\\\\\\\nwb = openpyxl.load_workbook(\\\\\\\\\"/home/user/Customers_New_7digit_Id.xlsx\\\\\\\\\")\\\\\\\\nws = wb.active\\\\\\\\nold_id_col = None\\\\\\\\nnew_id_col = None\\\\\\\\nheader_row = None\\\\\\\\nfor row in ws.iter_rows():\\\\\\\\n    for cell in row:\\\\\\\\n        if cell.value and \\\\\\\\\"old id\\\\\\\\\" in str(cell.value).lower():\\\\\\\\n            old_id_col = cell.column\\\\\\\\n            header_row = cell.row\\\\\\\\n        if cell.value and \\\\\\\\\"new 7\\\\\\\\\" in str(cell.value).lower():\\\\\\\\n            new_id_col = cell.column\\\\\\\\n    if old_id_col and new_id_col:\\\\\\\\n        break\\\\\\\\nprint(f\\\\\\\\\"Header:{header_row} OldCol:{old_id_col} NewCol:{new_id_col}\\\\\\\\\")\\\\\\\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\\\\\\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\\\\\\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\\\\\\\n    if old_cell.value is not None and str(old_cell.value).strip() != \\\\\\\\\"\\\\\\\\\":\\\\\\\\n        old_val = str(int(float(str(old_cell.value))))\\\\\\\\n        new_val = old_val.zfill(7)\\\\\\\\n        new_cell.value = new_val\\\\\\\\n        print(f\\\\\\\\\"Row {row_num}: {old_val} -> {new_val}\\\\\\\\\")\\\\\\\\nwb.save(\\\\\\\\\"/home/user/Customers_New_7digit_Id.xlsx\\\\\\\\\")\\\\\\\\nprint(\\\\\\\\\"Saved!\\\\\\\\\")\\\\\\\\n\\' > /home/user/fix.py\\\\', interval=0.05); time.sleep(0.5); pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260303@194738",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260303@194849",
+      "action": "pyautogui.write('nano /home/user/fix.py', interval=0.05); time.sleep(0.5); pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260303@194943",
+      "action": "pyautogui.write('import openpyxl\\\\nwb = openpyxl.load_workbook(\"/home/user/Customers_New_7digit_Id.xlsx\")\\\\nws = wb.active\\\\nold_id_col = None\\\\nnew_id_col = None\\\\nheader_row = None\\\\nfor row in ws.iter_rows():\\\\n    for cell in row:\\\\n        if cell.value and \"old id\" in str(cell.value).lower():\\\\n            old_id_col = cell.column\\\\n            header_row = cell.row\\\\n        if cell.value and \"new 7\" in str(cell.value).lower():\\\\n            new_id_col = cell.column\\\\n    if old_id_col and new_id_col:\\\\n        break\\\\nprint(f\"Header:{header_row} OldCol:{old_id_col} NewCol:{new_id_col}\")\\\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\\\n    if old_cell.value is not None and str(old_cell.value).strip() != \"\":\\\\n        old_val = str(int(float(str(old_cell.value))))\\\\n        new_val = old_val.zfill(7)\\\\n        new_cell.value = new_val\\\\n        print(f\"Row {row_num}: {old_val} -> {new_val}\")\\\\nwb.save(\"/home/user/Customers_New_7digit_Id.xlsx\")\\\\nprint(\"Saved!\")', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260303@195045",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('o'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260303@195052",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260303@195103",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('x'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260303@195110",
+      "action": "pyautogui.write('rm /home/user/fix.py', interval=0.05); time.sleep(0.5); pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260303@195338",
+      "action": "pyautogui.write('printf \\'import openpyxl\\\\\\\\nwb = openpyxl.load_workbook(\\\\\\\\\"/home/user/Customers_New_7digit_Id.xlsx\\\\\\\\\")\\\\\\\\nws = wb.active\\\\\\\\nold_id_col = None\\\\\\\\nnew_id_col = None\\\\\\\\nheader_row = None\\\\\\\\nfor row in ws.iter_rows():\\\\\\\\n    for cell in row:\\\\\\\\n        if cell.value and \\\\\\\\\"old id\\\\\\\\\" in str(cell.value).lower():\\\\\\\\n            old_id_col = cell.column\\\\\\\\n            header_row = cell.row\\\\\\\\n        if cell.value and \\\\\\\\\"new 7\\\\\\\\\" in str(cell.value).lower():\\\\\\\\n            new_id_col = cell.column\\\\\\\\n    if old_id_col and new_id_col:\\\\\\\\n        break\\\\\\\\nprint(f\\\\\\\\\"Header:{header_row} OldCol:{old_id_col} NewCol:{new_id_col}\\\\\\\\\")\\\\\\\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\\\\\\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\\\\\\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\\\\\\\n    if old_cell.value is not None and str(old_cell.value).strip() != \\\\\\\\\"\\\\\\\\\":\\\\\\\\n        old_val = str(int(float(str(old_cell.value))))\\\\\\\\n        new_val = old_val.zfill(7)\\\\\\\\n        new_cell.value = new_val\\\\\\\\n        print(f\\\\\\\\\"Row {row_num}: {old_val} -> {new_val}\\\\\\\\\")\\\\\\\\nwb.save(\\\\\\\\\"/home/user/Customers_New_7digit_Id.xlsx\\\\\\\\\")\\\\\\\\nprint(\\\\\\\\\"Saved!\\\\\\\\\")\\\\\\\\n\\' > /home/user/fix.py\\\\', interval=0.05); time.sleep(0.5); pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260303@195514",
+      "action": "pyautogui.click(480, 589, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260303@195521",
+      "action": "pyautogui.write('mousepad /home/user/fix.py &', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260303@195529",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260303@195535",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260303@195545",
+      "action": "pyautogui.click(1814, 45, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260303@195551",
+      "action": "pyautogui.click(1816, 44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260303@195603",
+      "action": "pyautogui.click(1807, 43, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260303@195614",
+      "action": "pyautogui.click(1891, 43, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 89,
+      "action_timestamp": "20260303@195621",
+      "action": "pyautogui.click(1812, 43, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 90,
+      "action_timestamp": "20260303@195630",
+      "action": "pyautogui.click(35, 805, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 91,
+      "action_timestamp": "20260303@195637",
+      "action": "pyautogui.click(33, 1029, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 92,
+      "action_timestamp": "20260303@195645",
+      "action": "pyautogui.click(960, 66, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 93,
+      "action_timestamp": "20260303@195652",
+      "action": "pyautogui.write('mousepad', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 94,
+      "action_timestamp": "20260303@195707",
+      "action": "pyautogui.click(35, 805, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 95,
+      "action_timestamp": "20260303@195714",
+      "action": "pyautogui.write('ps aux",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 96,
+      "action_timestamp": "20260303@195714",
+      "action": "grep mousepad', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 97,
+      "action_timestamp": "20260303@195714",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 98,
+      "action_timestamp": "20260303@195723",
+      "action": "pyautogui.write('mousepad', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 99,
+      "action_timestamp": "20260303@195723",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 100,
+      "action_timestamp": "20260303@195732",
+      "action": "pyautogui.write('sudo apt install mousepad', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 101,
+      "action_timestamp": "20260303@195732",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 102,
+      "action_timestamp": "20260303@195741",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 103,
+      "action_timestamp": "20260303@195741",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 104,
+      "action_timestamp": "20260303@195750",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 105,
+      "action_timestamp": "20260303@195750",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 106,
+      "action_timestamp": "20260303@195800",
+      "action": "pyautogui.write('osworld-public-evaluation', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 107,
+      "action_timestamp": "20260303@195800",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 108,
+      "action_timestamp": "20260303@195825",
+      "action": "pyautogui.write('gedit /home/user/fix.py &', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 109,
+      "action_timestamp": "20260303@195825",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 110,
+      "action_timestamp": "20260303@195844",
+      "action": "pyautogui.write('import openpyxl\\nwb = openpyxl.load_workbook(\"/home/user/Customers_New_7digit_Id.xlsx\")\\nws = wb.active\\nold_id_col = None\\nnew_id_col = None\\nheader_row = None\\nfor row in ws.iter_rows():\\n    for cell in row:\\n        if cell.value and \"old id\" in str(cell.value).lower():\\n            old_id_col = cell.column\\n            header_row = cell.row\\n        if cell.value and \"new 7\" in str(cell.value).lower():\\n            new_id_col = cell.column\\n    if old_id_col and new_id_col:\\n        break\\nprint(\"Header:\", header_row, \"OldCol:\", old_id_col, \"NewCol:\", new_id_col)\\nfor row_num in range(header_row + 1, ws.max_row + 1):\\n    old_cell = ws.cell(row=row_num, column=old_id_col)\\n    new_cell = ws.cell(row=row_num, column=new_id_col)\\n    if old_cell.value is not None and str(old_cell.value).strip() != \"\":\\n        old_val = str(int(float(str(old_cell.value))))\\n        new_val = old_val.zfill(7)\\n        new_cell.value = new_val\\nwb.save(\"/home/user/Customers_New_7digit_Id.xlsx\")\\nprint(\"Saved!\")', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 111,
+      "action_timestamp": "20260303@195945",
+      "action": "pyautogui.click(1046, 185, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 112,
+      "action_timestamp": "20260303@200047",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 113,
+      "action_timestamp": "20260303@200054",
+      "action": "no_action",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 114,
+      "action_timestamp": "20260303@200151",
+      "action": "pyautogui.click(35, 608, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 115,
+      "action_timestamp": "20260303@200157",
+      "action": "pyautogui.click(349, 157, button='left'); time.sleep(0.1); pyautogui.click(349, 157, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 116,
+      "action_timestamp": "20260303@200206",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 117,
+      "action_timestamp": "20260303@200216",
+      "action": "pyautogui.click(33, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 118,
+      "action_timestamp": "20260303@200224",
+      "action": "pyautogui.click(434, 337, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 119,
+      "action_timestamp": "20260303@200233",
+      "action": "pyautogui.click(420, 335, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 120,
+      "action_timestamp": "20260303@200356",
+      "action": "pyautogui.moveTo(515, 292); pyautogui.dragTo(576, 292, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

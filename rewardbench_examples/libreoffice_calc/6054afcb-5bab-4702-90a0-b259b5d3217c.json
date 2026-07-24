@@ -1,0 +1,234 @@
+{
+  "id": "6054afcb-5bab-4702-90a0-b259b5d3217c",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Some data are missed by now and are filled by 'N/A' temporarily. Please hide them in the table for now. Do not delete them and filter is no needed. The file to be evaluated is located on the VM at the following path: 「/home/user/Date_Budget_Variance_HideNA.xlsx」.",
+  "source": "https://www.youtube.com/shorts/JTbZ8sRxkdU",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/6054afcb-5bab-4702-90a0-b259b5d3217c/Date_Budget_Variance_HideNA.xlsx",
+            "path": "/home/user/Date_Budget_Variance_HideNA.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Date_Budget_Variance_HideNA.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/6054afcb-5bab-4702-90a0-b259b5d3217c",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Date_Budget_Variance_HideNA.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/6054afcb-5bab-4702-90a0-b259b5d3217c/Date_Budget_Variance_HideNA_gold.xlsx",
+      "dest": "Date_Budget_Variance_HideNA_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Date_Budget_Variance_HideNA.xlsx",
+      "dest": "Date_Budget_Variance_HideNA.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        },
+        {
+          "type": "row_props",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0",
+          "props": [
+            "hidden"
+          ]
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113619",
+      "action": "pyautogui.click(86, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113619.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113624",
+      "action": "pyautogui.rightClick(86, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113624.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113629",
+      "action": "pyautogui.click(161, 558)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113629.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113635",
+      "action": "pyautogui.rightClick(88, 369)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113635.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113642",
+      "action": "pyautogui.click(161, 581)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113642.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113648",
+      "action": "pyautogui.rightClick(88, 383)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113648.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113655",
+      "action": "pyautogui.click(161, 604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113655.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113704",
+      "action": "pyautogui.rightClick(88, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113704.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113712",
+      "action": "pyautogui.click(161, 625)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113712.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113717",
+      "action": "pyautogui.rightClick(88, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113717.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113724",
+      "action": "pyautogui.click(161, 640)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113724.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113731",
+      "action": "pyautogui.rightClick(88, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113731.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113741",
+      "action": "pyautogui.click(161, 654)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113741.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113746",
+      "action": "pyautogui.rightClick(88, 454)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113746.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113756",
+      "action": "pyautogui.click(161, 670)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113756.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Date_Budget_Variance_HideNA.xlsx"
+  ]
+}

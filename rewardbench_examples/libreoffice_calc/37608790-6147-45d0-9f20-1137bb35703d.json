@@ -1,0 +1,226 @@
+{
+  "id": "37608790-6147-45d0-9f20-1137bb35703d",
+  "snapshot": "libreoffice_calc",
+  "instruction": "The information are mixed in one field. Help me split them and fill in the columns of First Name, Last Name and Rank The file to be evaluated is located on the VM at the following path: 「/home/user/Employee_Roles_and_Ranks.xlsx」.",
+  "source": "https://www.youtube.com/shorts/uzPo_CPCHH8",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/37608790-6147-45d0-9f20-1137bb35703d/Employee_Roles_and_Ranks.xlsx",
+            "path": "/home/user/Employee_Roles_and_Ranks.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Employee_Roles_and_Ranks.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/37608790-6147-45d0-9f20-1137bb35703d",
+  "related_apps": [
+    "libreoffice calc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Employee_Roles_and_Ranks.xlsx - LibreOffice Calc",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(\"ctrl\", \"s\");"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_table",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/37608790-6147-45d0-9f20-1137bb35703d/Employee_Roles_and_Ranks_gold.xlsx",
+      "dest": "Employee_Roles_and_Ranks_gold.xlsx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Employee_Roles_and_Ranks.xlsx",
+      "dest": "Employee_Roles_and_Ranks.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": 0,
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@112307",
+      "action": "pyautogui.click(355, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@112307.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@112313",
+      "action": "pyautogui.click(355, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@112313.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@112320",
+      "action": "pyautogui.typewrite('Benedict')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@112320.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@112330",
+      "action": "pyautogui.click(434, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@112330.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@112337",
+      "action": "pyautogui.typewrite('Cucumberbach')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@112337.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@112346",
+      "action": "pyautogui.click(509, 329)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@112346.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@112354",
+      "action": "pyautogui.typewrite('Manager')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@112354.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@112402",
+      "action": "pyautogui.click(355, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@112402.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@112411",
+      "action": "pyautogui.typewrite('Blake')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@112411.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@112418",
+      "action": "pyautogui.click(413, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@112418.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@112426",
+      "action": "pyautogui.typewrite('Dreary')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@112426.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@112434",
+      "action": "pyautogui.click(495, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@112434.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@112440",
+      "action": "pyautogui.typewrite('CEO')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@112440.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@112446",
+      "action": "pyautogui.click(355, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@112446.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@112453",
+      "action": "pyautogui.typewrite('Bey')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@112453.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Employee_Roles_and_Ranks.xlsx"
+  ]
+}

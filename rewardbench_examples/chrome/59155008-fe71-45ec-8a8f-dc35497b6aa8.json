@@ -1,0 +1,112 @@
+{
+  "id": "59155008-fe71-45ec-8a8f-dc35497b6aa8",
+  "snapshot": "chrome",
+  "instruction": "What are the similar names to the name carl",
+  "source": "Mind2Web",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.babycenter.com/child"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "is_expected_active_tab",
+    "result": {
+      "type": "active_url_from_accessTree",
+      "goto_prefix": "https://www."
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type": "url",
+        "url": "https://www.babycenter.com/baby-names/details/carl-853"
+      }
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@122609",
+      "action": "pyautogui.click(887, 548)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@122609.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@122618",
+      "action": "pyautogui.click(392, 302)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@122618.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@122628",
+      "action": "pyautogui.typewrite('carl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@122628.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@122642",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@122642.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@122700",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@122700.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

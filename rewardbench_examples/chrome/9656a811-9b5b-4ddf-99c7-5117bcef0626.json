@@ -1,0 +1,158 @@
+{
+  "id": "9656a811-9b5b-4ddf-99c7-5117bcef0626",
+  "snapshot": "chrome",
+  "instruction": "I want Chrome to warn me whenever I visit a potentially harmful or unsafe website. Can you enable this safety feature?",
+  "source": "https://www.quora.com/How-do-I-set-the-security-settings-for-the-Google-Chrome-browser-for-the-best-security#:~:text=Enable%20Safe%20Browsing:%20Chrome%20has%20a%20built%2Din,Security%20%3E%20Security%20%3E%20Enable%20Safe%20Browsing.",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "chrome"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "google-chrome",
+            "--remote-debugging-port=1337"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 3
+        }
+      }
+    ],
+    "func": "exact_match",
+    "result": {
+      "type": "enable_enhanced_safety_browsing"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "true"
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124149",
+      "action": "pyautogui.click(1256, 238)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124149.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124155",
+      "action": "pyautogui.click(1078, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124155.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124202",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124202.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124210",
+      "action": "pyautogui.click(513, 433)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124210.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124220",
+      "action": "pyautogui.moveTo(830, 747)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124220.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124222",
+      "action": "pyautogui.scroll(-7)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124222.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124232",
+      "action": "pyautogui.click(830, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124232.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124244",
+      "action": "pyautogui.click(509, 731)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@124244.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@124259",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@124259.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

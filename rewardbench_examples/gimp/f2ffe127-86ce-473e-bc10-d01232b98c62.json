@@ -1,0 +1,222 @@
+{
+  "id": "f2ffe127-86ce-473e-bc10-d01232b98c62",
+  "raw_id": "7767eef2-56a3-4cea-8c9f-48c070c7d65b",
+  "snapshot": "gimp",
+  "instruction": "Please switch GIMP's icon theme from the default to the legacy one.",
+  "raw_instruction": "Please help change GIMP's theme from dark to light.",
+  "related_apps": [
+    "gimp"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(['ctrl', 'q']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "icon-theme",
+        "value": "\"Legacy\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "theme",
+        "value": "\"Light\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/7767eef2-56a3-4cea-8c9f-48c070c7d65b_trace_06ada14bc8c7_1755592327/image_0001.png",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@110913",
+      "action": "pyautogui.click(600.248, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@110913.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@110921",
+      "action": "pyautogui.click(598.261, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@110921.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@110932",
+      "action": "pyautogui.click(122.236, 78.132, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@110932.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@110943",
+      "action": "pyautogui.click(175.901, 646.813, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@110943.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@110952",
+      "action": "pyautogui.click(175.901, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@110952.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@111004",
+      "action": "pyautogui.click(171.925, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@111004.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@111016",
+      "action": "pyautogui.click(166.957, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@111016.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@111029",
+      "action": "pyautogui.scroll(-5, x=1725.217, y=795.165)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@111029.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@111043",
+      "action": "pyautogui.click(235.528, 681.429, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@111043.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@111058",
+      "action": "pyautogui.click(171.925, 701.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@111058.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@111111",
+      "action": "pyautogui.click(391.553, 604.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@111111.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@111122",
+      "action": "pyautogui.click(393.54, 604.286, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@111122.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@111136",
+      "action": "pyautogui.click(830.807, 869.341, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@111136.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@111151",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20260105@111151.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

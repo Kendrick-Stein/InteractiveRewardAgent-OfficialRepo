@@ -1,0 +1,233 @@
+{
+  "id": "0e5303d4-8820-42f6-b18d-daf7e633de21",
+  "snapshot": "chrome",
+  "instruction": "I want to learn python programming and my friend recommends me this course website. I have grabbed the lecture slide for week 0. Please download the PDFs for other weeks into the opened folder and leave the file name as-it-is.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://cs50.harvard.edu/python/2022/weeks/0/"
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "mkdir",
+          "-p",
+          "/home/user/lecture_slides"
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/0e5303d4-8820-42f6-b18d-daf7e633de21/lecture0.pdf",
+            "path": "/home/user/lecture_slides/lecture0.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "nautilus",
+          "/home/user/lecture_slides"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "os",
+    "chrome"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "/bin/bash",
+            "-c",
+            "cd /home/user && zip -qr lecture_slides.zip lecture_slides/"
+          ]
+        }
+      }
+    ],
+    "func": "compare_archive",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/lecture_slides.zip",
+      "dest": "lecture_slides.zip"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/0e5303d4-8820-42f6-b18d-daf7e633de21/lecture_slides.zip",
+      "dest": "gold_lecture_slides.zip"
+    },
+    "options": {
+      "file_path": "lecture_slides",
+      "file_type": "pdf"
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114804",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114804.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114811",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114811.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114818",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114818.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114825",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114825.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114834",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@114834.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114844",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114844.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114854",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@114854.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@114903",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@114903.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@114911",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@114911.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@114920",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@114920.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@114929",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@114929.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@114940",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@114940.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@114950",
+      "action": "pyautogui.click(590, 504)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@114950.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@114959",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20251127@114959.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

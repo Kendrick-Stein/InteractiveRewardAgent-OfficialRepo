@@ -1,0 +1,76 @@
+{
+  "id": "93eabf48-6a27-4cb6-b963-7d5fe1e0d3a9",
+  "snapshot": "chrome",
+  "instruction": "Could you assist me in turning off the dark mode feature in Google Chrome? I've noticed that while dark mode is great for reducing glare, it actually makes it more challenging for me to read text clearly, especially with my astigmatism.",
+  "source": "https://superuser.com/questions/1417973/how-to-disable-google-chrome-dark-mode",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123219",
+      "action": "pyautogui.click(34, 60)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123219.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123225",
+      "action": "pyautogui.click(1256, 238)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123225.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123231",
+      "action": "pyautogui.click(1010, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123231.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123238",
+      "action": "pyautogui.click(403, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123238.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123247",
+      "action": "pyautogui.click(480, 509)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123247.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123256",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@123256.png"
+    }
+  ],
+  "result_raw": "0"
+}

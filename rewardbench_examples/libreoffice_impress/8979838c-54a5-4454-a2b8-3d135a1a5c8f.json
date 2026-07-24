@@ -1,0 +1,193 @@
+{
+  "id": "8979838c-54a5-4454-a2b8-3d135a1a5c8f",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Give the slide a purple background color. Add the title to note. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/186_3.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/8979838c-54a5-4454-a2b8-3d135a1a5c8f/186_3.pptx",
+            "path": "/home/user/Desktop/186_3.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/186_3.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "186_3.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/8979838c-54a5-4454-a2b8-3d135a1a5c8f/186_3_Gold.pptx",
+      "dest": "186_3_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/186_3.pptx",
+      "dest": "186_3.pptx"
+    },
+    "options": {}
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131319",
+      "action": "pyautogui.click(1718, 345)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131319.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131323",
+      "action": "pyautogui.click(440, 164)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131323.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131327",
+      "action": "pyautogui.click(1718, 308)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131327.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131332",
+      "action": "pyautogui.click(1698, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131332.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131338",
+      "action": "pyautogui.click(1795, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@131338.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@131343",
+      "action": "pyautogui.click(1766, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@131343.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@131350",
+      "action": "pyautogui.click(349, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@131350.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@131356",
+      "action": "pyautogui.click(407, 270)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@131356.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@131401",
+      "action": "pyautogui.click(1372, 843)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@131401.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@131408",
+      "action": "pyautogui.click(515, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@131408.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@131415",
+      "action": "pyautogui.typewrite('Should You Consider Studying Abroad?')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@131415.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@131420",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20251127@131420.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/186_3.pptx"
+  ]
+}

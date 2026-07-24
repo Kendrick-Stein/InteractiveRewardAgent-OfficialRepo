@@ -1,0 +1,170 @@
+{
+  "id": "dcbe20e8-647f-4f1d-8696-f1c5bbb570e3",
+  "snapshot": "vscode",
+  "instruction": "Please help me change the background of VS Code to the photo in Downloads.",
+  "source": "",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125243",
+      "action": "pyautogui.click(472, 977)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125243.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125251",
+      "action": "pyautogui.click(584, 784)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125251.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125258",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125258.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125305",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125305.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125313",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125313.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125321",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125321.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125333",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125333.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125345",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125345.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125355",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@125355.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@125419",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@125419.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@125427",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@125427.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@125438",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@125438.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@125448",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@125448.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@125457",
+      "action": "pyautogui.click(1414, 337)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@125457.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@125510",
+      "action": "pyautogui.typewrite('background image')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@125510.png"
+    }
+  ],
+  "result_raw": "0"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "7767eef2-56a3-4cea-8c9f-48c070c7d65b",
+  "snapshot": "gimp",
+  "instruction": "Please help change GIMP's theme from dark to light.",
+  "source": "https://www.youtube.com/watch?v=LX-S1CX1HUI",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; time.sleep(1);pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "theme",
+        "value": "\"Light\""
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "gimprc",
+      "dest": "gimprc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@232029",
+      "action": "pyautogui.click(122.236, 75.165, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@232029.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@232039",
+      "action": "pyautogui.click(175.901, 646.813, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@232039.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@232052",
+      "action": "pyautogui.click(166.957, 677.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@232052.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@232107",
+      "action": "pyautogui.click(149.068, 679.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@232107.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@232117",
+      "action": "pyautogui.click(151.056, 679.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@232117.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@232128",
+      "action": "pyautogui.moveTo(865.59, 687.363)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@232128.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@232128",
+      "action": "pyautogui.dragTo(865.59, 734.835, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@232128.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251221@232140",
+      "action": "pyautogui.click(356.77, 629.011, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251221@232140.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251221@232151",
+      "action": "pyautogui.click(830.807, 869.341, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251221@232151.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251221@232202",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251221@232202.png"
+    }
+  ],
+  "result_raw": 1.0
+}

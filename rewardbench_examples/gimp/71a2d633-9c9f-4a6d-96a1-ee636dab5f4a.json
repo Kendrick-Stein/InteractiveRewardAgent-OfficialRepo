@@ -1,0 +1,114 @@
+{
+  "id": "71a2d633-9c9f-4a6d-96a1-ee636dab5f4a",
+  "raw_id": "d52d6308-ec58-42b7-a2c9-de80e4837b2b",
+  "snapshot": "gimp",
+  "instruction": "Could you help me show the tabs in the GIMP interface?",
+  "raw_instruction": "Could you help me remove the dock on the left side of the screen?",
+  "related_apps": [
+    "gimp"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey(['ctrl', 'q']);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "show-tabs",
+        "value": "yes"
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "sessionrc",
+      "dest": "sessionrc"
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"ctrl\", \"q\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_config_status",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type:": "key-value",
+        "key": "hide-docks",
+        "value": "yes"
+      }
+    },
+    "result": {
+      "type": "gimp_config_file",
+      "file_name": "sessionrc",
+      "dest": "sessionrc"
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/d52d6308-ec58-42b7-a2c9-de80e4837b2b_trace_20dac92d63e3_1755592327/image_0001.png",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@111308",
+      "action": "pyautogui.click(536.646, 77.143, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@111308.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@111315",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_2_20260105@111315.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

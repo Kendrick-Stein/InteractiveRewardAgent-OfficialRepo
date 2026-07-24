@@ -1,0 +1,625 @@
+{
+  "id": "d9b7c649-c975-4f53-88f5-940b29c47247",
+  "snapshot": "thunderbird",
+  "instruction": "Help me extract the latest 5 emails in daily folder from Thunderbird, from the earliest to the most recent by time, and creates a LibreOffice Calc Report \"report.xlsx\" in the desktop, storing the sender_name, sender_address, subject, CC, and number_of_attachments.",
+  "source": "https://marketplace.uipath.com/listings/extract-the-first-1000-gmail-emails-from-the-current-month-in-a-new-google-sheets-report",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/d9b7c649-c975-4f53-88f5-940b29c47247/thunderbird-profile.tar.gz",
+            "path": "/home/user/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xz",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird",
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "func": "compare_table",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/report.xlsx",
+      "dest": "report.xlsx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/d9b7c649-c975-4f53-88f5-940b29c47247/report.xlsx",
+      "dest": "report_gold.xlsx"
+    },
+    "options": {
+      "rules": [
+        {
+          "type": "sheet_data",
+          "sheet_idx0": "RI0",
+          "sheet_idx1": "EI0"
+        }
+      ]
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@222730",
+      "action": "pyautogui.click(764, 405, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@222746",
+      "action": "pyautogui.click(764, 438, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@222754",
+      "action": "pyautogui.click(764, 483, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@222803",
+      "action": "pyautogui.click(764, 538, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@222811",
+      "action": "pyautogui.click(764, 582, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@222843",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@222940",
+      "action": "pyautogui.click(33, 406, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@222956",
+      "action": "pyautogui.write('sender_name', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@223006",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@223011",
+      "action": "pyautogui.write('sender_address', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@223018",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@223023",
+      "action": "pyautogui.write('subject', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@223030",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@223035",
+      "action": "pyautogui.write('CC', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@223042",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@223048",
+      "action": "pyautogui.write('number_of_attachments', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@223056",
+      "action": "pyautogui.click(148, 338, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@223102",
+      "action": "pyautogui.write('HKU Bulk Email Delivery System', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@223109",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@223114",
+      "action": "pyautogui.write('mail.service@intranet.hku.hk', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@223122",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@223128",
+      "action": "pyautogui.write('HKU Daily Email Digest (25 JAN 2024)', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@223136",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@223141",
+      "action": "pyautogui.write('(None/empty)', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@223147",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@223153",
+      "action": "pyautogui.write('0', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@223159",
+      "action": "pyautogui.click(148, 357, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@223206",
+      "action": "pyautogui.click(148, 345, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@223211",
+      "action": "pyautogui.write('eNotices System', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@223218",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@223224",
+      "action": "pyautogui.write('enotices.daily.digest@hku.hk', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@223255",
+      "action": "pyautogui.click(150, 306, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@223300",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@223305",
+      "action": "pyautogui.press('delete')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@223316",
+      "action": "pyautogui.write('sender_name', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@223322",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@223326",
+      "action": "pyautogui.write('sender_address', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@223332",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@223337",
+      "action": "pyautogui.write('subject', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@223344",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@223348",
+      "action": "pyautogui.write('CC', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@223354",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@223359",
+      "action": "pyautogui.write('number_of_attachments', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@223410",
+      "action": "pyautogui.click(150, 329, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@223415",
+      "action": "pyautogui.write('HKU Bulk Email Delivery System', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@223422",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@223427",
+      "action": "pyautogui.write('mail.service@intranet.hku.hk', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@223434",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@223440",
+      "action": "pyautogui.write('HKU Daily Email Digest (25 JAN 2024)', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@223450",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@223456",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@223501",
+      "action": "pyautogui.write('0', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@223508",
+      "action": "pyautogui.click(150, 352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@223513",
+      "action": "pyautogui.write('eNotices System', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@223520",
+      "action": "pyautogui.press('tab')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@223526",
+      "action": "pyautogui.write('enotices.daily.digest@hku.hk', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@223556",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@223629",
+      "action": "pyautogui.write('python3 -c \"\\nimport subprocess\\nsubprocess.run([\\'pip\\', \\'install\\', \\'openpyxl\\', \\'-q\\'])\\nimport openpyxl\\nwb = openpyxl.Workbook()\\nws = wb.active\\nws.append([\\'sender_name\\', \\'sender_address\\', \\'subject\\', \\'CC\\', \\'number_of_attachments\\'])\\nws.append([\\'HKU Bulk Email Delivery System\\', \\'mail.service@intranet.hku.hk\\', \\'HKU Daily Email Digest (25 JAN 2024)\\', \\'\\', 0])\\nws.append([\\'eNotices System\\', \\'enotices.daily.digest@hku.hk\\', \\'HKU Daily Notices (27 JAN 2024)\\', \\'mail.service@intranet.hku.hk\\', 0])\\nws.append([\\'eNotices System\\', \\'enotices.daily.digest@hku.hk\\', \\'HKU Daily Notices (28 JAN 2024)\\', \\'mail.service@intranet.hku.hk\\', 0])\\nws.append([\\'HKU Bulk Email Delivery System\\', \\'mail.service@intranet.hku.hk\\', \\'HKU Daily Email Digest (29 JAN 2024)\\', \\'\\', 0])\\nws.append([\\'HKU Bulk Email Delivery System\\', \\'mail.service@intranet.hku.hk\\', \\'HKU Daily Email Digest (30 JAN 2024)\\', \\'\\', 0])\\nwb.save(\\'/home/user/Desktop/report.xlsx\\')\\nprint(\\'Done! File saved.\\')\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@223724",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@223735",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@223748",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_5_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

@@ -1,0 +1,303 @@
+{
+  "id": "e2dd0213-26db-4349-abe5-d5667bfd725c",
+  "snapshot": "gimp",
+  "instruction": "Can you assist me in shifting the text box to the left? I keep accidentally selecting the image layer beneath it.",
+  "source": "https://superuser.com/questions/839650/how-to-move-an-inserted-text-box-in-gimp",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/e2dd0213-26db-4349-abe5-d5667bfd725c/orange_background.xcf",
+            "path": "/home/user/Desktop/orange_background.xcf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/orange_background.xcf"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.hotkey([\"shift\", \"ctrl\", \"e\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import time; import pyautogui; pyautogui.write(\"leftside_textbox\");time.sleep(1);pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 2
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python3",
+            "-c",
+            "import pyautogui; pyautogui.press([\"enter\"]);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      }
+    ],
+    "func": "check_textbox_on_leftside",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/leftside_textbox.png",
+      "dest": "leftside_textbox.png"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133152",
+      "action": "pyautogui.moveTo(1022, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133152.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133154",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133154.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133200",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133200.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133205",
+      "action": "pyautogui.moveTo(999, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133205.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133207",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133207.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133213",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133213.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133220",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133220.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133222",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133222.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133229",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133229.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133236",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133236.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133238",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133238.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133247",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@133247.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@133253",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@133253.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@133256",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@133256.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@133303",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@133303.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@133310",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@133310.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@133312",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@133312.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@133319",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@133319.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@133327",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@133327.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@133329",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@133329.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@133336",
+      "action": "pyautogui.click(993, 674)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@133336.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@133343",
+      "action": "pyautogui.moveTo(968, 677)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@133343.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@133345",
+      "action": "pyautogui.dragTo(839, 671, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@133345.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

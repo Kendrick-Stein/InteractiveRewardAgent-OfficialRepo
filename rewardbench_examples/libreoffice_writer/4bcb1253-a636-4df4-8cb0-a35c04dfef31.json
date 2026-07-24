@@ -1,0 +1,147 @@
+{
+  "id": "4bcb1253-a636-4df4-8cb0-a35c04dfef31",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Export the current document into PDF, keep the file name The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/View_Person_Organizational_Summary.docx」.",
+  "source": "https://www.libreofficehelp.com/save-export-writer-documents-in-pdf-epub-format/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31/View_Person_Organizational_Summary.docx",
+            "path": "/home/user/Desktop/View_Person_Organizational_Summary.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/View_Person_Organizational_Summary.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "func": [
+      "compare_pdfs",
+      "compare_pdfs",
+      "compare_pdfs",
+      "compare_pdfs"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_Gold_1.pdf"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_Gold_2.pdf"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_Gold_3.pdf"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/4bcb1253-a636-4df4-8cb0-a35c04dfef31/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_Gold_4.pdf"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_1.pdf"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Documents/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_2.pdf"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Downloads/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_3.pdf"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/View_Person_Organizational_Summary.pdf",
+        "dest": "Constitution_Template_With_Guidelines_4.pdf"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@005917",
+      "action": "pyautogui.click(89.441, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@005917.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@005930",
+      "action": "pyautogui.click(130.186, 478.681, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@005930.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@005944",
+      "action": "pyautogui.click(454.161, 478.681, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@005944.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@005956",
+      "action": "pyautogui.click(1347.578, 805.055, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@005956.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@010008",
+      "action": "pyautogui.click(1549.317, 161.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@010008.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@010021",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251222@010021.png"
+    }
+  ],
+  "result_raw": "0.9977414640627076",
+  "file_path": [
+    "/home/user/Desktop/View_Person_Organizational_Summary.docx"
+  ]
+}

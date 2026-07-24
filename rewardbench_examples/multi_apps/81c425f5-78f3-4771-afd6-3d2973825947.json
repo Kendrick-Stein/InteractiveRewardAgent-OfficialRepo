@@ -1,0 +1,176 @@
+{
+  "id": "81c425f5-78f3-4771-afd6-3d2973825947",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Can you assist me in transferring the data from LibreOffice Calc in the current sheet to a LibreOffice Writer table while preserving the original format as in calc file? Save the document as \"price.docx\" on the desktop.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "path": "/home/user/Desktop/OSP_Envelope_Price-List_2023_5000.xlsx",
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/81c425f5-78f3-4771-afd6-3d2973825947/OSP_Envelope_Price-List_2023_5000.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/OSP_Envelope_Price-List_2023_5000.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/81c425f5-78f3-4771-afd6-3d2973825947",
+  "related_apps": [
+    "libreoffice_writer",
+    "libreoffice_calc",
+    "os"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "price.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey(\"ctrl\", \"s\"); time.sleep(0.5);"
+          ]
+        }
+      }
+    ],
+    "func": "compare_docx_tables",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/price.docx",
+      "dest": "price.docx"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/81c425f5-78f3-4771-afd6-3d2973825947/price.docx",
+      "dest": "price_Gold.docx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@115120",
+      "action": "pyautogui.moveTo(157, 311)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@115120.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@115122",
+      "action": "pyautogui.dragTo(570, 598, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@115122.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@115127",
+      "action": "pyautogui.hotkey('ctrl', 'c')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@115127.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@115133",
+      "action": "pyautogui.click(34, 342)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@115133.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@115140",
+      "action": "pyautogui.hotkey('ctrl', 'v')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@115140.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@115149",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@115149.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@115156",
+      "action": "pyautogui.click(147, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@115156.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@115204",
+      "action": "pyautogui.click(470, 248)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@115204.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@115211",
+      "action": "pyautogui.typewrite('price.docx')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@115211.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@115227",
+      "action": "pyautogui.click(1545, 164)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@115227.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@115234",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@115234.png"
+    }
+  ],
+  "result_raw": "1"
+}

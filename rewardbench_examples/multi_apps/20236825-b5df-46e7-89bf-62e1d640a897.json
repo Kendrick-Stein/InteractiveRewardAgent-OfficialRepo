@@ -1,0 +1,1065 @@
+{
+  "id": "20236825-b5df-46e7-89bf-62e1d640a897",
+  "snapshot": "vscode",
+  "instruction": "I am currently working on my algorithm practice using the document \"bubble_Sort_tutorial.docx.\" Please assist me in completing the 'bubbleSort' function within the 'bubbleSort.py' file on the Desktop and save the output as 'res.txt' on the Desktop.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/20236825-b5df-46e7-89bf-62e1d640a897/bubbleSort.zip",
+            "path": "/home/user/Desktop/bubbleSort.zip"
+          },
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/20236825-b5df-46e7-89bf-62e1d640a897/Bubble_Sort_tutorial.docx",
+            "path": "/home/user/Desktop/Bubble_Sort_tutorial.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "/bin/bash",
+          "-c",
+          "unzip /home/user/Desktop/bubbleSort.zip -d /home/user/Desktop/ && rm -rf /home/user/Desktop/bubbleSort.zip"
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Bubble_Sort_tutorial.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/20236825-b5df-46e7-89bf-62e1d640a897",
+  "related_apps": [
+    "vscode",
+    "libreoffice_writer",
+    "os"
+  ],
+  "evaluator": {
+    "func": "compare_text_file",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/20236825-b5df-46e7-89bf-62e1d640a897/res.txt",
+      "dest": "res_Gold.txt"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/res.txt",
+      "dest": "res.txt"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260304@002726",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260304@002733",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260304@002739",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260304@002746",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260304@002753",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260304@002800",
+      "action": "pyautogui.press('pagedown')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260304@002809",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260304@002816",
+      "action": "pyautogui.click(1832, 44, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260304@002823",
+      "action": "pyautogui.click(1849, 773, button='left'); time.sleep(0.1); pyautogui.click(1849, 773, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260304@002900",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260304@002925",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.keyDown('alt'); pyautogui.press('t'); pyautogui.keyUp('alt'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260304@002934",
+      "action": "pyautogui.write('cat /home/user/Desktop/bubbleSort.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260304@002942",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260304@002959",
+      "action": "pyautogui.write('python3 -c \"import docx; doc=docx.Document(\\'/home/user/Desktop/bubble_Sort_tutorial.docx\\'); [print(p.text) for p in doc.paragraphs]\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260304@003017",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260304@003033",
+      "action": "pyautogui.write('pip3 install python-docx', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260304@003041",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260304@003048",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260304@003113",
+      "action": "pyautogui.write('python3 -c \"import docx; doc=docx.Document(\\'/home/user/Desktop/Bubble_Sort_tutorial.docx\\'); [print(p.text) for p in doc.paragraphs]\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260304@003127",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260304@003211",
+      "action": "pyautogui.scroll(5, x=1344, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260304@003218",
+      "action": "pyautogui.scroll(5, x=1344, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260304@003225",
+      "action": "pyautogui.scroll(5, x=1344, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260304@003232",
+      "action": "pyautogui.scroll(5, x=1344, y=432)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260304@003240",
+      "action": "pyautogui.click(1665, 150, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260304@003249",
+      "action": "pyautogui.scroll(5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260304@003320",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260304@003326",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260304@003420",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260304@003459",
+      "action": "pyautogui.write('cat > /home/user/Desktop/bubbleSort.py << \\'EOF\\'\\n# Optimized Python program for implementation of Bubble Sort\\n\\ndef bubbleSort(arr):\\n    n = len(arr)\\n    for i in range(n-1):\\n        swapped = False\\n        for j in range(0, n-i-1):\\n            if arr[j] > arr[j+1]:\\n                arr[j], arr[j+1] = arr[j+1], arr[j]\\n                swapped = True\\n        if not swapped:\\n            break\\n    return\\n\\n# Driver code to test above\\nif __name__ == \"__main__\":\\n    arr = [64, 34, 25, 12, 22, 11, 90]\\n\\n    bubbleSort(arr)\\n\\n    print(\"Sorted array:\")\\n    for i in range(len(arr)):\\n        print(\"%d\" % arr[i], end=\" \")\\n\\n# This code is modified by Suraj krushna Yadav\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260304@003542",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260304@003600",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260304@003613",
+      "action": "pyautogui.write('cat > /home/user/Desktop/bubbleSort.py << \\'EOF\\'\\n# Optimized Python program for implementation of Bubble Sort\\n\\ndef bubbleSort(arr):\\n    n = len(arr)\\n    for i in range(n-1):\\n        swapped = False\\n        for j in range(0, n-i-1):\\n            if arr[j] > arr[j+1]:\\n                arr[j], arr[j+1] = arr[j+1], arr[j]\\n                swapped = True\\n        if not swapped:\\n            break\\n    return\\n\\n# Driver code to test above\\nif __name__ == \"__main__\":\\n    arr = [64, 34, 25, 12, 22, 11, 90]\\n\\n    bubbleSort(arr)\\n\\n    print(\"Sorted array:\")\\n    for i in range(len(arr)):\\n        print(\"%d\" % arr[i], end=\" \")\\n\\n# This code is modified by Suraj krushna Yadav\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260304@003657",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260304@003731",
+      "action": "pyautogui.write(\"cat > /home/user/Desktop/bubbleSort.py << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260304@003731",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('cat > /home/user/Desktop/bubbleSort.py << \\'EOF\\'\\n# Optimized Python program for implementation of Bubble Sort\\n\\ndef bubbleSort(arr):\\n    n = len(arr)\\n    for i in range(n-1):\\n        swapped = False\\n        for j in range(0, n-i-1):\\n            if arr[j] > arr[j+1]:\\n                arr[j], arr[j+1] = arr[j+1], arr[j]\\n                swapped = True\\n        if not swapped:\\n            break\\n    return\\n\\n# Driver code to test above\\nif __name__ == \"__main__\":\\n    arr = [64, 34, 25, 12, 22, 11, 90]\\n\\n    bubbleSort(arr)\\n\\n    print(\"Sorted array:\")\\n    for i in range(len(arr)):\\n        print(\"%d\" % arr[i], end=\" \")\\n\\n# This code is modified by Suraj krushna Yadav\\nEOF', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260304@003825",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260304@003838",
+      "action": "pyautogui.write(\"cat > /home/user/Desktop/bubbleSort.py << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260304@003838",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260304@003851",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260304@003901",
+      "action": "pyautogui.write(\"cat > /home/user/Desktop/bubbleSort.py << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260304@003901",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260304@003916",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260304@003929",
+      "action": "pyautogui.write(\"cat > /home/user/Desktop/bubbleSort.py << 'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260304@003929",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260304@004020",
+      "action": "pyautogui.write('cat > /home/user/Desktop/bubbleSort.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260304@004020",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('space')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260304@004020",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write('<<', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260304@004020",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('space')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260304@004020",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.write(\"'EOF'\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260304@004020",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260304@004034",
+      "action": "pyautogui.write('<', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260304@004034",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260304@004048",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260304@004054",
+      "action": "pyautogui.write('<', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260304@004054",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260304@004103",
+      "action": "pyautogui.write(',', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260304@004103",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260304@004113",
+      "action": "pyautogui.write('.', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260304@004113",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260304@004149",
+      "action": "pyautogui.write('nano /home/user/Desktop/bubbleSort.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260304@004149",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260304@004206",
+      "action": "pyautogui.write('# Optimized Python program for implementation of Bubble Sort\\n\\ndef bubbleSort(arr):\\n    n = len(arr)\\n    for i in range(n-1):\\n        swapped = False\\n        for j in range(0, n-i-1):\\n            if arr[j] > arr[j+1]:\\n                arr[j], arr[j+1] = arr[j+1], arr[j]\\n                swapped = True\\n        if not swapped:\\n            break\\n    return\\n\\n# Driver code to test above\\nif __name__ == \"__main__\":\\n    arr = [64, 34, 25, 12, 22, 11, 90]\\n\\n    bubbleSort(arr)\\n\\n    print(\"Sorted array:\")\\n    for i in range(len(arr)):\\n        print(\"%d\" % arr[i], end=\" \")\\n\\n# This code is modified by Suraj krushna Yadav', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260304@004244",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('o'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260304@004250",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260304@004255",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('x'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260304@004303",
+      "action": "pyautogui.write('python3 /home/user/Desktop/bubbleSort.py > /home/user/Desktop/res.txt', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260304@004303",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260304@004317",
+      "action": "pyautogui.write('python3 /home/user/Desktop/bubbleSort.py > /home/user/Desktop/res.txt', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260304@004317",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False; pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260304@004354",
+      "action": "pyautogui.click(240, 1061, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260304@004359",
+      "action": "pyautogui.write('cat /home/user/Desktop/bubbleSort.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260304@004407",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260304@004414",
+      "action": "pyautogui.write('cat /home/user/Desktop/res.txt', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260304@004421",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260304@004440",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260304@004530",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260304@004730",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260304@004738",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260304@004746",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260304@004812",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260304@004824",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260304@004833",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260304@004841",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260304@004906",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260304@004931",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260304@004939",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260304@005010",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 89,
+      "action_timestamp": "20260304@005031",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 90,
+      "action_timestamp": "20260304@005041",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 91,
+      "action_timestamp": "20260304@005127",
+      "action": "pyautogui.write('python3 -c \"with open(\\'/home/user/Desktop/bubbleSort.py\\') as f: print(\\'=== bubbleSort.py ===\\'); print(f.read()); with open(\\'/home/user/Desktop/res.txt\\') as f: print(\\'=== res.txt ===\\'); print(f.read())\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 92,
+      "action_timestamp": "20260304@005149",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 93,
+      "action_timestamp": "20260304@005210",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 94,
+      "action_timestamp": "20260304@005219",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 95,
+      "action_timestamp": "20260304@005302",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('c'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 96,
+      "action_timestamp": "20260304@005314",
+      "action": "pyautogui.write('python3 -c \"\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 97,
+      "action_timestamp": "20260304@005324",
+      "action": "pyautogui.write(\"with open('/home/user/Desktop/bubbleSort.py') as f:\", interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 98,
+      "action_timestamp": "20260304@005348",
+      "action": "pyautogui.click(90, 50, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 99,
+      "action_timestamp": "20260304@005415",
+      "action": "pyautogui.click(480, 108, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 100,
+      "action_timestamp": "20260304@005450",
+      "action": "pyautogui.click(1440, 108, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 101,
+      "action_timestamp": "20260304@005531",
+      "action": "pyautogui.write('python3 -c \"\\nwith open(\\'/home/user/Desktop/bubbleSort.py\\') as f:\\n    print(\\'=== bubbleSort.py ===\\')\\n    print(f.read())\\nwith open(\\'/home/user/Desktop/res.txt\\') as f:\\n    print(\\'=== res.txt ===\\')\\n    print(f.read())\\n\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 102,
+      "action_timestamp": "20260304@005549",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 103,
+      "action_timestamp": "20260304@005645",
+      "action": "pyautogui.click(288, 813, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 104,
+      "action_timestamp": "20260304@005652",
+      "action": "pyautogui.write('python3 -c \"print(open(\\'/home/user/Desktop/res.txt\\').read())\"', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 105,
+      "action_timestamp": "20260304@005701",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 106,
+      "action_timestamp": "20260304@005708",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 107,
+      "action_timestamp": "20260304@005744",
+      "action": "pyautogui.write('cat /home/user/Desktop/res.txt', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 108,
+      "action_timestamp": "20260304@005751",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 109,
+      "action_timestamp": "20260304@005758",
+      "action": "pyautogui.write('cat /home/user/Desktop/bubbleSort.py', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 110,
+      "action_timestamp": "20260304@005806",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 111,
+      "action_timestamp": "20260304@005826",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

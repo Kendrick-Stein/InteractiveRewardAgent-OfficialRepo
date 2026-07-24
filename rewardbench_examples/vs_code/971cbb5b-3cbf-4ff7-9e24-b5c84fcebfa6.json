@@ -1,0 +1,100 @@
+{
+  "id": "971cbb5b-3cbf-4ff7-9e24-b5c84fcebfa6",
+  "snapshot": "vscode",
+  "instruction": "Please help me change the settings of VS Code so that every time I open it, it automatically creates a python file called \"test.py\" without using any extensions.",
+  "source": "",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124531",
+      "action": "pyautogui.click(472, 977)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124531.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124537",
+      "action": "pyautogui.click(568, 782)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124537.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124546",
+      "action": "pyautogui.typewrite('on start')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124546.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124553",
+      "action": "pyautogui.click(1064, 859)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124553.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124607",
+      "action": "pyautogui.click(1051, 816)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124607.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124619",
+      "action": "pyautogui.click(1051, 857)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124619.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124630",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@124630.png"
+    }
+  ],
+  "result_raw": "0"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "ce88f674-ab7a-43da-9201-468d38539e4a",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Please set my slides upright instead of sideways. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/AM_Last_Page_Template.pptx」.",
+  "source": "https://justclickhere.co.uk/resources/change-slides-in-impress-to-portrait/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/ce88f674-ab7a-43da-9201-468d38539e4a/AM_Last_Page_Template.pptx",
+            "path": "/home/user/Desktop/AM_Last_Page_Template.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/AM_Last_Page_Template.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "AM_Last_Page_Template.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_slide_orientation_Portrait",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/AM_Last_Page_Template.pptx",
+      "dest": "AM_Last_Page_Template.pptx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130312",
+      "action": "pyautogui.click(344, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130312.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130317",
+      "action": "pyautogui.click(418, 280)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130317.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130324",
+      "action": "pyautogui.click(691, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130324.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130329",
+      "action": "pyautogui.click(1372, 847)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130329.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130342",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@130342.png"
+    }
+  ],
+  "result_raw": "1",
+  "file_path": [
+    "/home/user/Desktop/AM_Last_Page_Template.pptx"
+  ]
+}

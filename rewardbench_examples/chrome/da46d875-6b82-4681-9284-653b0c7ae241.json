@@ -1,0 +1,1015 @@
+{
+  "id": "da46d875-6b82-4681-9284-653b0c7ae241",
+  "snapshot": "chrome",
+  "instruction": "Book an appointment to apply for a transportation access pass at the Charlie Card store on the first Monday eight months later, 10:15 am, fill in my details (James Smith, james.smith@gmail.com). And do not click \"book\" directly. Let me review it.",
+  "source": "test_task_2",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.mbta.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": [
+      "is_expected_url_pattern_match",
+      "check_direct_json_object",
+      "check_direct_json_object"
+    ],
+    "conj": "and",
+    "result": [
+      {
+        "type": "active_tab_info"
+      },
+      {
+        "type": "active_tab_html_parse",
+        "category": "class",
+        "class_multiObject_only_child": {
+          "HAZ16": {
+            "0": "content",
+            "1": "time"
+          }
+        }
+      },
+      {
+        "type": "active_tab_html_parse",
+        "category": "input",
+        "inputObject": {
+          "/html/body/div[2]/div/form/div[7]/div/div/div[1]/input[1]": "name",
+          "/html/body/div[2]/div/form/div[7]/div/div/div[1]/input[2]": "mail"
+        }
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule",
+        "rules": {
+          "expected": [
+            "book/CharlieCardStoreAppointments@mbta.com/"
+          ]
+        }
+      },
+      {
+        "type": "rule_relativeTime",
+        "rules": {
+          "relativeTime": {
+            "from": "first monday eight months later"
+          },
+          "expected": {
+            "content": "Apply for Transportation Access Pass (TAP) CharlieCard non-auto approval",
+            "time": "{MonthFull} {Day0D}, 10:15 AM"
+          }
+        }
+      },
+      {
+        "type": "rule",
+        "rules": {
+          "expected": {
+            "name": "James Smith",
+            "mail": "james.smith@gmail.com"
+          }
+        }
+      }
+    ]
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260303@175610",
+      "action": "pyautogui.click(1238, 294, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260303@175626",
+      "action": "pyautogui.click(576, 243, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260303@175637",
+      "action": "pyautogui.write('Charlie Card store appointment booking', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260303@175647",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260303@175714",
+      "action": "pyautogui.scroll(-5, x=768, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260303@175729",
+      "action": "pyautogui.click(643, 558, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260303@175738",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260303@175749",
+      "action": "pyautogui.click(470, 243, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260303@175759",
+      "action": "time.sleep(2)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260303@175811",
+      "action": "pyautogui.click(1200, 200, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260303@175819",
+      "action": "pyautogui.click(1206, 197, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260303@180225",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260303@180621",
+      "action": "import pyautogui; import time; pyautogui.FAILSAFE = False",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260303@180640",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260303@180659",
+      "action": "time.sleep(10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260303@180717",
+      "action": "infeasible",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260303@180730",
+      "action": "pyautogui.click(960, 540, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260303@180735",
+      "action": "pyautogui.write('passoword', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260303@180743",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260303@180817",
+      "action": "pyautogui.write('passoword', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260303@180833",
+      "action": "pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.keyDown('backspace'); pyautogui.press('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace'); pyautogui.keyUp('backspace')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260303@180842",
+      "action": "pyautogui.write('password', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260303@180850",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260303@180908",
+      "action": "pyautogui.click(35, 63, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20260303@180916",
+      "action": "time.sleep(2)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20260303@180926",
+      "action": "pyautogui.click(48, 13, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20260303@180932",
+      "action": "pyautogui.click(960, 67, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20260303@180939",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20260303@180946",
+      "action": "pyautogui.click(993, 185, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 30,
+      "action_timestamp": "20260303@180952",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 31,
+      "action_timestamp": "20260303@181008",
+      "action": "pyautogui.click(48, 13, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 32,
+      "action_timestamp": "20260303@181015",
+      "action": "pyautogui.click(960, 67, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 33,
+      "action_timestamp": "20260303@181022",
+      "action": "pyautogui.write('Firefox', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 34,
+      "action_timestamp": "20260303@181030",
+      "action": "pyautogui.click(993, 185, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 35,
+      "action_timestamp": "20260303@181042",
+      "action": "pyautogui.write('google.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 36,
+      "action_timestamp": "20260303@181050",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 37,
+      "action_timestamp": "20260303@181055",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 38,
+      "action_timestamp": "20260303@181105",
+      "action": "pyautogui.write('MBTA Charlie Card store appointment booking', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 39,
+      "action_timestamp": "20260303@181115",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 40,
+      "action_timestamp": "20260303@181121",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 41,
+      "action_timestamp": "20260303@181137",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 42,
+      "action_timestamp": "20260303@181301",
+      "action": "pyautogui.click(672, 861, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 43,
+      "action_timestamp": "20260303@181322",
+      "action": "pyautogui.click(163, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 44,
+      "action_timestamp": "20260303@181338",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 45,
+      "action_timestamp": "20260303@181406",
+      "action": "pyautogui.click(163, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 46,
+      "action_timestamp": "20260303@181413",
+      "action": "pyautogui.click(566, 89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 47,
+      "action_timestamp": "20260303@181419",
+      "action": "pyautogui.write('https://www.mbta.com/charlie-card', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 48,
+      "action_timestamp": "20260303@181426",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 49,
+      "action_timestamp": "20260303@181435",
+      "action": "pyautogui.click(566, 89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 50,
+      "action_timestamp": "20260303@181442",
+      "action": "pyautogui.write('MBTA Charlie Card store appointment book online', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 51,
+      "action_timestamp": "20260303@181452",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 52,
+      "action_timestamp": "20260303@181500",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 53,
+      "action_timestamp": "20260303@181515",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 54,
+      "action_timestamp": "20260303@181522",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 55,
+      "action_timestamp": "20260303@181529",
+      "action": "pyautogui.scroll(-5, x=960, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 56,
+      "action_timestamp": "20260303@181537",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 57,
+      "action_timestamp": "20260303@181543",
+      "action": "pyautogui.press('pageup')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 58,
+      "action_timestamp": "20260303@181552",
+      "action": "pyautogui.click(612, 777, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 59,
+      "action_timestamp": "20260303@181601",
+      "action": "pyautogui.click(672, 187, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 60,
+      "action_timestamp": "20260303@181608",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 61,
+      "action_timestamp": "20260303@181616",
+      "action": "pyautogui.write('MBTA Charlie Card appointment Calendly Acuity', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 62,
+      "action_timestamp": "20260303@181625",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_18_screenshot.png"
+    },
+    {
+      "step_num": 63,
+      "action_timestamp": "20260303@181632",
+      "action": "time.sleep(5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_19_screenshot.png"
+    },
+    {
+      "step_num": 64,
+      "action_timestamp": "20260303@181644",
+      "action": "pyautogui.click(612, 676, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_20_screenshot.png"
+    },
+    {
+      "step_num": 65,
+      "action_timestamp": "20260303@181653",
+      "action": "pyautogui.click(557, 384, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_21_screenshot.png"
+    },
+    {
+      "step_num": 66,
+      "action_timestamp": "20260303@181700",
+      "action": "pyautogui.click(432, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_22_screenshot.png"
+    },
+    {
+      "step_num": 67,
+      "action_timestamp": "20260303@181707",
+      "action": "pyautogui.click(672, 213, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_23_screenshot.png"
+    },
+    {
+      "step_num": 68,
+      "action_timestamp": "20260303@181713",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_24_screenshot.png"
+    },
+    {
+      "step_num": 69,
+      "action_timestamp": "20260303@181721",
+      "action": "pyautogui.write('MBTA Charlie Card Acuity Scheduling direct booking link', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_25_screenshot.png"
+    },
+    {
+      "step_num": 70,
+      "action_timestamp": "20260303@181755",
+      "action": "pyautogui.click(864, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 71,
+      "action_timestamp": "20260303@181803",
+      "action": "pyautogui.write('https://app.acuityscheduling.com/schedule.php?owner=19580633', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 72,
+      "action_timestamp": "20260303@181814",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 73,
+      "action_timestamp": "20260303@181828",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 74,
+      "action_timestamp": "20260303@181840",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 75,
+      "action_timestamp": "20260303@181940",
+      "action": "pyautogui.click(626, 89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 76,
+      "action_timestamp": "20260303@181948",
+      "action": "pyautogui.write('https://mbta.acuityscheduling.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 77,
+      "action_timestamp": "20260303@181956",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 78,
+      "action_timestamp": "20260303@182002",
+      "action": "time.sleep(3)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 79,
+      "action_timestamp": "20260303@182015",
+      "action": "pyautogui.click(803, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 80,
+      "action_timestamp": "20260303@182032",
+      "action": "pyautogui.click(864, 599, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 81,
+      "action_timestamp": "20260303@182039",
+      "action": "pyautogui.write('site:acuityscheduling.com MBTA Charlie Card', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 82,
+      "action_timestamp": "20260303@182051",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 83,
+      "action_timestamp": "20260303@182101",
+      "action": "pyautogui.click(227, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    },
+    {
+      "step_num": 84,
+      "action_timestamp": "20260303@182109",
+      "action": "pyautogui.click(662, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_10_screenshot.png"
+    },
+    {
+      "step_num": 85,
+      "action_timestamp": "20260303@182115",
+      "action": "pyautogui.click(163, 89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_11_screenshot.png"
+    },
+    {
+      "step_num": 86,
+      "action_timestamp": "20260303@182122",
+      "action": "pyautogui.click(227, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_12_screenshot.png"
+    },
+    {
+      "step_num": 87,
+      "action_timestamp": "20260303@182129",
+      "action": "pyautogui.scroll(-5, x=864, y=599)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_13_screenshot.png"
+    },
+    {
+      "step_num": 88,
+      "action_timestamp": "20260303@182135",
+      "action": "pyautogui.click(626, 590, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_14_screenshot.png"
+    },
+    {
+      "step_num": 89,
+      "action_timestamp": "20260303@182154",
+      "action": "pyautogui.click(899, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_15_screenshot.png"
+    },
+    {
+      "step_num": 90,
+      "action_timestamp": "20260303@182208",
+      "action": "pyautogui.click(434, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_16_screenshot.png"
+    },
+    {
+      "step_num": 91,
+      "action_timestamp": "20260303@182219",
+      "action": "text_done",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_17_screenshot.png"
+    },
+    {
+      "step_num": 92,
+      "action_timestamp": "20260303@182251",
+      "action": "pyautogui.click(672, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_1_screenshot.png"
+    },
+    {
+      "step_num": 93,
+      "action_timestamp": "20260303@182257",
+      "action": "pyautogui.click(566, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_2_screenshot.png"
+    },
+    {
+      "step_num": 94,
+      "action_timestamp": "20260303@182302",
+      "action": "pyautogui.write('https://www.mbta.com', interval=0.05); time.sleep(0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_3_screenshot.png"
+    },
+    {
+      "step_num": 95,
+      "action_timestamp": "20260303@182312",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_4_screenshot.png"
+    },
+    {
+      "step_num": 96,
+      "action_timestamp": "20260303@182320",
+      "action": "pyautogui.click(163, 87, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_5_screenshot.png"
+    },
+    {
+      "step_num": 97,
+      "action_timestamp": "20260303@182327",
+      "action": "pyautogui.click(221, 49, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_6_screenshot.png"
+    },
+    {
+      "step_num": 98,
+      "action_timestamp": "20260303@182337",
+      "action": "pyautogui.scroll(-5, x=864, y=540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_7_screenshot.png"
+    },
+    {
+      "step_num": 99,
+      "action_timestamp": "20260303@182352",
+      "action": "pyautogui.click(624, 185, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_8_screenshot.png"
+    },
+    {
+      "step_num": 100,
+      "action_timestamp": "20260303@182358",
+      "action": "pyautogui.keyDown('ctrl'); pyautogui.press('a'); pyautogui.keyUp('ctrl')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "round_9_screenshot.png"
+    }
+  ],
+  "result_raw": "0"
+}

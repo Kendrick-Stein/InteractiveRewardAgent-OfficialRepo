@@ -1,0 +1,190 @@
+{
+  "id": "fba2c100-79e8-42df-ae74-b592418d54f4",
+  "snapshot": "base_setup",
+  "instruction": "Snap a photo of the current video scene, save it as 'interstellar.png', and put it on the Desktop, please.",
+  "source": "https://www.youtube.com/watch?v=XHprwDJ0-fU&t=436s",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vlc/fba2c100-79e8-42df-ae74-b592418d54f4/Interstellar%20Movie%20-%20Official%20Trailer.mp4",
+            "path": "/home/user/Desktop/Interstellar Movie - Official Trailer.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show --start-time=120.5 --stop-time=121 --play-and-pause '/home/user/Desktop/Interstellar Movie - Official Trailer.mp4'",
+        "shell": true
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 1
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Interstellar Movie - Interstellar Movie - Official Trailer - VLC media player"
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "compare_images",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vlc/fba2c100-79e8-42df-ae74-b592418d54f4/interstellar.png",
+      "dest": "interstellar_gold.png"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/interstellar.png",
+      "dest": "interstellar.png"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114030",
+      "action": "pyautogui.click(259, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114030.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114035",
+      "action": "pyautogui.click(317, 308)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114035.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114040",
+      "action": "pyautogui.click(34, 598)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114040.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114048",
+      "action": "pyautogui.click(180, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114048.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114053",
+      "action": "pyautogui.rightClick(392, 167)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@114053.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114100",
+      "action": "pyautogui.click(455, 363)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114100.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114107",
+      "action": "pyautogui.typewrite('interstellar')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@114107.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@114114",
+      "action": "pyautogui.click(480, 363)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@114114.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@114119",
+      "action": "pyautogui.rightClick(392, 150)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@114119.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@114126",
+      "action": "pyautogui.click(461, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@114126.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@114131",
+      "action": "pyautogui.click(151, 172)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@114131.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@114138",
+      "action": "pyautogui.click(1224, 51)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@114138.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@114144",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_13_20251127@114144.png"
+    }
+  ],
+  "result_raw": 0.906492567397591
+}

@@ -1,0 +1,205 @@
+{
+  "id": "0e763496-b6bb-4508-a427-fad0b6c3e195",
+  "snapshot": "libreoffice_writer",
+  "instruction": "Change the font to \"Times New Roman\" throughout the text. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Dublin_Zoo_Intro.docx」.",
+  "source": "https://ask.libreoffice.org/t/how-do-i-change-the-font-for-the-whole-document-in-writer/9220",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/0e763496-b6bb-4508-a427-fad0b6c3e195/Dublin_Zoo_Intro.docx",
+            "path": "/home/user/Desktop/Dublin_Zoo_Intro.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Dublin_Zoo_Intro.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Dublin_Zoo_Intro.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "compare_font_names",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "font_name": "Times New Roman"
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Dublin_Zoo_Intro.docx",
+      "dest": "Dublin_Zoo_Intro.docx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@005819",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@005819.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@005830",
+      "action": "pyautogui.click(550.559, 144.396, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@005830.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@005841",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@005841.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@005852",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@005852.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@005904",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@005904.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@005918",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@005918.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@005931",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@005931.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@005944",
+      "action": "pyautogui.scroll(-5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@005944.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@005956",
+      "action": "pyautogui.scroll(5, x=704.596, y=338.242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@005956.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@010008",
+      "action": "pyautogui.click(550.559, 146.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@010008.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@010021",
+      "action": "pyautogui.write('Times New Roman', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251222@010021.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251222@010032",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251222@010032.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251222@010040",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251222@010040.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251222@010050",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20251222@010050.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/Dublin_Zoo_Intro.docx"
+  ]
+}

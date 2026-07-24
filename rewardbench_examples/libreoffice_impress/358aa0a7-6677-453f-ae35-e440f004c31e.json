@@ -1,0 +1,132 @@
+{
+  "id": "358aa0a7-6677-453f-ae35-e440f004c31e",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Do you have any suggestions on how to modify the font for all text boxes in an Impress presentation? I want to standardize the font to 'Liberation Sans Narrow', but I don't want to manually select each individual text box. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/note-taking-strategies.pptx」.",
+  "source": "https://superuser.com/questions/296101/change-all-text-fonts-in-libreoffice-impress-presentation",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/358aa0a7-6677-453f-ae35-e440f004c31e/note-taking-strategies.file",
+            "path": "/home/user/Desktop/note-taking-strategies.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/note-taking-strategies.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "note-taking-strategies.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 15
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/358aa0a7-6677-453f-ae35-e440f004c31e/note-taking-strategies_Gold.pptx",
+      "dest": "note-taking-strategies_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/note-taking-strategies.pptx",
+      "dest": "note-taking-strategies.pptx"
+    },
+    "options": {
+      "examine_shape": false
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131350",
+      "action": "pyautogui.click(807, 473)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131350.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131355",
+      "action": "pyautogui.click(1654, 234)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131355.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131400",
+      "action": "pyautogui.typewrite('Liberation Sans Narrow')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131400.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131406",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131406.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131413",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@131413.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/note-taking-strategies.pptx"
+  ]
+}

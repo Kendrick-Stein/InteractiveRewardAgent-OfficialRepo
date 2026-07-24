@@ -1,0 +1,186 @@
+{
+  "id": "b21acd93-60fd-4127-8a43-2f5178f4a830",
+  "snapshot": "libreoffice_writer",
+  "instruction": "I have been practicing professional writing lately. Now I am writing essay which requires one paragraph each for introduction, body and conclusion with single-space for introduction, double-space for body then one-and-a-half-space for conclusion. The font size of this essay is 12. Could you help me on this? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx」.",
+  "source": "https://superuser.com/questions/1097199/how-can-i-double-space-a-document-in-libreoffice?rq=1",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/b21acd93-60fd-4127-8a43-2f5178f4a830/CCHU9045_Course_Outline_2019-20.docx",
+            "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "CCHU9045_Course_Outline_2019-20.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "compare_line_spacing",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/b21acd93-60fd-4127-8a43-2f5178f4a830/CCHU9045_Course_Outline_2019-20_Gold.docx",
+      "dest": "CCHU9045_Course_Outline_2019-20_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx",
+      "dest": "CCHU9045_Course_Outline_2019-20.docx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131745",
+      "action": "pyautogui.moveTo(701, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131745.png"
+    },
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131747",
+      "action": "pyautogui.dragTo(1022, 882, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131747.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131752",
+      "action": "pyautogui.click(292, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131752.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131758",
+      "action": "pyautogui.click(344, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131758.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131804",
+      "action": "pyautogui.click(626, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@131804.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@131810",
+      "action": "pyautogui.click(292, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@131810.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@131817",
+      "action": "pyautogui.click(344, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@131817.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@131824",
+      "action": "pyautogui.click(626, 203)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@131824.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@131829",
+      "action": "pyautogui.click(292, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@131829.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@131834",
+      "action": "pyautogui.click(344, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@131834.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@131840",
+      "action": "pyautogui.click(626, 176)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@131840.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@131846",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_11_20251127@131846.png"
+    }
+  ],
+  "result_raw": "0",
+  "file_path": [
+    "/home/user/Desktop/CCHU9045_Course_Outline_2019-20.docx"
+  ]
+}

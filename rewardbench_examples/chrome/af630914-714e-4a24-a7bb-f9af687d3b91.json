@@ -1,0 +1,160 @@
+{
+  "id": "af630914-714e-4a24-a7bb-f9af687d3b91",
+  "snapshot": "chrome",
+  "instruction": "My grandmother has been using the Chrome lately and told me that the font size is way too small for her poor eyesight. Could you set the default font size to the largest for her?",
+  "source": "https://www.howtogeek.com/680260/how-to-change-chromes-default-text-size/",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "chrome"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "google-chrome",
+            "--remote-debugging-port=1337"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 3
+        }
+      }
+    ],
+    "func": "check_font_size",
+    "result": {
+      "type": "chrome_font_size"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type": "range",
+        "min": 16,
+        "max": 99999
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124219",
+      "action": "pyautogui.click(1253, 242)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124219.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124225",
+      "action": "pyautogui.click(1016, 1004)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124225.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@124233",
+      "action": "pyautogui.click(407, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@124233.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@124244",
+      "action": "pyautogui.click(480, 512)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@124244.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124257",
+      "action": "pyautogui.moveTo(551, 610)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124257.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@124258",
+      "action": "pyautogui.scroll(-7)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@124258.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@124311",
+      "action": "pyautogui.click(1037, 788)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@124311.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@124321",
+      "action": "pyautogui.click(984, 914)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@124321.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@124331",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@124331.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

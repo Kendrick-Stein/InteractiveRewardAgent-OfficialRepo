@@ -1,0 +1,217 @@
+{
+  "id": "5203d847-2572-4150-912a-03f062254390",
+  "snapshot": "thunderbird",
+  "instruction": "Create a local folder called \"Promotions\" and create a filter to auto move the inbox emails whose subject contains “discount” to the new folder",
+  "source": "https://support.mozilla.org/en-US/kb/organize-your-messages-using-filters",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/thunderbird/dd84e895-72fd-4023-a336-97689ded257c/thunderbird-profile.tar.gz",
+            "path": "/home/user/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "close_window",
+        "parameters": {
+          "window_name": "Message Filters",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_thunderbird_filter",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.thunderbird/t5q2a5hp.default-release/ImapMail/outlook.office365.com/msgFilterRules.dat",
+      "dest": "msgFilterRules.dat"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": [
+          {
+            "enabled": "yes",
+            "action": "Move to folder",
+            "actionValue": "mailbox://nobody@Local%20Folders/Promotions",
+            "condition": [
+              "AND (subject,contains,discount)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132254",
+      "action": "pyautogui.rightClick(199, 431)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132254.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132259",
+      "action": "pyautogui.click(269, 529)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132259.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132303",
+      "action": "pyautogui.typewrite('Promotions')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132303.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132308",
+      "action": "pyautogui.click(1049, 632)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132308.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132313",
+      "action": "pyautogui.click(1010, 208)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132313.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132318",
+      "action": "pyautogui.click(1299, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132318.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132324",
+      "action": "pyautogui.typewrite('Discount Emails')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132324.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132329",
+      "action": "pyautogui.click(1160, 540)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132329.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132333",
+      "action": "pyautogui.typewrite('discount')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@132333.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@132339",
+      "action": "pyautogui.click(866, 694)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@132339.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@132344",
+      "action": "pyautogui.click(839, 784)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@132344.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@132349",
+      "action": "pyautogui.click(1395, 842)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@132349.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@132354",
+      "action": "pyautogui.click(1395, 859)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@132354.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@132359",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20251127@132359.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

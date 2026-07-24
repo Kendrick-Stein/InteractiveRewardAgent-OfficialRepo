@@ -1,0 +1,287 @@
+{
+  "id": "7582fb1b-528b-4241-a656-88452c4730bb",
+  "raw_id": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89",
+  "snapshot": "vlc",
+  "instruction": "Change the VLC recordings folder to the Documents directory",
+  "raw_instruction": "Help me modify the folder used to store my recordings to Desktop",
+  "related_apps": [
+    "vlc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "is_vlc_recordings_folder",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "recording_file_path": "/home/user/Documents"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "raw_evaluator": {
+    "func": "is_vlc_recordings_folder",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "recording_file_path": "/home/user/Desktop"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89/bbc29286-474e-48bd-975f-d2b028b17d5a/image_0002.png",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "vlc"
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@113914",
+      "action": "pyautogui.click(944.099, 371.868, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@113914.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@113921",
+      "action": "pyautogui.click(1022.609, 605.275, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@113921.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@113929",
+      "action": "pyautogui.click(978.882, 264.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@113929.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@113938",
+      "action": "pyautogui.click(978.882, 264.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@113938.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@113949",
+      "action": "pyautogui.click(639.006, 901.978, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@113949.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@114001",
+      "action": "pyautogui.click(642.981, 576.593, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@114001.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@114013",
+      "action": "pyautogui.scroll(-5, x=690.683, y=720.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@114013.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@114027",
+      "action": "pyautogui.click(631.056, 577.582, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@114027.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@114040",
+      "action": "pyautogui.click(625.093, 498.462, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@114040.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@114051",
+      "action": "pyautogui.moveTo(867.578, 337.253)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@114051.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@114051",
+      "action": "pyautogui.dragTo(865.59, 589.451, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@114051.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@114103",
+      "action": "pyautogui.click(606.211, 251.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@114103.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@114114",
+      "action": "pyautogui.write('recording', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@114114.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@114127",
+      "action": "pyautogui.click(1295.901, 904.945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@114127.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@114139",
+      "action": "pyautogui.hotkey('ctrl', 'p')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@114139.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@114151",
+      "action": "pyautogui.click(978.882, 264.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20260105@114151.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20260105@114205",
+      "action": "pyautogui.click(1020.621, 698.242, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20260105@114205.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20260105@114219",
+      "action": "pyautogui.write('/home/user/Documents', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_17_20260105@114219.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20260105@114231",
+      "action": "pyautogui.click(1205.466, 904.945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_18_20260105@114231.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20260105@114244",
+      "action": "pyautogui.click(1228.323, 344.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_19_20260105@114244.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20260105@114256",
+      "action": "pyautogui.click(33.789, 274.945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_20_20260105@114256.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20260105@114310",
+      "action": "pyautogui.click(948.075, 373.846, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_21_20260105@114310.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20260105@114324",
+      "action": "pyautogui.click(1022.609, 605.275, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_22_20260105@114324.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20260105@114340",
+      "action": "pyautogui.click(978.882, 264.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_23_20260105@114340.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20260105@114356",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_24_20260105@114356.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

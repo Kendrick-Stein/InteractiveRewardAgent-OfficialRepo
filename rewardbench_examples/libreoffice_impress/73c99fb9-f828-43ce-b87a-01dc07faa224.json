@@ -1,0 +1,121 @@
+{
+  "id": "73c99fb9-f828-43ce-b87a-01dc07faa224",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Add \"Page 1\" into the content textbox on Slide 2. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/109_4.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/73c99fb9-f828-43ce-b87a-01dc07faa224/109_4.pptx",
+            "path": "/home/user/Desktop/109_4.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/109_4.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "109_4.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/73c99fb9-f828-43ce-b87a-01dc07faa224/109_4_Gold.pptx",
+      "dest": "109_4_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/109_4.pptx",
+      "dest": "109_4.pptx"
+    },
+    "options": {}
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@131110",
+      "action": "pyautogui.click(180, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@131110.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@131114",
+      "action": "pyautogui.click(515, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@131114.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@131119",
+      "action": "pyautogui.typewrite('Page 1')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@131119.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@131124",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_4_20251127@131124.png"
+    }
+  ],
+  "result_raw": "1",
+  "file_path": [
+    "/home/user/Desktop/109_4.pptx"
+  ]
+}

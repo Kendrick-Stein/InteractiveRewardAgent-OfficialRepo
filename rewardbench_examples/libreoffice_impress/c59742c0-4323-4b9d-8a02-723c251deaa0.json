@@ -1,0 +1,141 @@
+{
+  "id": "c59742c0-4323-4b9d-8a02-723c251deaa0",
+  "snapshot": "libreoffice_impress",
+  "instruction": "I am making PPT about the history of baseball. I want to add an introduction audio named \"Baseball.mp3\" on the Desktop into my PPT, but I do not know how. Could you help me add audio into my presentation file? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Mady_and_Mia_Baseball.pptx」.",
+  "source": "https://www.reddit.com/r/libreoffice/comments/17lcdrp/audio_not_supported_in_libreoffice_impress/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/c59742c0-4323-4b9d-8a02-723c251deaa0/Mady_and_Mia_Baseball.pptx",
+            "path": "/home/user/Desktop/Mady_and_Mia_Baseball.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/c59742c0-4323-4b9d-8a02-723c251deaa0/Baseball.mp3",
+            "path": "/home/user/Desktop/Baseball.mp3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Mady_and_Mia_Baseball.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Mady_and_Mia_Baseball.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_audios",
+    "result": {
+      "type": "audio_in_slide",
+      "ppt_file_path": "/home/user/Desktop/Mady_and_Mia_Baseball.pptx",
+      "slide_index": 0,
+      "dest": "Baseball.mp3"
+    },
+    "expected": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Baseball.mp3",
+      "dest": "Baseball_to_be_placed.mp3"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130520",
+      "action": "pyautogui.click(226, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130520.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130524",
+      "action": "pyautogui.click(274, 126)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130524.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130529",
+      "action": "pyautogui.click(461, 284)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130529.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130534",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130534.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130540",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@130540.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/Desktop/Mady_and_Mia_Baseball.pptx"
+  ]
+}

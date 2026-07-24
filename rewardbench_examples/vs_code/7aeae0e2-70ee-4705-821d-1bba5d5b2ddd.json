@@ -1,0 +1,130 @@
+{
+  "id": "7aeae0e2-70ee-4705-821d-1bba5d5b2ddd",
+  "snapshot": "vscode",
+  "instruction": "Please help me visualize all numpy arrays in current python file within VS Code.",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/vs_code/7aeae0e2-70ee-4705-821d-1bba5d5b2ddd/main.py",
+            "path": "/home/user/main.py"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code",
+          "/home/user/main.py"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@124949",
+      "action": "pyautogui.click(1256, 955)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@124949.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@124954",
+      "action": "pyautogui.click(1107, 744)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@124954.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125000",
+      "action": "pyautogui.click(1010, 442)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125000.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125008",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125008.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125021",
+      "action": "pyautogui.click(803, 296)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125021.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125035",
+      "action": "pyautogui.click(830, 383)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125035.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125050",
+      "action": "pyautogui.press('f5')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125050.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125105",
+      "action": "pyautogui.click(1107, 670)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125105.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125118",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251127@125118.png"
+    }
+  ],
+  "result_raw": "0"
+}

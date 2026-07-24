@@ -1,0 +1,165 @@
+{
+  "id": "a10b69e1-6034-4a2b-93e1-571d45194f75",
+  "snapshot": "thunderbird",
+  "instruction": "Create two local folders in Thunderbird for me: COMPANY and UNIVERSITY.",
+  "source": "https://support.mozilla.org/bm/questions/1027435",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/thunderbird/dd84e895-72fd-4023-a336-97689ded257c/thunderbird-profile.tar.gz",
+            "path": "/home/user/thunderbird-profile.tar.gz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "tar",
+          "-xzv",
+          "--recursive-unlink",
+          "-f",
+          "/home/user/thunderbird-profile.tar.gz",
+          "-C",
+          "/home/user/"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "/usr/bin/thunderbird"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/2ad9387a-65d8-4e33-ad5b-7580065a27ca",
+  "related_apps": [
+    "thunderbird"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "ls",
+            "-R",
+            "/home/user/.thunderbird/t5q2a5hp.default-release/Mail/Local Folders"
+          ],
+          "stdout": "thunder-local-folder.ls"
+        }
+      }
+    ],
+    "func": "check_list",
+    "result": {
+      "type": "cache_file",
+      "path": "thunder-local-folder.ls"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expect": [
+          "\\bCOMPANY\\.msf\\b",
+          "\\bCOMPANY/?(?!\\.msf)",
+          "\\bUNIVERSITY\\.msf\\b",
+          "\\bUNIVERSITY/?(?!\\.msf)"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132505",
+      "action": "pyautogui.rightClick(199, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132505.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132509",
+      "action": "pyautogui.click(274, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132509.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132514",
+      "action": "pyautogui.typewrite('COMPANY')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132514.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132518",
+      "action": "pyautogui.click(1049, 636)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132518.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132524",
+      "action": "pyautogui.rightClick(199, 430)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132524.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132529",
+      "action": "pyautogui.click(274, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132529.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@132535",
+      "action": "pyautogui.typewrite('UNIVERSITY')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@132535.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@132540",
+      "action": "pyautogui.click(1049, 636)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@132540.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@132545",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_9_20251127@132545.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

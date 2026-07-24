@@ -1,0 +1,155 @@
+{
+  "id": "fbb548ca-c2a6-4601-9204-e39a2efc507b",
+  "snapshot": "gimp",
+  "instruction": "Blue is my favorite color, so could you help me change the color theme of GIMP to \"Blue\"?",
+  "source": "",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133226",
+      "action": "pyautogui.click(34, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133226.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133232",
+      "action": "WAIT",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133232.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133238",
+      "action": "pyautogui.click(123, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133238.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133247",
+      "action": "pyautogui.click(180, 640)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133247.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133255",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@133255.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@133302",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@133302.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133309",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133309.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133316",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@133316.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@133323",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@133323.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@133330",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@133330.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@133337",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@133337.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@133344",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@133344.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@133352",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@133352.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@133359",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@133359.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@133405",
+      "action": "pyautogui.click(163, 667)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@133405.png"
+    }
+  ],
+  "result_raw": "0"
+}

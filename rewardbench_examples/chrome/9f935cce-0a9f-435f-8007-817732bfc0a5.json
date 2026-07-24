@@ -1,0 +1,140 @@
+{
+  "id": "9f935cce-0a9f-435f-8007-817732bfc0a5",
+  "snapshot": "chrome",
+  "instruction": "Browse list of Civil Division forms.",
+  "source": "online_tasks",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.justice.gov/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "is_expected_url_pattern_match",
+    "result": {
+      "type": "active_url_from_accessTree",
+      "goto_prefix": "https://www."
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": [
+          "forms\\?title=&field_component_target_id=431"
+        ]
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251221@231158",
+      "action": "pyautogui.click(740.373, 450.0, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251221@231158.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251221@231205",
+      "action": "pyautogui.click(721.491, 585.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251221@231205.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251221@231213",
+      "action": "pyautogui.click(861.615, 792.198, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251221@231213.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251221@231220",
+      "action": "pyautogui.click(731.429, 908.901, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251221@231220.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251221@231228",
+      "action": "pyautogui.click(504.845, 857.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251221@231228.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251221@231237",
+      "action": "pyautogui.click(509.814, 859.451, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251221@231237.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251221@231247",
+      "action": "pyautogui.scroll(-5, x=1247.205, y=785.275)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251221@231247.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251221@231258",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251221@231258.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

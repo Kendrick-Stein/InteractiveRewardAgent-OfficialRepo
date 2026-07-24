@@ -1,0 +1,213 @@
+{
+  "id": "8f4ff54b-5361-40b7-990a-3138fb5c7a31",
+  "raw_id": "13584542-872b-42d8-b299-866967b5c3ef",
+  "snapshot": "os",
+  "instruction": "I would like to ensure that every time I open the Terminal, the background color is set to Solarized Dark theme instead of default. Please guide me to set it permanently.",
+  "raw_instruction": "I click in terminal: terminal->132x43 to change terminal size but after each reboot terminal size is set to default setting and I have to change it again. Help me set it permanently",
+  "related_apps": [
+    "os"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 1
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; time.sleep(0.5); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(0.5); pyautogui.write('gsettings get org.gnome.Terminal.Legacy.Settings theme-variant'); time.sleep(0.5); pyautogui.press('enter')"
+          ]
+        }
+      }
+    ],
+    "func": "check_include_exclude",
+    "result": {
+      "type": "vm_terminal_output"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "include": [
+          "'dark'"
+        ],
+        "exclude": []
+      }
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 1
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; time.sleep(0.5); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(0.5); pyautogui.write('stty size'); time.sleep(0.5); pyautogui.press('enter')"
+          ]
+        }
+      }
+    ],
+    "func": "check_include_exclude",
+    "result": {
+      "type": "vm_terminal_output"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "include": [
+          "43 132"
+        ],
+        "exclude": []
+      }
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/13584542-872b-42d8-b299-866967b5c3ef_trace_12f0125b2072_1755704454/image_0001.png",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@123245",
+      "action": "pyautogui.click(29.814, 14.835, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@123245.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@123251",
+      "action": "pyautogui.write('terminal', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@123251.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@123300",
+      "action": "pyautogui.click(995.776, 192.857, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@123300.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@123308",
+      "action": "pyautogui.write('gnome-terminal', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@123308.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@123315",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@123315.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@123324",
+      "action": "pyautogui.click(840.745, 560.769, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@123324.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@123336",
+      "action": "pyautogui.click(796.025, 783.297, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@123336.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@123347",
+      "action": "pyautogui.click(1385.342, 185.934, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@123347.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@123356",
+      "action": "pyautogui.click(1345.59, 194.835, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@123356.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@123406",
+      "action": "pyautogui.click(1038.509, 226.484, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@123406.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@123414",
+      "action": "pyautogui.click(1028.571, 174.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@123414.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@123423",
+      "action": "pyautogui.click(1032.547, 271.978, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@123423.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@123434",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_12_20260105@123434.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

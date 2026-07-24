@@ -1,0 +1,106 @@
+{
+  "id": "930fdb3b-11a8-46fe-9bac-577332e2640e",
+  "snapshot": "vscode",
+  "instruction": "Please help me create a shortcut \"ctrl+j\" to move cursor focus from terminal to editor in VS Code.",
+  "source": "https://superuser.com/questions/1270103/how-to-switch-the-cursor-between-terminal-and-code-in-vscode",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "code"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Visual Studio Code"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vscode"
+  ],
+  "evaluator": {
+    "func": "check_json_keybindings",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": {
+          "key": "ctrl+j",
+          "command": "workbench.action.focusActiveEditorGroup",
+          "when": "terminalFocus"
+        }
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/.config/Code/User/keybindings.json",
+      "dest": "keybindings.json"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125026",
+      "action": "pyautogui.click(467, 264)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125026.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125036",
+      "action": "pyautogui.click(541, 728)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125036.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125048",
+      "action": "pyautogui.click(934, 793)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125048.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125056",
+      "action": "pyautogui.typewrite('ctrl+j')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125056.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125109",
+      "action": "pyautogui.click(968, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125109.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125121",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_6_20251127@125121.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

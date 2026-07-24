@@ -1,0 +1,125 @@
+{
+  "id": "06432466-3250-4f1b-a8b5-98543afba994",
+  "raw_id": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89",
+  "snapshot": "vlc",
+  "instruction": "Set the folder used to store my recordings to Downloads",
+  "raw_instruction": "Help me modify the folder used to store my recordings to Desktop",
+  "related_apps": [
+    "vlc"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "is_vlc_recordings_folder",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "recording_file_path": "/home/user/Downloads"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "raw_evaluator": {
+    "func": "is_vlc_recordings_folder",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "recording_file_path": "/home/user/Desktop"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89/bbc29286-474e-48bd-975f-d2b028b17d5a/image_0002.png",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "vlc"
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@114105",
+      "action": "pyautogui.click(944.099, 371.868, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@114105.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@114114",
+      "action": "pyautogui.click(1022.609, 605.275, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@114114.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@114127",
+      "action": "pyautogui.click(978.882, 264.066, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@114127.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@114139",
+      "action": "pyautogui.click(1022.609, 698.242, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@114139.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@114151",
+      "action": "pyautogui.write('/home/user/Downloads', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@114151.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@114205",
+      "action": "pyautogui.click(1206.46, 898.022, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@114205.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@114219",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20260105@114219.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

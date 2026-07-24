@@ -1,0 +1,184 @@
+{
+  "id": "ac9bb6cb-1888-43ab-81e4-a98a547918cd",
+  "snapshot": "libreoffice_impress",
+  "instruction": "I am preparing a PPT in Libreoffice impress. The slide number is barely visible to me. Please help me change the color of the slide number to red? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/saa-format-guide.pptx」.",
+  "source": "https://superuser.com/questions/1674211/how-to-change-colour-of-slide-number-in-libre-office",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/ac9bb6cb-1888-43ab-81e4-a98a547918cd/saa-format-guide.pptx",
+            "path": "/home/user/Desktop/saa-format-guide.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/saa-format-guide.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "saa-format-guide.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_page_number_colors",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/saa-format-guide.pptx",
+      "dest": "saa-format-guide.pptx"
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "color": "red"
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@002813",
+      "action": "pyautogui.click(177.888, 79.121, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@002813.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@002825",
+      "action": "pyautogui.click(620.124, 308.571, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@002825.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@002838",
+      "action": "pyautogui.click(132.174, 79.121, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@002838.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@002851",
+      "action": "pyautogui.click(177.888, 79.121, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@002851.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@002905",
+      "action": "pyautogui.click(222.609, 200.769, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@002905.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@002919",
+      "action": "pyautogui.doubleClick(1353.54, 951.429, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@002919.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@002936",
+      "action": "pyautogui.click(1318.758, 954.396, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@002936.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@002941",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@002941.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@002952",
+      "action": "pyautogui.click(1547.329, 326.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@002952.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@003009",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@003009.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@003026",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251222@003026.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/saa-format-guide.pptx"
+  ]
+}

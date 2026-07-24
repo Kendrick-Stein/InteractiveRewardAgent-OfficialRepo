@@ -1,0 +1,205 @@
+{
+  "id": "951d7926-6858-4b2d-8c99-a96d9ea97744",
+  "snapshot": "os",
+  "instruction": "I have an image of my receipt located in /home/user. Please take a closer look at it and record the unit price for labor in a new doc file named Details.docx on the desktop. record the number only.",
+  "source": "authors",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://drive.usercontent.google.com/download?id=1jnr4GRh-WmjNxIFJLy_cFMIDpgdEHCVl&export=download&authuser=0&confirm=t&uuid=16783a7f-62e6-4711-ba0e-60fdbbf4c949&at=APZUnTWw9re3wh-InQDDgTmZal8M:1709798244794",
+            "path": "/home/user/OIP.jpg"
+          }
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/951d7926-6858-4b2d-8c99-a96d9ea97744",
+  "related_apps": [
+    "os",
+    "gimp",
+    "pdf"
+  ],
+  "evaluator": {
+    "func": "compare_docx_files",
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Details.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "951d7926-6858-4b2d-8c99-a96d9ea97744_expected.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Details.docx",
+      "dest": "Details.docx"
+    }
+  },
+  "task_id": "951d7926-6858-4b2d-8c99-a96d9ea97744",
+  "os": "ubuntu",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@110348",
+      "action": "pyautogui.click(1850.435, 1007.802, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@110348.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@110403",
+      "action": "pyautogui.doubleClick(1862.36, 997.912, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@110403.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@110420",
+      "action": "pyautogui.click(940.124, 215.604, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@110420.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@110436",
+      "action": "pyautogui.doubleClick(700.621, 132.527, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@110436.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@110450",
+      "action": "pyautogui.click(1238.261, 189.89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20260105@110450.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20260105@110505",
+      "action": "pyautogui.click(31.801, 337.253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20260105@110505.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20260105@110521",
+      "action": "pyautogui.write('5', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20260105@110521.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20260105@110537",
+      "action": "pyautogui.click(639.006, 366.923, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20260105@110537.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20260105@110552",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20260105@110552.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20260105@110609",
+      "action": "pyautogui.click(458.137, 247.253, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20260105@110609.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20260105@110625",
+      "action": "pyautogui.write('Details.docx', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20260105@110625.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20260105@110641",
+      "action": "pyautogui.click(1549.317, 161.209, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20260105@110641.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20260105@110657",
+      "action": "pyautogui.click(1834.534, 44.505, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20260105@110657.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20260105@110713",
+      "action": "pyautogui.click(141.118, 212.637, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20260105@110713.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20260105@110727",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_15_20260105@110727.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

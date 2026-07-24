@@ -1,0 +1,163 @@
+{
+  "id": "7882ed6e-bece-4bf0-bada-c32dc1ddae72",
+  "snapshot": "base_setup",
+  "instruction": "Play the latest season of 'Stranger Things' purchased from the Google Play Movies & TV store directly in VLC.",
+  "source": "https://wiki.videolan.org/Digital_Restrictions_Management/",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114001",
+      "action": "pyautogui.click(670, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114001.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114007",
+      "action": "pyautogui.click(707, 395)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114007.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114023",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114023.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114037",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114037.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114050",
+      "action": "pyautogui.click(839, 547)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@114050.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114059",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114059.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114109",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@114109.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@114117",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@114117.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@114127",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@114127.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@114137",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@114137.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@114148",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@114148.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@114159",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@114159.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@114211",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@114211.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@114222",
+      "action": "pyautogui.click(722, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@114222.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@114232",
+      "action": "pyautogui.doubleClick(839, 410)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@114232.png"
+    }
+  ],
+  "result_raw": "0"
+}

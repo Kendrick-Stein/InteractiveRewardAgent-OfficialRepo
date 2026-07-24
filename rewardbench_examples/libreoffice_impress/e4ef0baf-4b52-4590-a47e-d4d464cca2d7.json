@@ -1,0 +1,363 @@
+{
+  "id": "e4ef0baf-4b52-4590-a47e-d4d464cca2d7",
+  "snapshot": "libreoffice_impress",
+  "instruction": "The height of picture should be 20cm on slide 3 while the font size of all textboxes should be 40pt on slide 6. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/42_2.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/e4ef0baf-4b52-4590-a47e-d4d464cca2d7/42_2.pptx",
+            "path": "/home/user/Desktop/42_2.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/42_2.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "42_2.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": [
+      "compare_pptx_files",
+      "compare_pptx_files"
+    ],
+    "conj": "or",
+    "expected": [
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/e4ef0baf-4b52-4590-a47e-d4d464cca2d7/42_2_Gold.pptx",
+        "dest": "42_2_Gold.pptx"
+      },
+      {
+        "type": "cloud_file",
+        "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/e4ef0baf-4b52-4590-a47e-d4d464cca2d7/42_2_Gold_all_fonts.pptx",
+        "dest": "42_2_Gold_all_fonts.pptx"
+      }
+    ],
+    "result": [
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/42_2.pptx",
+        "dest": "42_2.pptx"
+      },
+      {
+        "type": "vm_file",
+        "path": "/home/user/Desktop/42_2.pptx",
+        "dest": "42_2.pptx"
+      }
+    ]
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@005032",
+      "action": "pyautogui.click(175.901, 450.0, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@005032.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@005045",
+      "action": "pyautogui.click(880.497, 503.407, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@005045.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@005056",
+      "action": "pyautogui.click(1587.081, 670.549, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@005056.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@005108",
+      "action": "pyautogui.click(1662.609, 814.945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@005108.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@005117",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@005117.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@005128",
+      "action": "pyautogui.write('20cm', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@005128.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@005140",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@005140.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@005152",
+      "action": "pyautogui.click(175.901, 746.703, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@005152.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@005205",
+      "action": "pyautogui.click(1080.248, 407.473, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@005205.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@005218",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@005218.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@005232",
+      "action": "pyautogui.click(1815.652, 236.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251222@005232.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251222@005246",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251222@005246.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251222@005301",
+      "action": "pyautogui.write('40pt', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251222@005301.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251222@005317",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251222@005317.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251222@005333",
+      "action": "pyautogui.click(1082.236, 585.495, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251222@005333.png"
+    },
+    {
+      "step_num": 16,
+      "action_timestamp": "20251222@005351",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_16_20251222@005351.png"
+    },
+    {
+      "step_num": 17,
+      "action_timestamp": "20251222@005407",
+      "action": "pyautogui.click(1815.652, 236.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_17_20251222@005407.png"
+    },
+    {
+      "step_num": 18,
+      "action_timestamp": "20251222@005423",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_18_20251222@005423.png"
+    },
+    {
+      "step_num": 19,
+      "action_timestamp": "20251222@005438",
+      "action": "pyautogui.write('40pt', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_19_20251222@005438.png"
+    },
+    {
+      "step_num": 20,
+      "action_timestamp": "20251222@005453",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_20_20251222@005453.png"
+    },
+    {
+      "step_num": 21,
+      "action_timestamp": "20251222@005508",
+      "action": "pyautogui.click(1082.236, 819.89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_21_20251222@005508.png"
+    },
+    {
+      "step_num": 22,
+      "action_timestamp": "20251222@005522",
+      "action": "pyautogui.doubleClick(1082.236, 776.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_22_20251222@005522.png"
+    },
+    {
+      "step_num": 23,
+      "action_timestamp": "20251222@005533",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_23_20251222@005533.png"
+    },
+    {
+      "step_num": 24,
+      "action_timestamp": "20251222@005546",
+      "action": "pyautogui.click(1815.652, 236.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_24_20251222@005546.png"
+    },
+    {
+      "step_num": 25,
+      "action_timestamp": "20251222@005557",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_25_20251222@005557.png"
+    },
+    {
+      "step_num": 26,
+      "action_timestamp": "20251222@005612",
+      "action": "pyautogui.write('40pt', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_26_20251222@005612.png"
+    },
+    {
+      "step_num": 27,
+      "action_timestamp": "20251222@005626",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_27_20251222@005626.png"
+    },
+    {
+      "step_num": 28,
+      "action_timestamp": "20251222@005639",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_28_20251222@005639.png"
+    },
+    {
+      "step_num": 29,
+      "action_timestamp": "20251222@005652",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_29_20251222@005652.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/42_2.pptx"
+  ]
+}

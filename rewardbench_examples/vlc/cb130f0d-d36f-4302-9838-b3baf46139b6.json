@@ -1,0 +1,93 @@
+{
+  "id": "cb130f0d-d36f-4302-9838-b3baf46139b6",
+  "snapshot": "base_setup",
+  "instruction": "Automatically adjust the brightness and contrast of this video to match my room's lighting.",
+  "source": "https://www.vlchelp.com/increase-brightness-contrast-videos/",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@114322",
+      "action": "pyautogui.click(943, 375)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@114322.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@114329",
+      "action": "pyautogui.click(993, 395)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@114329.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@114336",
+      "action": "pyautogui.click(382, 380)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@114336.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@114345",
+      "action": "pyautogui.click(413, 532)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@114345.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@114354",
+      "action": "pyautogui.click(413, 612)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@114354.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@114405",
+      "action": "pyautogui.click(686, 778)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@114405.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@114417",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_7_20251127@114417.png"
+    }
+  ],
+  "result_raw": "0"
+}

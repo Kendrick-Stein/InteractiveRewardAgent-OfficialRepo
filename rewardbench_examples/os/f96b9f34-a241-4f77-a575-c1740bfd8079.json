@@ -1,0 +1,110 @@
+{
+  "id": "f96b9f34-a241-4f77-a575-c1740bfd8079",
+  "raw_id": "f9be0997-4b7c-45c5-b05c-4612b44a6118",
+  "snapshot": "os",
+  "instruction": "I am currently working on a ubuntu system. Help me to turn off 'Lock screen notifications'?",
+  "raw_instruction": "I am currently working on a ubuntu system but I do not want the notifications to bother me. Can you help me to switch to 'Do not disturb mode'?",
+  "related_apps": [
+    "os"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "gsettings get org.gnome.desktop.notifications show-in-lock-screen",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "false\n"
+      }
+    }
+  },
+  "raw_evaluator": {
+    "func": "exact_match",
+    "result": {
+      "type": "vm_command_line",
+      "command": "gsettings get org.gnome.desktop.notifications show-banners",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": "false\n"
+      }
+    }
+  },
+  "screenshot": "/root/temp/verl/tmp_sft_zr/f9be0997-4b7c-45c5-b05c-4612b44a6118_trace_7e3ea761578c_1755704454/image_0001.png",
+  "config": [
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "gsettings set org.gnome.desktop.notifications show-banners true",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click(960, 540); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@122604",
+      "action": "pyautogui.click(1894.161, 12.857, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@122604.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@122613",
+      "action": "pyautogui.click(1664.596, 187.912, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@122613.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@122625",
+      "action": "pyautogui.click(598.261, 390.659, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@122625.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@122634",
+      "action": "pyautogui.click(1362.484, 301.648, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20260105@122634.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20260105@122642",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20260105@122642.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

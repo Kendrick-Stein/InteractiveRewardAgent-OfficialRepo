@@ -1,0 +1,210 @@
+{
+  "id": "5d901039-a89c-4bfb-967b-bf66f4df075e",
+  "snapshot": "libreoffice_impress",
+  "instruction": "I want to turn the rectangular image of Columbus on the first page into a cover page. Could you help me stretch this image to fill the entire page, keeping its proportion and centering the image? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/CPD_Background_Investigation_Process.pptx」.",
+  "source": "https://superuser.com/questions/986776/how-can-i-stretch-an-image-in-a-libreoffice-impress-presentation-to-fill-the-pag",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/5d901039-a89c-4bfb-967b-bf66f4df075e/CPD_Background_Investigation_Process.pptx",
+            "path": "/home/user/Desktop/CPD_Background_Investigation_Process.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/CPD_Background_Investigation_Process.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "CPD_Background_Investigation_Process.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "check_image_stretch_and_center",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/5d901039-a89c-4bfb-967b-bf66f4df075e/CPD_Background_Investigation_Process.pptx",
+      "dest": "CPD_Background_Investigation_Process_Original.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/CPD_Background_Investigation_Process.pptx",
+      "dest": "CPD_Background_Investigation_Process.pptx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130306",
+      "action": "pyautogui.click(1032, 462)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130306.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130311",
+      "action": "pyautogui.click(1529, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130311.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130318",
+      "action": "pyautogui.click(1529, 901)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130318.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130328",
+      "action": "pyautogui.moveTo(1276, 585)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130328.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130330",
+      "action": "pyautogui.dragTo(1351, 952, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@130330.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130341",
+      "action": "pyautogui.moveTo(797, 326)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@130341.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@130344",
+      "action": "pyautogui.dragTo(551, 281, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@130344.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@130352",
+      "action": "pyautogui.click(1529, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@130352.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@130401",
+      "action": "pyautogui.moveTo(1018, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@130401.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@130403",
+      "action": "pyautogui.dragTo(1368, 952, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@130403.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@130413",
+      "action": "pyautogui.moveTo(551, 281)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@130413.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@130416",
+      "action": "pyautogui.dragTo(455, 230, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@130416.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@130425",
+      "action": "pyautogui.click(1529, 494)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@130425.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@130432",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@130432.png"
+    }
+  ],
+  "result_raw": "0.0",
+  "file_path": [
+    "/home/user/Desktop/CPD_Background_Investigation_Process.pptx"
+  ]
+}

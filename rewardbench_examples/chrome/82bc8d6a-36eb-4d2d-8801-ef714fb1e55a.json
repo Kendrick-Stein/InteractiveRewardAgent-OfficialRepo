@@ -1,0 +1,171 @@
+{
+  "id": "82bc8d6a-36eb-4d2d-8801-ef714fb1e55a",
+  "snapshot": "chrome",
+  "instruction": "On next Monday, look up a flight from Mumbai to Stockholm.",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.qatarairways.com/en-hk/homepage.html"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": "check_direct_json_object",
+    "result": {
+      "type": "active_tab_url_parse",
+      "goto_prefix": "https://www.",
+      "parse_keys": [
+        "fromStation",
+        "toStation",
+        "departing"
+      ],
+      "replace": {
+        "departing": "time"
+      }
+    },
+    "expected": {
+      "type": "rule_relativeTime",
+      "rules": {
+        "relativeTime": {
+          "from": "next Monday"
+        },
+        "expected": {
+          "fromStation": "BOM",
+          "toStation": "STO",
+          "time": "{Year}-{Month0D}-{Day0D}"
+        }
+      }
+    }
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123010",
+      "action": "pyautogui.click(1180, 865)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123010.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123025",
+      "action": "pyautogui.click(541, 608)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123025.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123035",
+      "action": "pyautogui.click(488, 422)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123035.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123049",
+      "action": "pyautogui.typewrite('Mumbai')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123049.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123104",
+      "action": "pyautogui.click(538, 478)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123104.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123118",
+      "action": "pyautogui.typewrite('Stockholm')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123118.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123127",
+      "action": "pyautogui.click(761, 548)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@123127.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@123138",
+      "action": "pyautogui.click(914, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@123138.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@123150",
+      "action": "pyautogui.click(1224, 492)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@123150.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@123201",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@123201.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

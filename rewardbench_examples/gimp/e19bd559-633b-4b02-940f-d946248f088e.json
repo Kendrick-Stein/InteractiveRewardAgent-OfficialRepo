@@ -1,0 +1,121 @@
+{
+  "id": "e19bd559-633b-4b02-940f-d946248f088e",
+  "snapshot": "gimp",
+  "instruction": "Could you tone down the brightness of my photo at desktop?",
+  "source": "https://www.quora.com/How-do-I-edit-a-photo-in-GIMP",
+  "config": [],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@132924",
+      "action": "pyautogui.click(28, 530)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@132924.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@132931",
+      "action": "pyautogui.click(103, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@132931.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@132937",
+      "action": "pyautogui.click(119, 149)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@132937.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@132944",
+      "action": "pyautogui.click(324, 203)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@132944.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@132952",
+      "action": "pyautogui.click(1012, 720)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@132952.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@132959",
+      "action": "pyautogui.click(370, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@132959.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@133005",
+      "action": "pyautogui.click(442, 280)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@133005.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133012",
+      "action": "pyautogui.moveTo(449, 280)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@133012.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@133015",
+      "action": "pyautogui.dragTo(413, 284, duration=0.5)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@133015.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@133021",
+      "action": "pyautogui.click(584, 437)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@133021.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@133027",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_10_20251127@133027.png"
+    }
+  ],
+  "result_raw": "0"
+}

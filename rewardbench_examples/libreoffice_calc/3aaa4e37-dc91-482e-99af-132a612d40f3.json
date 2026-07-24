@@ -1,0 +1,134 @@
+{
+  "id": "3aaa4e37-dc91-482e-99af-132a612d40f3",
+  "snapshot": "libreoffice_calc",
+  "instruction": "Could you help me to export the current sheet to a csv file? Export the contents just as they are shown on the screen. Just keep the other options untouched. A default csv format is ok. The csv should share the file name with the original xlsx. The file to be evaluated is located on the VM at the following path: 「/home/user/Export_Calc_to_CSV.xlsx」.",
+  "source": "https://www.quora.com/How-can-you-import-export-CSV-files-with-LibreOffice-Calc-or-OpenOffice",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/3aaa4e37-dc91-482e-99af-132a612d40f3/Export_Calc_to_CSV.xlsx",
+            "path": "/home/user/Export_Calc_to_CSV.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Export_Calc_to_CSV.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/3aaa4e37-dc91-482e-99af-132a612d40f3",
+  "related_apps": [
+    "libreoffice_calc"
+  ],
+  "evaluator": {
+    "func": "compare_csv",
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV.csv"
+    },
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_calc/3aaa4e37-dc91-482e-99af-132a612d40f3/Export_Calc_to_CSV.csv",
+      "dest": "Export_Calc_to_CSV_gold.csv"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113223",
+      "action": "pyautogui.click(90, 73)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113223.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113228",
+      "action": "pyautogui.click(136, 355)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113228.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113233",
+      "action": "pyautogui.click(1568, 905)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113233.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113240",
+      "action": "pyautogui.moveTo(1510, 909)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113240.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113242",
+      "action": "pyautogui.scroll(-7)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113242.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113249",
+      "action": "pyautogui.click(1458, 1037)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113249.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113257",
+      "action": "pyautogui.click(1545, 161)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113257.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113303",
+      "action": "pyautogui.click(1180, 700)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113303.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113310",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_8_20251127@113310.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/Export_Calc_to_CSV.xlsx"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "21760ecb-8f62-40d2-8d85-0cee5725cb72",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Could you help me add slide transition \"dissolve\" to my first page? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Ch4 Video Effect.pptx」.",
+  "source": "https://www.libreofficehelp.com/add-animations-transitions-libreoffice-impress-slides/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/21760ecb-8f62-40d2-8d85-0cee5725cb72/Ch4%20Video%20Effect.pptx",
+            "path": "/home/user/Desktop/Ch4 Video Effect.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Ch4 Video Effect.pptx"
+      }
+    },
+    {
+      "type": "sleep",
+      "parameters": {
+        "seconds": 0.5
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time;  time.sleep(4); pyautogui.doubleClick(x={SCREEN_WIDTH_HALF}, y={SCREEN_HEIGHT_HALF}); time.sleep(0.5);pyautogui.mouseDown(); pyautogui.mouseUp(); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Ch4 Video Effect.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(4.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 4.5
+        }
+      }
+    ],
+    "func": "check_transition",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "slide_idx": 0,
+        "transition_type": "dissolve"
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Ch4 Video Effect.pptx",
+      "dest": "Ch4 Video Effect.pptx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@130833",
+      "action": "pyautogui.click(349, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@130833.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@130839",
+      "action": "pyautogui.click(369, 654)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@130839.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@130845",
+      "action": "pyautogui.click(1689, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@130845.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@130851",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_4_20251127@130851.png"
+    }
+  ],
+  "result_raw": "1.0",
+  "file_path": [
+    "/home/user/Desktop/Ch4 Video Effect.pptx"
+  ]
+}

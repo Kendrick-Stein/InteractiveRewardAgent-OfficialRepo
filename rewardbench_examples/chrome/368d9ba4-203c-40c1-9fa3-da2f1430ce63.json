@@ -1,0 +1,227 @@
+{
+  "id": "368d9ba4-203c-40c1-9fa3-da2f1430ce63",
+  "snapshot": "chrome",
+  "instruction": "Find the Monthly forecast for Manchester, GB for this month",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://www.accuweather.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": [
+      "check_direct_json_object",
+      "is_expected_url_pattern_match"
+    ],
+    "result": [
+      {
+        "type": "url_dashPart",
+        "goto_prefix": "https://www.",
+        "partIndex": -2,
+        "needDeleteId": false,
+        "returnType": "json",
+        "key": "time"
+      },
+      {
+        "type": "active_url_from_accessTree",
+        "goto_prefix": "https://www."
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule_relativeTime",
+        "rules": {
+          "relativeTime": {
+            "from": "this month"
+          },
+          "expected": {
+            "time": "{month}-weather"
+          }
+        }
+      },
+      {
+        "type": "rule",
+        "rules": {
+          "expected": [
+            "/manchester/"
+          ]
+        }
+      }
+    ]
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@123043",
+      "action": "pyautogui.click(714, 438)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@123043.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@123054",
+      "action": "pyautogui.typewrite('manchester')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@123054.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@123106",
+      "action": "pyautogui.click(707, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@123106.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@123121",
+      "action": "pyautogui.click(707, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@123121.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@123133",
+      "action": "pyautogui.click(707, 477)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@123133.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@123149",
+      "action": "pyautogui.click(757, 406)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@123149.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@123202",
+      "action": "pyautogui.click(859, 383)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@123202.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@123210",
+      "action": "pyautogui.click(1141, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@123210.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@123219",
+      "action": "pyautogui.click(1141, 389)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@123219.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@123228",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@123228.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@123235",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@123235.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@123243",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@123243.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@123253",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@123253.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@123301",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@123301.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@123312",
+      "action": "pyautogui.click(1122, 330)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@123312.png"
+    }
+  ],
+  "result_raw": "0"
+}

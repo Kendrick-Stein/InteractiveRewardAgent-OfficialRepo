@@ -1,0 +1,265 @@
+{
+  "id": "6f4073b8-d8ea-4ade-8a18-c5d1d5d5aa9a",
+  "snapshot": "multiapps",
+  "instruction": "I now want to count the meeting cities of the three machine learning conferences in the past ten years from 2013 to 2019(including 2013 and 2019). I have listed the names and years of the conferences in excel. Please fill in the vacant locations.",
+  "source": "author",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/6f4073b8-d8ea-4ade-8a18-c5d1d5d5aa9a/Conference.xlsx",
+            "path": "/home/user/Desktop/ConferenceCity.xlsx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/ConferenceCity.xlsx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "calc",
+    "chrome",
+    "os"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/6f4073b8-d8ea-4ade-8a18-c5d1d5d5aa9a/ConferenceCity%20Gold.xlsx",
+              "path": "/home/user/Desktop/ConferenceCity_Gold.xlsx"
+            }
+          ]
+        }
+      },
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "ConferenceCity.xlsx - LibreOffice Calc"
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey(\"ctrl\", \"s\"); time.sleep(0.5);"
+          ]
+        }
+      }
+    ],
+    "func": "compare_conference_city_in_order",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "expected": [
+          "Scottsdale",
+          "Atlanta",
+          [
+            "Lake Tahoe",
+            "Stateline"
+          ],
+          [
+            "Banff",
+            "Alberta's Rockies",
+            "Alberta’s Rockies"
+          ],
+          "Beijing",
+          [
+            "Montreal",
+            "Montréal"
+          ],
+          "San Diego",
+          "Lille",
+          [
+            "Montreal",
+            "Montréal"
+          ],
+          "San Juan",
+          [
+            "New York",
+            "New York City",
+            "NYC"
+          ],
+          "Barcelona",
+          "Toulon",
+          "Sydney",
+          [
+            "Los Angeles",
+            "Long Beach",
+            "LA"
+          ],
+          "Vancouver",
+          "Stockholm",
+          [
+            "Montreal",
+            "Montréal"
+          ],
+          "New Orleans",
+          [
+            "Los Angeles",
+            "Long Beach",
+            "LA"
+          ],
+          "Vancouver"
+        ]
+      }
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/ConferenceCity.xlsx",
+      "dest": "ConferenceCity.xlsx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@121103",
+      "action": "pyautogui.click(355, 339)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@121103.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@121107",
+      "action": "pyautogui.typewrite('Scottsdale')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@121107.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@121113",
+      "action": "pyautogui.click(355, 360)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@121113.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@121122",
+      "action": "pyautogui.typewrite('Atlanta')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@121122.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@121129",
+      "action": "pyautogui.click(355, 379)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@121129.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@121134",
+      "action": "pyautogui.typewrite('Lake Tahoe')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@121134.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@121141",
+      "action": "pyautogui.click(355, 404)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@121141.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@121146",
+      "action": "pyautogui.typewrite('Beijing')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@121146.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@121152",
+      "action": "pyautogui.click(355, 429)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@121152.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@121159",
+      "action": "pyautogui.typewrite('Montreal')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@121159.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@121205",
+      "action": "pyautogui.click(355, 458)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@121205.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@121212",
+      "action": "pyautogui.typewrite('Lille')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@121212.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@121219",
+      "action": "pyautogui.click(355, 487)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@121219.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@121225",
+      "action": "pyautogui.typewrite('San Diego')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@121225.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@121232",
+      "action": "pyautogui.click(359, 511)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@121232.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

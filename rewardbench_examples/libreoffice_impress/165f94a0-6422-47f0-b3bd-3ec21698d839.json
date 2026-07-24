@@ -1,0 +1,178 @@
+{
+  "id": "165f94a0-6422-47f0-b3bd-3ec21698d839",
+  "raw_id": "15aece23-a215-4579-91b4-69eec72e18da",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Move the title of page 2 to the top of the slide.",
+  "raw_instruction": "Move the title of page 2 to the bottom of the slide.",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "source": "LLM generated",
+  "trajectory": "trajectories/",
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "134_2.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "",
+      "dest": "165f94a0-6422-47f0-b3bd-3ec21698d839_expected.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/134_2.pptx",
+      "dest": "134_2.pptx"
+    },
+    "options": {
+      "examine_shape": false,
+      "examine_top_position": true
+    }
+  },
+  "raw_evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "134_2.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://drive.usercontent.google.com/download?id=1X2x0KzBllrCtupnllxoZ-HkHmd7Dd4Dp&export=download&authuser=0&confirm=t&uuid=58797979-1d78-4cbe-9c21-747400262a7c&at=APZUnTWJVEFgc0DKLpwNaqLfzBrQ:1708188011672",
+      "dest": "134_2_Original.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/134_2.pptx",
+      "dest": "134_2.pptx"
+    },
+    "options": {
+      "examine_shape": false,
+      "examine_title_bottom_position": true
+    }
+  },
+  "screenshot": "/root/verl/task_generation/uitars_without_reflection_new_load/15aece23-a215-4579-91b4-69eec72e18da/63af41da-f539-4431-afb8-b8dcab5c10d1/image_0002.png",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/15aece23-a215-4579-91b4-69eec72e18da/134_2.pptx",
+            "path": "/home/user/Desktop/134_2.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/134_2.pptx"
+      }
+    }
+  ],
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20260105@120635",
+      "action": "pyautogui.click(164.969, 393.626, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20260105@120635.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@120644",
+      "action": "pyautogui.moveTo(569.441, 356.044)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@120644.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20260105@120644",
+      "action": "pyautogui.dragTo(569.441, 237.363, duration=1.0)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20260105@120644.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20260105@120654",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20260105@120654.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20260105@120701",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_4_20260105@120701.png"
+    }
+  ],
+  "result_raw": "1.0"
+}

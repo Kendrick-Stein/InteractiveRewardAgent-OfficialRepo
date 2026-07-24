@@ -1,0 +1,88 @@
+{
+  "id": "8ea73f6f-9689-42ad-8c60-195bbf06a7ba",
+  "snapshot": "gimp",
+  "instruction": "Can you enhance this low-resolution photo to high-resolution without increasing the file size?",
+  "source": "",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/gimp/8ea73f6f-9689-42ad-8c60-195bbf06a7ba/low_resolution.jpeg",
+            "path": "/home/user/Desktop/low_resolution.jpeg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "gimp",
+          "/home/user/Desktop/low_resolution.jpeg"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "gimp"
+  ],
+  "evaluator": {
+    "func": "infeasible"
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@133330",
+      "action": "pyautogui.click(274, 72)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@133330.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@133336",
+      "action": "pyautogui.click(317, 350)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@133336.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@133343",
+      "action": "pyautogui.typewrite('2560')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@133343.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@133349",
+      "action": "pyautogui.click(1132, 761)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@133349.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@133400",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_5_20251127@133400.png"
+    }
+  ],
+  "result_raw": "0"
+}

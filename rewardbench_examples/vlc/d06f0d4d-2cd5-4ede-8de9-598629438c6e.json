@@ -1,0 +1,201 @@
+{
+  "id": "d06f0d4d-2cd5-4ede-8de9-598629438c6e",
+  "snapshot": "chrome",
+  "instruction": "Can you change the color of the volume slider to black-ish color? I often use the player in a low-light environment, and a darker color scheme would be less straining on my eyes, especially during nighttime usage.",
+  "source": "https://superuser.com/questions/1039392/changing-colour-of-vlc-volume-slider",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": "VLC_VERBOSE=-1 vlc --no-audio --no-video-title-show",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5);"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "vlc"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "launch",
+        "parameters": {
+          "command": [
+            "pkill",
+            "vlc"
+          ]
+        }
+      },
+      {
+        "type": "launch",
+        "parameters": {
+          "command": "vlc --no-audio --no-video-title-show",
+          "shell": true
+        }
+      }
+    ],
+    "func": "check_qt_slider_colours",
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "type": "blackish"
+      }
+    },
+    "result": {
+      "type": "vlc_config",
+      "dest": "vlcrc"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@113743",
+      "action": "pyautogui.click(943, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@113743.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@113753",
+      "action": "pyautogui.click(993, 604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@113753.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@113800",
+      "action": "pyautogui.click(1022, 404)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@113800.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@113812",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@113812.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@113824",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@113824.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@113835",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@113835.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@113845",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@113845.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@113855",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@113855.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@113903",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@113903.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@113911",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@113911.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@113919",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@113919.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@113930",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@113930.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@113939",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@113939.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@113949",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@113949.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@113958",
+      "action": "pyautogui.click(1256, 450)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@113958.png"
+    }
+  ],
+  "result_raw": "0"
+}

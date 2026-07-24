@@ -1,0 +1,220 @@
+{
+  "id": "a434992a-89df-4577-925c-0c58b747f0f4",
+  "snapshot": "libreoffice_impress",
+  "instruction": "Change the font size of the content to 12, and change the font color to orange. Change the slide's background to red. The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/16_2.pptx」.",
+  "source": "https://arxiv.org/pdf/2311.01767.pdf",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/a434992a-89df-4577-925c-0c58b747f0f4/16_2.pptx",
+            "path": "/home/user/Desktop/16_2.pptx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/16_2.pptx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_impress"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "16_2.pptx - LibreOffice Impress",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5);"
+          ]
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      }
+    ],
+    "func": "compare_pptx_files",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_impress/a434992a-89df-4577-925c-0c58b747f0f4/16_2_Gold.pptx",
+      "dest": "16_2_Gold.pptx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/16_2.pptx",
+      "dest": "16_2.pptx"
+    },
+    "options": {}
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@003245",
+      "action": "pyautogui.click(900.373, 571.648, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@003245.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@003254",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@003254.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@003304",
+      "action": "pyautogui.click(1815.652, 236.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@003304.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@003314",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@003314.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@003325",
+      "action": "pyautogui.write('12', interval=0.1)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@003325.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@003331",
+      "action": "pyautogui.hotkey('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@003331.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@003340",
+      "action": "pyautogui.click(1574.161, 326.374, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@003340.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@003349",
+      "action": "pyautogui.click(1583.106, 447.033, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@003349.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@003402",
+      "action": "pyautogui.click(344.845, 74.176, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@003402.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@003414",
+      "action": "pyautogui.click(410.435, 274.945, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@003414.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@003428",
+      "action": "pyautogui.click(698.634, 293.736, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@003428.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@003442",
+      "action": "pyautogui.click(696.646, 459.89, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251222@003442.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251222@003458",
+      "action": "pyautogui.click(1358.509, 849.56, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251222@003458.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251222@003514",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251222@003514.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251222@003531",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20251222@003531.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/16_2.pptx"
+  ]
+}

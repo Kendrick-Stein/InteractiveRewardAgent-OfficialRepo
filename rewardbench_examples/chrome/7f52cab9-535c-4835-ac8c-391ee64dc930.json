@@ -1,0 +1,245 @@
+{
+  "id": "7f52cab9-535c-4835-ac8c-391ee64dc930",
+  "snapshot": "chrome",
+  "instruction": "Create a list of drip coffee makers that are on sale and within $25-60 and have a black finish.",
+  "source": "test_task_1",
+  "config": [
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "google-chrome",
+          "--remote-debugging-port=1337"
+        ]
+      }
+    },
+    {
+      "type": "launch",
+      "parameters": {
+        "command": [
+          "socat",
+          "tcp-listen:9222,fork",
+          "tcp:localhost:1337"
+        ]
+      }
+    },
+    {
+      "type": "chrome_open_tabs",
+      "parameters": {
+        "urls_to_open": [
+          "https://shopping.google.com/"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Google Chrome"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "chrome"
+  ],
+  "evaluator": {
+    "func": [
+      "check_direct_json_object",
+      "check_direct_json_object"
+    ],
+    "result": [
+      {
+        "type": "active_tab_url_parse",
+        "goto_prefix": "https://www.",
+        "parse_keys": [
+          "q"
+        ]
+      },
+      {
+        "type": "active_tab_html_parse",
+        "goto_prefix": "https://www.",
+        "category": "class",
+        "class_multiObject_search_exist": {
+          "fT28tf": [
+            "Black",
+            "$25 - $60",
+            "On sale",
+            "is_other_exist"
+          ]
+        }
+      }
+    ],
+    "expected": [
+      {
+        "type": "rule",
+        "rules": {
+          "expected": {
+            "q": "drip coffee maker"
+          },
+          "expect_in_result": true
+        }
+      },
+      {
+        "type": "rule",
+        "rules": {
+          "expected": {
+            "Black": true,
+            "$25 - $60": true,
+            "On sale": true,
+            "is_other_exist": false
+          }
+        }
+      }
+    ]
+  },
+  "proxy": true,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@122542",
+      "action": "pyautogui.click(734, 461)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@122542.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@122547",
+      "action": "pyautogui.typewrite('drip coffee maker')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@122547.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@122554",
+      "action": "pyautogui.press('enter')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@122554.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@122603",
+      "action": "pyautogui.click(686, 562)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@122603.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@122616",
+      "action": "pyautogui.click(509, 658)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@122616.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@122631",
+      "action": "pyautogui.click(530, 200)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@122631.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@122643",
+      "action": "pyautogui.click(488, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@122643.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@122656",
+      "action": "pyautogui.moveTo(488, 662)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@122656.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@122700",
+      "action": "pyautogui.scroll(-7)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@122700.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@122713",
+      "action": "pyautogui.click(386, 374)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@122713.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@122721",
+      "action": "pyautogui.scroll(-10)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@122721.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@122733",
+      "action": "pyautogui.click(422, 548)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@122733.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@122744",
+      "action": "pyautogui.click(420, 620)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@122744.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@122756",
+      "action": "pyautogui.click(386, 611)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@122756.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@122807",
+      "action": "pyautogui.click(1256, 385)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@122807.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@122820",
+      "action": "pyautogui.click(415, 816)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@122820.png"
+    }
+  ],
+  "result_raw": "0"
+}

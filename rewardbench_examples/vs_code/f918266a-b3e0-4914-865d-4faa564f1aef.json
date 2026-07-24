@@ -1,0 +1,188 @@
+{
+  "id": "f918266a-b3e0-4914-865d-4faa564f1aef",
+  "snapshot": "vscode",
+  "instruction": "Please complete the code and retrieve the output from the Python script 'calculator.py' located on the desktop and save it as 'log.txt' in the same directory as the Python file.",
+  "source": "GAIA",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/f918266a-b3e0-4914-865d-4faa564f1aef/calculator.zip",
+            "path": "/home/user/Desktop/calculator.zip"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "/bin/bash",
+          "-c",
+          "unzip /home/user/Desktop/calculator.zip -d /home/user/Desktop/ && rm -rf /home/user/Desktop/calculator.zip"
+        ]
+      }
+    }
+  ],
+  "trajectory": "trajectories/f918266a-b3e0-4914-865d-4faa564f1aef",
+  "related_apps": [
+    "vscode",
+    "os"
+  ],
+  "evaluator": {
+    "func": "compare_text_file",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/multi_apps/f918266a-b3e0-4914-865d-4faa564f1aef/log_Gold.txt",
+      "dest": "log_Gold.txt"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/log.txt",
+      "dest": "log.txt"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@121706",
+      "action": "pyautogui.click(1850, 889)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@121706.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@121713",
+      "action": "pyautogui.doubleClick(1850, 889)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@121713.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@121720",
+      "action": "pyautogui.click(199, 470)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@121720.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@121732",
+      "action": "pyautogui.typewrite('print(\"Sorted array is:\")')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@121732.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@121749",
+      "action": "pyautogui.click(791, 150)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@121749.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@121802",
+      "action": "pyautogui.click(32, 670)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@121802.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@121813",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@121813.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@121822",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@121822.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@121835",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@121835.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@121847",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@121847.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@121902",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@121902.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@121924",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@121924.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@121940",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@121940.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@121957",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_14_20251127@121957.png"
+    },
+    {
+      "step_num": 15,
+      "action_timestamp": "20251127@122014",
+      "action": "pyautogui.click(32, 820)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_15_20251127@122014.png"
+    }
+  ],
+  "result_raw": "0.0"
+}

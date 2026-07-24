@@ -1,0 +1,224 @@
+{
+  "id": "6f56bf42-85b8-4fbb-8e06-6c44960184ba",
+  "snapshot": "os",
+  "instruction": "Copies file 'file1' to each of directories 'dir1', 'dir2', 'dir3'.",
+  "source": "NL2Bash",
+  "trajectory": "trajectories/",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/os/6f56bf42-85b8-4fbb-8e06-6c44960184ba/setup.sh",
+            "path": "setup.sh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "chmod +x setup.sh",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": "./setup.sh",
+        "shell": true
+      }
+    },
+    {
+      "type": "execute",
+      "parameters": {
+        "command": [
+          "python",
+          "-c",
+          "import pyautogui; import time; time.sleep(0.5); pyautogui.click({SCREEN_WIDTH_HALF}, {SCREEN_HEIGHT_HALF}); time.sleep(0.5); pyautogui.hotkey('ctrl', 'alt', 't'); time.sleep(0.5)"
+        ]
+      }
+    },
+    {
+      "type": "activate_window",
+      "parameters": {
+        "window_name": "Terminal"
+      }
+    }
+  ],
+  "related_apps": [
+    "os"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "download",
+        "parameters": {
+          "files": [
+            {
+              "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/os/6f56bf42-85b8-4fbb-8e06-6c44960184ba/eval.sh",
+              "path": "eval.sh"
+            }
+          ]
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": "chmod +x eval.sh",
+          "shell": true
+        }
+      }
+    ],
+    "func": "check_include_exclude",
+    "result": {
+      "type": "vm_command_line",
+      "command": "bash eval.sh",
+      "shell": true
+    },
+    "expected": {
+      "type": "rule",
+      "rules": {
+        "include": [
+          "Success: file1 exists in dir1.\nSuccess: file1 exists in dir2.\nSuccess: file1 exists in dir3.\n"
+        ],
+        "exclude": []
+      }
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251127@125441",
+      "action": "pyautogui.click(34, 604)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251127@125441.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251127@125449",
+      "action": "pyautogui.rightClick(943, 281)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251127@125449.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251127@125457",
+      "action": "pyautogui.click(1016, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251127@125457.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251127@125510",
+      "action": "pyautogui.click(274, 622)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251127@125510.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251127@125517",
+      "action": "pyautogui.click(1224, 75)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251127@125517.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251127@125525",
+      "action": "pyautogui.rightClick(943, 281)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251127@125525.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251127@125538",
+      "action": "pyautogui.click(1016, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251127@125538.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251127@125551",
+      "action": "pyautogui.click(274, 654)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251127@125551.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251127@125602",
+      "action": "pyautogui.click(1224, 75)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251127@125602.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251127@125617",
+      "action": "pyautogui.rightClick(943, 276)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251127@125617.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251127@125630",
+      "action": "pyautogui.click(1016, 423)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_11_20251127@125630.png"
+    },
+    {
+      "step_num": 12,
+      "action_timestamp": "20251127@125641",
+      "action": "pyautogui.click(276, 670)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_12_20251127@125641.png"
+    },
+    {
+      "step_num": 13,
+      "action_timestamp": "20251127@125651",
+      "action": "pyautogui.click(1224, 75)",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_13_20251127@125651.png"
+    },
+    {
+      "step_num": 14,
+      "action_timestamp": "20251127@125700",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_14_20251127@125700.png"
+    }
+  ],
+  "result_raw": 0.0
+}

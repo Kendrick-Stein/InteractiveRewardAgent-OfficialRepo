@@ -1,0 +1,177 @@
+{
+  "id": "e246f6d8-78d7-44ac-b668-fcf47946cb50",
+  "snapshot": "libreoffice_writer",
+  "instruction": "I found Italic font very hard to discern from the normal text for me, as it is also dark black with the same size. Current font size is 12 and I want to change the font size of italicized words to 14 to make it more discernible. Can you help me on this? The file to be evaluated is located on the VM at the following path: 「/home/user/Desktop/Y22-2119-assign4.docx」.",
+  "source": "https://ask.libreoffice.org/t/how-to-change-text-size-color-of-italic-font/77712",
+  "config": [
+    {
+      "type": "download",
+      "parameters": {
+        "files": [
+          {
+            "url": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/e246f6d8-78d7-44ac-b668-fcf47946cb50/Y22-2119-assign4.docx",
+            "path": "/home/user/Desktop/Y22-2119-assign4.docx"
+          }
+        ]
+      }
+    },
+    {
+      "type": "open",
+      "parameters": {
+        "path": "/home/user/Desktop/Y22-2119-assign4.docx"
+      }
+    }
+  ],
+  "trajectory": "trajectories/",
+  "related_apps": [
+    "libreoffice_writer"
+  ],
+  "evaluator": {
+    "postconfig": [
+      {
+        "type": "activate_window",
+        "parameters": {
+          "window_name": "Y22-2119-assign4.docx - LibreOffice Writer",
+          "strict": true
+        }
+      },
+      {
+        "type": "sleep",
+        "parameters": {
+          "seconds": 0.5
+        }
+      },
+      {
+        "type": "execute",
+        "parameters": {
+          "command": [
+            "python",
+            "-c",
+            "import pyautogui; import time; pyautogui.hotkey('ctrl', 's'); time.sleep(0.5); "
+          ]
+        }
+      }
+    ],
+    "func": "check_italic_font_size_14",
+    "expected": {
+      "type": "cloud_file",
+      "path": "https://huggingface.co/datasets/xlangai/ubuntu_osworld_file_cache/resolve/main/libreoffice_writer/e246f6d8-78d7-44ac-b668-fcf47946cb50/Y22-2119-assign4_Gold.docx",
+      "dest": "Y22-2119-assign4.docx_Gold.docx"
+    },
+    "result": {
+      "type": "vm_file",
+      "path": "/home/user/Desktop/Y22-2119-assign4.docx",
+      "dest": "Y22-2119-assign4.docx"
+    }
+  },
+  "proxy": false,
+  "fixed_ip": false,
+  "possibility_of_env_change": "low",
+  "traj": [
+    {
+      "step_num": 1,
+      "action_timestamp": "20251222@011046",
+      "action": "pyautogui.hotkey('ctrl', 'a')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_1_20251222@011046.png"
+    },
+    {
+      "step_num": 2,
+      "action_timestamp": "20251222@011052",
+      "action": "pyautogui.click(665.839, 150.33, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_2_20251222@011052.png"
+    },
+    {
+      "step_num": 3,
+      "action_timestamp": "20251222@011101",
+      "action": "pyautogui.click(594.286, 385.714, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_3_20251222@011101.png"
+    },
+    {
+      "step_num": 4,
+      "action_timestamp": "20251222@011108",
+      "action": "pyautogui.hotkey('ctrl', 'z')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_4_20251222@011108.png"
+    },
+    {
+      "step_num": 5,
+      "action_timestamp": "20251222@011120",
+      "action": "pyautogui.click(736.398, 150.33, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_5_20251222@011120.png"
+    },
+    {
+      "step_num": 6,
+      "action_timestamp": "20251222@011131",
+      "action": "pyautogui.click(663.851, 148.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_6_20251222@011131.png"
+    },
+    {
+      "step_num": 7,
+      "action_timestamp": "20251222@011143",
+      "action": "pyautogui.click(596.273, 370.879, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_7_20251222@011143.png"
+    },
+    {
+      "step_num": 8,
+      "action_timestamp": "20251222@011154",
+      "action": "pyautogui.click(659.876, 148.352, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_8_20251222@011154.png"
+    },
+    {
+      "step_num": 9,
+      "action_timestamp": "20251222@011207",
+      "action": "pyautogui.click(604.224, 387.692, button='left')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_9_20251222@011207.png"
+    },
+    {
+      "step_num": 10,
+      "action_timestamp": "20251222@011219",
+      "action": "pyautogui.hotkey('ctrl', 's')",
+      "reward": 0,
+      "done": false,
+      "info": {},
+      "screenshot_file": "step_10_20251222@011219.png"
+    },
+    {
+      "step_num": 11,
+      "action_timestamp": "20251222@011232",
+      "action": "DONE",
+      "reward": 0,
+      "done": true,
+      "info": {
+        "done": true
+      },
+      "screenshot_file": "step_11_20251222@011232.png"
+    }
+  ],
+  "result_raw": 1.0,
+  "file_path": [
+    "/home/user/Desktop/Y22-2119-assign4.docx"
+  ]
+}
