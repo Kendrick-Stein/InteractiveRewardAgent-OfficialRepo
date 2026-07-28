@@ -149,6 +149,76 @@
       </figure>
     </div>
   </section>
+
+  <section class="paper-section" aria-labelledby="agreement-title">
+    <div class="container">
+      <div class="section-copy wide-copy">
+        <p class="section-kicker">Experiments</p>
+        <h2 id="agreement-title">Automated task generation and human–IRA agreement</h2>
+        <p>To extend evaluation beyond GUI-RewardBench, we group validated tasks by their initial environment configuration and use an LLM to generate feasible instruction variants, producing 855 tasks across nine application categories. We randomly sample 100 of these tasks, execute them with a Qwen3.6-based GUI agent, and compare GPT-5.5-based interactive reward agent verdicts against human annotations. The interactive reward agent agrees with human labels on 94.0% of the trajectories, yielding Cohen's kappa of 0.84, conventionally interpreted as almost perfect agreement.</p>
+      </div>
+      <dl class="bench-strip" aria-label="Human–IRA agreement summary">
+        <div><dt>855</dt><dd>Automatically generated tasks</dd></div>
+        <div><dt>94.0%</dt><dd>Agreement with human labels</dd></div>
+        <div><dt>0.84</dt><dd>Cohen's kappa</dd></div>
+      </dl>
+      <div class="table-wrap paper-table-wrap" aria-label="Human–IRA agreement by category">
+        <table>
+          <caption>Human–IRA agreement on generated tasks. “LibreOffice” combines Calc, Impress, and Writer.</caption>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Sample Size</th>
+              <th>Agreement %</th>
+              <th>Cohen's kappa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>LibreOffice</td><td>35</td><td>85.7%</td><td>0.62</td></tr>
+            <tr><td>Chrome</td><td>15</td><td>100.0%</td><td>N/A</td></tr>
+            <tr><td>VSCode</td><td>12</td><td>100.0%</td><td>1.00</td></tr>
+            <tr><td>Thunderbird</td><td>11</td><td>90.9%</td><td>0.82</td></tr>
+            <tr><td>GIMP</td><td>8</td><td>100.0%</td><td>1.00</td></tr>
+            <tr><td>OS</td><td>19</td><td>100.0%</td><td>1.00</td></tr>
+            <tr class="highlight-row"><td>Overall</td><td>100</td><td>94.0%</td><td>0.84</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-note">Cohen's kappa is N/A for Chrome because all sampled Chrome tasks are labeled as failures by both human reviewers and the interactive reward agent, making chance-corrected agreement undefined.</p>
+    </div>
+  </section>
+
+  <section class="paper-section muted-section" aria-labelledby="rl-title">
+    <div class="container">
+      <div class="section-copy wide-copy">
+        <p class="section-kicker">Experiments</p>
+        <h2 id="rl-title">Reinforcement learning with IRA rewards</h2>
+        <p>We test whether the interactive reward agent can replace task-specific reward scripts and extend RL training to automatically generated tasks. Setting A trains on OSWorld tasks using ground-truth script rewards. Setting B uses the same tasks but replaces the scripts with the interactive reward agent. Setting C trains on automatically generated tasks using the interactive reward agent, where no task-specific evaluation script is available. We adopt the RL training method of DART and use Qwen3.6-35B-A3B as the backbone for the interactive reward agent.</p>
+      </div>
+      <div class="table-wrap paper-table-wrap" aria-label="RL training settings and OSWorld success rates">
+        <table>
+          <caption>RL training settings and resulting OSWorld success rates.</caption>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Task Source</th>
+              <th>Evaluator</th>
+              <th>Success (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>A</td><td>OSWorld tasks</td><td>Script</td><td>34.9</td></tr>
+            <tr><td>B</td><td>OSWorld tasks</td><td>IRA</td><td>34.0</td></tr>
+            <tr><td>C</td><td>Generated tasks</td><td>IRA</td><td>33.5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="result-readout">
+        <p>Replacing script rewards with the interactive reward agent on the same OSWorld tasks yields 34.0% success, comparable to the 34.9% obtained with ground-truth scripts. More notably, training on generated out-of-distribution tasks with interactive reward agent rewards achieves 33.5%, only 1.4 percentage points below the script-based setting.</p>
+        <p>These results show that the interactive reward agent converts generated tasks without evaluation scripts into effective, transferable RL supervision, enabling scalable training beyond curated benchmark tasks.</p>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
   <div class="container">
