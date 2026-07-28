@@ -57,8 +57,8 @@
         <p>Concretely, the interactive reward agent uses a VLM to propose task-specific completion conditions, rather than to directly judge task success. It then verifies these conditions by collecting evidence from the actual environment through system tools, application tools, and GUI tools.</p>
       </div>
       <figure class="paper-figure">
-        <img src="assets/figures/image.png" width="4721" height="2134" alt="Interactive Reward Agent evaluation pipeline from task instruction to final reward.">
-        <figcaption>Interactive reward agent evaluation pipeline. The task instruction and final environment state are the inputs. Interactive reward agent first generates necessary completion conditions grounded in the instruction and then verifies each condition through tool-selected environment queries.</figcaption>
+        <img src="assets/figures/pipeline_overview.png" width="4000" height="1520" alt="Interactive Reward Agent pipeline: from task instruction, screenshots, and environment state, through condition proposal and tool-based verification, to the final reward, verdict, and reasoning.">
+        <figcaption>Overview of the interactive reward agent. Given a task instruction, the initial and final screenshots, and an interactive environment state, the agent first proposes a set of task-grounded completion conditions. For each condition, it iteratively selects tool actions, receives environment feedback, and updates the interaction history until sufficient evidence is available to assign a binary verdict. The condition-level verdicts are then aggregated into the final reward, overall verdict, and reasoning.</figcaption>
       </figure>
     </div>
   </section>
@@ -81,7 +81,7 @@
           <figcaption>Trajectory length distribution.</figcaption>
         </figure>
         <figure class="paper-figure portrait-figure">
-          <img src="assets/figures/rewardbench_category_outcome_donut.png" width="1955" height="1723" alt="GUI-RewardBench task category distribution.">
+          <img src="assets/figures/rewardbench_category_outcome_donut.png" width="2758" height="2758" alt="GUI-RewardBench task category and success/failure outcome distribution.">
           <figcaption>Task category distribution.</figcaption>
         </figure>
       </div>
@@ -97,20 +97,20 @@
         <p>We provide the overall binary classification metrics and report per category accuracy. The evaluation scheme is a central factor in GUI reward modeling: the performance gap is not only determined by the backbone model, but also by the way task success is verified.</p>
       </div>
       <figure class="paper-figure wide-figure">
-        <img src="assets/figures/imageheat_annotated.png" width="3390" height="1500" alt="Per-category accuracy heatmap across evaluator families.">
-        <figcaption>Per-category accuracy comparison across VLM-as-reward evaluators, GUI-agent-as-reward evaluators, and interactive reward agent variants. Each cell reports the accuracy percentage for one method on one application category, with warmer colors indicating higher accuracy.</figcaption>
+        <img src="assets/figures/category_heatmap.png" width="2605" height="1572" alt="Per-category accuracy heatmap comparing VLM-based reward evaluators and Interactive Reward Agent variants.">
+        <figcaption>Per-category accuracy comparison between VLM-based reward evaluators and the interactive reward agent. Each cell reports accuracy (%) for one method on one application category, with warmer colors indicating higher accuracy.</figcaption>
       </figure>
       <div class="result-readout">
-        <p>Table results show that interactive reward agent with GPT-5.5 achieves the highest accuracy of 86.9%, improving over the strongest VLM baseline, DistRL, by 8.1 percentage points, and over the strongest GUI-agent-as-reward evaluator baseline by 3.7 percentage points.</p>
-        <p>Interactive reward agent does not improve performance by blindly accepting more tasks as successful. Instead, it produces a better-calibrated decision boundary between false positives and false negatives.</p>
+        <p>All three interactive reward agent variants outperform all four passive VLM-based reward evaluators. The strongest passive evaluator, DistRL, achieves 78.8% accuracy and 76.7% F1, whereas every interactive reward agent variant achieves at least 85.0% accuracy and 83.9% F1. The best variant, built on GPT-5.5, reaches 86.9% accuracy.</p>
+        <p>The interactive reward agent performs consistently across the three evaluated backbones. The open-source Qwen3.6-35B-A3B backbone achieves results close to the proprietary GPT-5.4 and GPT-5.5 backbones and obtains the highest recall, showing that the framework reduces dependence on the backbone's existing ability to generalize.</p>
       </div>
       <div class="table-wrap paper-table-wrap" aria-label="Overall binary classification metrics">
         <table>
-          <caption>overall binary classification metrics.</caption>
+          <caption>Performance of VLM-based reward evaluators and the interactive reward agent on GUI-RewardBench.</caption>
           <thead>
             <tr>
-              <th>Type</th>
               <th>Method</th>
+              <th>Mode</th>
               <th>Acc.</th>
               <th>Prec.</th>
               <th>Rec.</th>
@@ -122,17 +122,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>VLM-as-reward-evaluator</td><td>WebRL</td><td>47.0%</td><td>100.0%</td><td>0.6%</td><td>1.2%</td><td>1</td><td>0</td><td>150</td><td>170</td></tr>
-            <tr><td>VLM-as-reward-evaluator</td><td>ZeroGUI</td><td>67.6%</td><td>77.2%</td><td>55.6%</td><td>64.6%</td><td>95</td><td>28</td><td>122</td><td>76</td></tr>
-            <tr><td>VLM-as-reward-evaluator</td><td>DigiRL</td><td>78.5%</td><td>93.2%</td><td>64.3%</td><td>76.1%</td><td>110</td><td>8</td><td>142</td><td>61</td></tr>
-            <tr><td>VLM-as-reward-evaluator</td><td>DistRL</td><td>78.8%</td><td>92.6%</td><td>65.5%</td><td>76.7%</td><td>112</td><td>9</td><td>141</td><td>59</td></tr>
-            <tr><td>GUI-agent-as-reward-evaluator</td><td>UITars-1.5</td><td>60.4%</td><td>63.5%</td><td>27.8%</td><td>38.6%</td><td>40</td><td>23</td><td>154</td><td>104</td></tr>
-            <tr><td>GUI-agent-as-reward-evaluator</td><td>GPT-5.4</td><td>77.9%</td><td>89.7%</td><td>64.0%</td><td>74.7%</td><td>105</td><td>12</td><td>145</td><td>59</td></tr>
-            <tr><td>GUI-agent-as-reward-evaluator</td><td>GPT-5.5</td><td>83.2%</td><td>90.8%</td><td>71.5%</td><td>80.0%</td><td>108</td><td>11</td><td>159</td><td>43</td></tr>
-            <tr><td>Interactive Reward Agent</td><td>Qwen3.5-397B-A17B</td><td>81.0%</td><td>86.7%</td><td>71.6%</td><td>78.4%</td><td>111</td><td>17</td><td>149</td><td>44</td></tr>
-            <tr><td>Interactive Reward Agent</td><td>Qwen3.6-35B-A3B</td><td>85.0%</td><td>88.7%</td><td>79.6%</td><td>83.9%</td><td>125</td><td>16</td><td>148</td><td>32</td></tr>
-            <tr><td>Interactive Reward Agent</td><td>GPT-5.4</td><td>85.4%</td><td>94.0%</td><td>76.2%</td><td>84.2%</td><td>125</td><td>8</td><td>149</td><td>39</td></tr>
-            <tr class="highlight-row"><td>Interactive Reward Agent</td><td>GPT-5.5</td><td>86.9%</td><td>93.7%</td><td>77.6%</td><td>84.9%</td><td>118</td><td>8</td><td>161</td><td>34</td></tr>
+            <tr><td>WebRL</td><td>Passive</td><td>47.0%</td><td>100.0%</td><td>0.6%</td><td>1.2%</td><td>1</td><td>0</td><td>150</td><td>170</td></tr>
+            <tr><td>ZeroGUI</td><td>Passive</td><td>67.6%</td><td>77.2%</td><td>55.6%</td><td>64.6%</td><td>95</td><td>28</td><td>122</td><td>76</td></tr>
+            <tr><td>DigiRL</td><td>Passive</td><td>78.5%</td><td>93.2%</td><td>64.3%</td><td>76.1%</td><td>110</td><td>8</td><td>142</td><td>61</td></tr>
+            <tr><td>DistRL</td><td>Passive</td><td>78.8%</td><td>92.6%</td><td>65.5%</td><td>76.7%</td><td>112</td><td>9</td><td>141</td><td>59</td></tr>
+            <tr><td>IRA with Qwen3.6-35B-A3B</td><td>Interactive</td><td>85.0%</td><td>88.7%</td><td>79.6%</td><td>83.9%</td><td>125</td><td>16</td><td>148</td><td>32</td></tr>
+            <tr><td>IRA with GPT-5.4</td><td>Interactive</td><td>85.4%</td><td>94.0%</td><td>76.2%</td><td>84.2%</td><td>125</td><td>8</td><td>149</td><td>39</td></tr>
+            <tr class="highlight-row"><td>IRA with GPT-5.5</td><td>Interactive</td><td>86.9%</td><td>93.7%</td><td>77.6%</td><td>84.9%</td><td>118</td><td>8</td><td>161</td><td>34</td></tr>
           </tbody>
         </table>
       </div>
