@@ -10,8 +10,15 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
-  <nav class="nav single-page-nav" aria-label="Site">
+  <nav class="nav" aria-label="Site">
     <a class="brand" href="index.html">Interactive Reward Agent</a>
+    <div class="nav-links">
+      <a href="#method-title">Method</a>
+      <a href="#bench-title">Benchmark</a>
+      <a href="#result-title">Results</a>
+      <a href="#agreement-title">Human Agreement</a>
+      <a href="#rl-title">RL</a>
+    </div>
   </nav>
 </header>
 
@@ -49,14 +56,14 @@
   </section>
 
   <section class="paper-section" aria-labelledby="method-title">
-    <div class="container two-column">
-      <div class="section-copy">
+    <div class="container">
+      <div class="section-copy wide-copy">
         <p class="section-kicker">Method</p>
         <h2 id="method-title">Propose-then-verify evaluation</h2>
         <p>In this paper, we propose an interactive reward agent (IRA) built on a propose-then-verify framework equipped with tools for environment interaction. Given a task instruction and a GUI environment after the agent execution, the interactive reward agent first generates explicit task completion conditions and then verifies them through tools.</p>
         <p>Concretely, the interactive reward agent uses a VLM to propose task-specific completion conditions, rather than to directly judge task success. It then verifies these conditions by collecting evidence from the actual environment through system tools, application tools, and GUI tools.</p>
       </div>
-      <figure class="paper-figure">
+      <figure class="paper-figure wide-figure">
         <img src="assets/figures/pipeline_overview.png" width="4000" height="1520" alt="Interactive Reward Agent pipeline: from task instruction, screenshots, and environment state, through condition proposal and tool-based verification, to the final reward, verdict, and reasoning.">
         <figcaption>Overview of the interactive reward agent. Given a task instruction, the initial and final screenshots, and an interactive environment state, the agent first proposes a set of task-grounded completion conditions. For each condition, it iteratively selects tool actions, receives environment feedback, and updates the interaction history until sufficient evidence is available to assign a binary verdict. The condition-level verdicts are then aggregated into the final reward, overall verdict, and reasoning.</figcaption>
       </figure>
@@ -105,7 +112,7 @@
         <p>The interactive reward agent performs consistently across the three evaluated backbones. The open-source Qwen3.6-35B-A3B backbone achieves results close to the proprietary GPT-5.4 and GPT-5.5 backbones and obtains the highest recall, showing that the framework reduces dependence on the backbone's existing ability to generalize.</p>
       </div>
       <div class="table-wrap paper-table-wrap" aria-label="Overall binary classification metrics">
-        <table>
+        <table class="results-table">
           <caption>Performance of VLM-based reward evaluators and the interactive reward agent on GUI-RewardBench.</caption>
           <thead>
             <tr>
@@ -162,8 +169,8 @@
         <div><dt>94.0%</dt><dd>Agreement with human labels</dd></div>
         <div><dt>0.84</dt><dd>Cohen's kappa</dd></div>
       </dl>
-      <div class="table-wrap paper-table-wrap" aria-label="Human–IRA agreement by category">
-        <table>
+      <div class="table-wrap paper-table-wrap compact-table" aria-label="Human–IRA agreement by category">
+        <table class="agreement-table">
           <caption>Human–IRA agreement on generated tasks. “LibreOffice” combines Calc, Impress, and Writer.</caption>
           <thead>
             <tr>
@@ -190,28 +197,30 @@
 
   <section class="paper-section muted-section" aria-labelledby="rl-title">
     <div class="container">
-      <div class="section-copy wide-copy">
-        <p class="section-kicker">Experiments</p>
-        <h2 id="rl-title">Reinforcement learning with IRA rewards</h2>
-        <p>We test whether the interactive reward agent can replace task-specific reward scripts and extend RL training to automatically generated tasks. Setting A trains on OSWorld tasks using ground-truth script rewards. Setting B uses the same tasks but replaces the scripts with the interactive reward agent. Setting C trains on automatically generated tasks using the interactive reward agent, where no task-specific evaluation script is available. We adopt the RL training method of DART and use Qwen3.6-35B-A3B as the backbone for the interactive reward agent.</p>
-      </div>
-      <div class="table-wrap paper-table-wrap" aria-label="RL training settings and OSWorld success rates">
-        <table>
-          <caption>RL training settings and resulting OSWorld success rates.</caption>
-          <thead>
-            <tr>
-              <th>Setting</th>
-              <th>Task Source</th>
-              <th>Evaluator</th>
-              <th>Success (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>A</td><td>OSWorld tasks</td><td>Script</td><td>34.9</td></tr>
-            <tr><td>B</td><td>OSWorld tasks</td><td>IRA</td><td>34.0</td></tr>
-            <tr><td>C</td><td>Generated tasks</td><td>IRA</td><td>33.5</td></tr>
-          </tbody>
-        </table>
+      <div class="two-column rl-grid">
+        <div class="section-copy">
+          <p class="section-kicker">Experiments</p>
+          <h2 id="rl-title">Reinforcement learning with IRA rewards</h2>
+          <p>We test whether the interactive reward agent can replace task-specific reward scripts and extend RL training to automatically generated tasks. Setting A trains on OSWorld tasks using ground-truth script rewards. Setting B uses the same tasks but replaces the scripts with the interactive reward agent. Setting C trains on automatically generated tasks using the interactive reward agent, where no task-specific evaluation script is available. We adopt the RL training method of DART and use Qwen3.6-35B-A3B as the backbone for the interactive reward agent.</p>
+        </div>
+        <div class="table-wrap paper-table-wrap compact-table" aria-label="RL training settings and OSWorld success rates">
+          <table class="rl-table">
+            <caption>RL training settings and resulting OSWorld success rates.</caption>
+            <thead>
+              <tr>
+                <th>Setting</th>
+                <th>Task Source</th>
+                <th>Evaluator</th>
+                <th>Success (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>A</td><td>OSWorld tasks</td><td>Script</td><td>34.9</td></tr>
+              <tr><td>B</td><td>OSWorld tasks</td><td>IRA</td><td>34.0</td></tr>
+              <tr><td>C</td><td>Generated tasks</td><td>IRA</td><td>33.5</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="result-readout">
         <p>Replacing script rewards with the interactive reward agent on the same OSWorld tasks yields 34.0% success, comparable to the 34.9% obtained with ground-truth scripts. More notably, training on generated out-of-distribution tasks with interactive reward agent rewards achieves 33.5%, only 1.4 percentage points below the script-based setting.</p>
